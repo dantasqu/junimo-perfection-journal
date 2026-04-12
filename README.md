@@ -10,6 +10,33 @@ https://dantasqu.github.io/junimo-perfection-journal/
 
 `1.1.0` — `Honey Junimo`
 
+## Artwork Preview
+
+This is the current open-book golden Junimo art that now appears in the latest app and web hero.
+
+![Open book with a golden Junimo](./branding/assets/open-book-golden-junimo.svg)
+
+```text
+          .-""""-.
+       .-'  _  _  '-.
+     .'   .' \/ '.   '.
+    /   .'  /\   '.    \
+   ;   /   /  \    \    ;
+   |  ;   / /\ \    ;   |
+   |  |  / /  \ \   |   |
+   |  | |  .--.  |  |   |
+   |  | | (o  o) |  |   |
+   |  | |  \__/  |  |   |
+   |  |  \  --  /   |   |
+   ;   \  '.__.'   /    ;
+    \   '.      .'    .'
+     '.   '-..-'   .-'
+       '-.______.-'
+      __/  /||\  \__
+   .-' _.-' || '-._ '-.
+  /_.-'     ||     '-._\
+```
+
 ## Use It
 
 Open the live site in any modern browser, or open `index.html` locally.
