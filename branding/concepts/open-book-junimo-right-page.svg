@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Open Stardew-style book with a Junimo on the right page</title>
+  <desc id="desc">A clear open brown book inspired by Stardew Valley, with cream pages, a visible spine, and a green Junimo sprite on the right page.</desc>
+  <defs>
+    <linearGradient id="coverBrown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8d684f" />
+      <stop offset="100%" stop-color="#5d3f2d" />
+    </linearGradient>
+    <linearGradient id="coverEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4d3425" />
+      <stop offset="50%" stop-color="#734f39" />
+      <stop offset="100%" stop-color="#422c20" />
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7dc" />
+      <stop offset="100%" stop-color="#efd7a2" />
+    </linearGradient>
+    <linearGradient id="pageEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8b36f" />
+      <stop offset="100%" stop-color="#c39449" />
+    </linearGradient>
+    <radialGradient id="junimoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff1ab" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fff1ab" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#4b311e" flood-opacity="0.28" />
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#4b311e" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <ellipse cx="320" cy="410" rx="225" ry="28" fill="#53361f" opacity="0.16" />
+
+  <g filter="url(#shadow)">
+    <path
+      d="M82 346L110 176L300 212L300 376L104 352Z"
+      fill="url(#coverBrown)"
+      stroke="#4d3425"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M558 346L530 176L340 212L340 376L536 352Z"
+      fill="url(#coverBrown)"
+      stroke="#4d3425"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M104 334L126 190L300 220L300 364L124 343Z"
+      fill="url(#paper)"
+      stroke="#c79c5b"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M536 334L514 190L340 220L340 364L516 343Z"
+      fill="url(#paper)"
+      stroke="#c79c5b"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M303 208C311 205 318 204 320 204C322 204 329 205 337 208V376C329 380 322 382 320 382C318 382 311 380 303 376V208Z"
+      fill="url(#coverEdge)"
+      stroke="#422c20"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+
+    <path d="M143 223L143 338" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M167 217L167 335" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M190 220L190 333" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M213 224L213 331" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M236 228L236 328" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M259 232L259 326" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M282 236L282 323" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+
+    <path d="M497 223L497 338" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M473 217L473 335" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M450 220L450 333" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M427 224L427 331" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M404 228L404 328" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M381 232L381 326" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+    <path d="M358 236L358 323" stroke="#d8c089" stroke-width="3" stroke-linecap="round" />
+
+    <path d="M123 343L300 364" stroke="url(#pageEdge)" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+    <path d="M517 343L340 364" stroke="url(#pageEdge)" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+
+    <path d="M140 256C180 242 228 240 286 252" fill="none" stroke="#d9c391" stroke-width="5" stroke-linecap="round" opacity="0.7" />
+    <path d="M137 287C182 273 229 272 286 282" fill="none" stroke="#d9c391" stroke-width="5" stroke-linecap="round" opacity="0.62" />
+    <path d="M500 256C460 242 412 240 354 252" fill="none" stroke="#d9c391" stroke-width="5" stroke-linecap="round" opacity="0.7" />
+    <path d="M503 287C458 273 411 272 354 282" fill="none" stroke="#d9c391" stroke-width="5" stroke-linecap="round" opacity="0.62" />
+  </g>
+
+  <circle cx="442" cy="249" r="72" fill="url(#junimoGlow)" />
+
+  <g filter="url(#soft)">
+    <ellipse cx="446" cy="302" rx="46" ry="14" fill="#6f522b" opacity="0.16" />
+    <image
+      x="394"
+      y="194"
+      width="96"
+      height="96"
+      preserveAspectRatio="xMidYMid meet"
+      image-rendering="pixelated"
+      href="data:image/gif;base64,R0lGODlhMAAwAPIFAEfLGwQ9D43wMzKGHKW1gwAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJDwAFACwAAAAAMAAwAAAD/1i63P4wykmrvThHwHX4msMBHhgyYxmcz+e+bhSzCmyv0EzfsGwyugXvNRIYj8HaT7hUDgPFozFZoFqfUI502qx2da6o1DYoi8HfX1i7JZvZAjQOqP6IkbDy4FyfM+cuRyN6hIViejYOcoIchY57cIg9DYtGg4+Eh2WJlHlljCMAW6MClwNUfy56oHekpY2bXakfq5ahoq6gkn45tG+3wMHBqJ0BesLIycR0xr/JzyPLf9DUt9JO1dkA115Z2tDca6HiyOQc4XbW6crr0bLFwObD7efvzMCswvnb9tO3+/hsjeuH7Z9AZPvQNYMU7NgtAhAj7qKgytkth6EiSozFq0eFL4bAMI7QCHGiBRckCWQziQElyZUcVaSEeYqgBHmmhtAo2JAjpx30Qu36ubObzmLcKGJRNAnoE6YvWBAterIp1apRry5IAAAh+QQJDwAFACwDAAMAKgAtAAAD/1i63A7QyUkpBDXrF7cMoFeAgUY6p5dW69Jm7xcqsUveOE7le+7fPeDkRywNdQ2SYMm8KJnLGC8Jgi6dVasUyXhCsQGrYCscZQWXgTqnHlyYq6k5fIW02ep3dDaPn9NrOG16Y3xEbU12bYuLhHdFAYh1AIyVbhBMj0WSaIqWg5hLmn6ReaFiqImUgUZdIKAAqbKdqwNksLOpgLZ8NgEXwMHCw8FkxMfIYCggyc3Dxs7RENDSztTVydfTzNncwNoAJM3ixb003mDj6NutvsKqx/Dsy7/B8sP34Pfvk8pUpQMICBwoDNbAgZrotTkosKApAAwJJPy3kKHDSxAZTpQBEClbrRoUH0rbGATWSFYiIKlsp2JlERG+XPpIyYVmmSAgWdQ8crNlzwIJAAAh+QQJDwAFACwDAAMAKgAtAAAD/1garP7wgRkrZMHqMsG22Fd1ohOCWJqWV4OqKvucFQzLpjszQu93tlhrNfT9JkHiTpkLGHvApK5JwxwBgyzsKYhmFsKCFTrJDrZPL1U37pa1Kq4abDNfzfh8x1cN2slYeYJ7PX11WXeCehN8bI4BZoRcRh2SZjd0kYyTlJUAPpdhGJqfnFeWcEoYnqytroFnU3SvtK6hX0u1upW3Eau7wEiyYgzBwTRNxsDIs56/tM9zuc7FtdHCuMnUAbrXAMzE3J6nruTfw97mrObg6YCv7OgMZgT19qyk+Km+81n2957yBdw3hN4/AvoGvOr1QiCtgwTA8YOUJRhEiQUrArs4TCtDEofSZHzU2ArjhpEKXZmc2E5KNhaYliTBQaelFJo4ZXbMeTIMzxIxIyQAACH5BAUPAAUALAMAAwAqAC0AAAP/WLrcDtDJSSkENesXtwygV4CBRjqnl1br0mbvFyqxS944TuV77t894ORHLA11DZJgybwomcsYLwmCLp1VqxTJeEKxAatgKxxlBZeBOqceXJirqTl8hbTZ6nd0No+f02s4bXpjfERtTXZti4uEd0UBiHUAjJVuEEyPRZJoipaDmEuafpF5oWKoiZSBRl0goACpsp2rA2Sws6mAtnw2ARfAwcLDwWTEx8hgKCDJzcPGztEQ0NLO1NXJ19PM2dzA2gAkzeLFvTTeYOPo262+wqrH8OzLv8Hyw/fg9++TylSlAwgIHCgM1sCBmui1OSiwoCkADAkk/LeQocNLEBlOlAEQKVutGhQfStsYBNZIViIgqWynYmUREb5c+kjJhWaZICBZ1Dxys2XPAgkAADs="
+    />
+  </g>
+</svg>

@@ -12,23 +12,9 @@ https://dantasqu.github.io/junimo-perfection-journal/
 
 ## Artwork Preview
 
-This is the current journal artwork for the project.
+This is the current transparent journal artwork for the project.
 
-![Junimo Perfection Journal artwork](./branding/assets/junimo-journal-open-book-art.png)
-
-```text
-      ______________________________________________
-   .-'______________________________________________'-.
-  /____________________________________________________\
-  |====================================================|
-  |                                                    |
-  |        J U N I M O   P E R F E C T I O N           |
-  |                  J O U R N A L                     |
-  |                                                    |
-  |====================================================|
-      ||                                          ||
-      ||                                          ||
-```
+![Junimo Perfection Journal artwork](./branding/current/journal-art-transparent.png)
 
 ## Use It
 
@@ -40,7 +26,11 @@ Open the live site in any modern browser, or open `index.html` locally.
 - `styles.css`: the Stardew-inspired UI styling
 - `app.js`: tracker logic and local save behavior
 - `data/wiki-data.js`: bundled Stardew Wiki tracker data
-- `branding/`: icon direction, palette, and visual references for the book + Junimo identity
+- `branding/current/`: the current journal artwork files
+- `branding/site/`: artwork used by the live site UI
+- `branding/social/`: GitHub/social preview exports
+- `branding/concepts/`: rougher alternate art explorations
+- `branding/references/`: Stardew and layout reference images
 - `CHANGELOG.md`: release history
 
 ## Notes
