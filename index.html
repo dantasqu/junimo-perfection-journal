@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junimo Perfection Journal</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./data/wiki-data.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Stardew Valley 1.6 Forest Spirit Edition</p>
+          <h1>Junimo Perfection Journal</h1>
+          <p class="hero-text">
+            A cozy Stardew Valley journal for every fish, dish, crafted item,
+            shipment, friendship goal, and late-game milestone still standing
+            between you and perfection.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="export-data" class="action-button">Export save</button>
+          <button id="import-data" class="action-button action-button-secondary">Import save</button>
+          <button id="reset-data" class="action-button action-button-danger">Reset tracker</button>
+          <input id="import-file" type="file" accept="application/json" hidden />
+        </div>
+      </header>
+
+      <nav class="tab-bar" aria-label="Tracker tabs">
+        <button class="tab-button is-active" data-tab="general">General</button>
+        <button class="tab-button" data-tab="fish">Fish</button>
+        <button class="tab-button" data-tab="cooking">Cooking</button>
+        <button class="tab-button" data-tab="crafting">Crafting</button>
+        <button class="tab-button" data-tab="other">Other Perfection</button>
+      </nav>
+
+      <main class="tab-panels">
+        <section id="general" class="tab-panel is-active" aria-labelledby="general-tab">
+          <div id="general-top" class="summary-grid"></div>
+          <div id="general-left-board"></div>
+          <div id="general-categories" class="category-grid"></div>
+          <div id="general-footer" class="source-card"></div>
+        </section>
+
+        <section id="fish" class="tab-panel" aria-labelledby="fish-tab">
+          <div class="panel-toolbar">
+            <label class="field">
+              <span>Search fish</span>
+              <input id="fish-search" type="search" placeholder="Search by name, place, or season" />
+            </label>
+            <label class="field">
+              <span>Category</span>
+              <select id="fish-category">
+                <option value="all">All fish</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Status</span>
+              <select id="fish-status">
+                <option value="remaining">Still need</option>
+                <option value="all">All</option>
+                <option value="done">Caught</option>
+              </select>
+            </label>
+          </div>
+          <div id="fish-summary" class="summary-grid compact"></div>
+          <div id="fish-table"></div>
+        </section>
+
+        <section id="cooking" class="tab-panel" aria-labelledby="cooking-tab">
+          <div class="panel-toolbar">
+            <label class="field">
+              <span>Search recipes</span>
+              <input id="cooking-search" type="search" placeholder="Search recipes, ingredients, or source" />
+            </label>
+            <label class="field">
+              <span>Status</span>
+              <select id="cooking-status">
+                <option value="remaining">Still need</option>
+                <option value="all">All</option>
+                <option value="done">Cooked</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Ingredient category</span>
+              <select id="cooking-ingredient-category">
+                <option value="all">All ingredients</option>
+              </select>
+            </label>
+          </div>
+          <div id="cooking-summary" class="summary-grid compact"></div>
+          <div id="cooking-ingredients" class="section-stack"></div>
+          <div id="cooking-recipes" class="recipe-grid"></div>
+        </section>
+
+        <section id="crafting" class="tab-panel" aria-labelledby="crafting-tab">
+          <div class="panel-toolbar">
+            <label class="field">
+              <span>Search crafting</span>
+              <input id="crafting-search" type="search" placeholder="Search items, materials, or source" />
+            </label>
+            <label class="field">
+              <span>Status</span>
+              <select id="crafting-status">
+                <option value="remaining">Still need</option>
+                <option value="all">All</option>
+                <option value="done">Crafted</option>
+              </select>
+            </label>
+          </div>
+          <div id="crafting-summary" class="summary-grid compact"></div>
+          <div id="crafting-ingredients" class="section-stack"></div>
+          <div id="crafting-recipes" class="recipe-grid"></div>
+        </section>
+
+        <section id="other" class="tab-panel" aria-labelledby="other-tab">
+          <div id="other-summary" class="summary-grid compact"></div>
+          <div class="section-stack">
+            <section class="section-card">
+              <div class="section-header">
+                <div>
+                  <p class="section-kicker">Shipping</p>
+                  <h2>Items Shipped</h2>
+                </div>
+                <label class="field field-inline">
+                  <span>Search shipped items</span>
+                  <input id="shipping-search" type="search" placeholder="Search shipped items" />
+                </label>
+              </div>
+              <div id="shipping-content"></div>
+            </section>
+
+            <section class="section-card">
+              <div class="section-header">
+                <div>
+                  <p class="section-kicker">Friendships</p>
+                  <h2>Great Friends</h2>
+                  <p class="section-note">Type current hearts or mark the villager complete.</p>
+                </div>
+              </div>
+              <div id="villagers-content"></div>
+            </section>
+
+            <section class="section-card">
+              <div class="section-header">
+                <div>
+                  <p class="section-kicker">Combat</p>
+                  <h2>Monster Eradication Goals</h2>
+                  <p class="section-note">Type current kills or mark the goal complete.</p>
+                </div>
+              </div>
+              <div id="monster-content"></div>
+            </section>
+
+            <section class="section-card two-up">
+              <div>
+                <div class="section-header">
+                  <div>
+                    <p class="section-kicker">Skills</p>
+                    <h2>Farmer Level</h2>
+                    <p class="section-note">Type current levels or mark each skill complete.</p>
+                  </div>
+                </div>
+                <div id="skills-content"></div>
+              </div>
+              <div>
+                <div class="section-header">
+                  <div>
+                    <p class="section-kicker">Collectibles</p>
+                    <h2>Stardrops & Walnuts</h2>
+                  </div>
+                </div>
+                <div id="stardrops-content"></div>
+                <div id="walnuts-content"></div>
+              </div>
+            </section>
+
+            <section class="section-card">
+              <div class="section-header">
+                <div>
+                  <p class="section-kicker">Farm Buildings</p>
+                  <h2>Obelisks & Gold Clock</h2>
+                  <p class="section-note">Use the material planner below, then mark each building when it is on your farm.</p>
+                </div>
+              </div>
+              <div id="buildings-content"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="front-junimo" aria-hidden="true">
+      <img
+        src="https://stardewvalleywiki.com/mediawiki/images/5/57/Junimo.gif"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6952 @@
+window.STARDEW_WIKI_DATA = {
+  "meta": {
+    "appName": "Junimo Perfection Journal",
+    "generatedAt": "2026-04-12T03:36:12.247469+00:00",
+    "wikiSourcePages": [
+      {
+        "label": "Perfection",
+        "url": "https://stardewvalleywiki.com/Perfection"
+      },
+      {
+        "label": "Fish",
+        "url": "https://stardewvalleywiki.com/Fish"
+      },
+      {
+        "label": "Cooking",
+        "url": "https://stardewvalleywiki.com/Cooking"
+      },
+      {
+        "label": "Crafting",
+        "url": "https://stardewvalleywiki.com/Crafting"
+      },
+      {
+        "label": "Shipping",
+        "url": "https://stardewvalleywiki.com/Shipping"
+      },
+      {
+        "label": "Friendship",
+        "url": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "label": "Adventurer's Guild",
+        "url": "https://stardewvalleywiki.com/Adventurer%27s_Guild"
+      },
+      {
+        "label": "Stardrop",
+        "url": "https://stardewvalleywiki.com/Stardrop"
+      },
+      {
+        "label": "Earth Obelisk",
+        "url": "https://stardewvalleywiki.com/Earth_Obelisk"
+      },
+      {
+        "label": "Water Obelisk",
+        "url": "https://stardewvalleywiki.com/Water_Obelisk"
+      },
+      {
+        "label": "Desert Obelisk",
+        "url": "https://stardewvalleywiki.com/Desert_Obelisk"
+      },
+      {
+        "label": "Island Obelisk",
+        "url": "https://stardewvalleywiki.com/Island_Obelisk"
+      },
+      {
+        "label": "Gold Clock",
+        "url": "https://stardewvalleywiki.com/Gold_Clock"
+      }
+    ],
+    "notes": [
+      "Fish, cooking, crafting, shipping, perfection totals, monster goals, and stardrop sources are built from Stardew Valley Wiki pages stored in /data/raw.",
+      "Villager heart targets follow the perfection note on the wiki: datable villagers max at 8 hearts for perfection, non-datable villagers at 10."
+    ]
+  },
+  "perfectionCategories": [
+    {
+      "id": "produce-forage-shipped",
+      "name": "Produce & Forage Shipped",
+      "requirement": "Ship one of every item in the Items Shipped (Farm & Forage) tab in the collections menu.",
+      "totalRequired": 154,
+      "weightPercent": 15
+    },
+    {
+      "id": "obelisks-on-farm",
+      "name": "Obelisks on Farm",
+      "requirement": "Build Earth Obelisk, Water Obelisk, Desert Obelisk, and Island Obelisk on the farm .",
+      "totalRequired": 4,
+      "weightPercent": 4
+    },
+    {
+      "id": "golden-clock-on-farm",
+      "name": "Golden Clock on Farm",
+      "requirement": "Build Gold Clock on the farm .",
+      "totalRequired": 1,
+      "weightPercent": 10
+    },
+    {
+      "id": "monster-slayer-hero",
+      "name": "Monster Slayer Hero",
+      "requirement": "Complete all monster eradication goals for the Adventurer's Guild .",
+      "totalRequired": 12,
+      "weightPercent": 10
+    },
+    {
+      "id": "great-friends",
+      "name": "Great Friends",
+      "requirement": "Reach maximum hearts with every villager . This includes Kent, so it is not possible to complete this in year 1. Note: The \"maximum hearts\" for datable villagers is 8, and for non-datable villagers, 10 is the max. If the player has children, their friendship status does not affect the score.",
+      "totalRequired": 34,
+      "weightPercent": 11
+    },
+    {
+      "id": "farmer-level",
+      "name": "Farmer Level",
+      "requirement": "Reach level 10 in every skill .",
+      "totalRequired": 25,
+      "weightPercent": 5
+    },
+    {
+      "id": "found-all-stardrops",
+      "name": "Found All Stardrops",
+      "requirement": "Find all Stardrops .",
+      "totalRequired": 7,
+      "weightPercent": 10
+    },
+    {
+      "id": "cooking-recipes-made",
+      "name": "Cooking Recipes Made",
+      "requirement": "Cook every recipe.",
+      "totalRequired": 81,
+      "weightPercent": 10
+    },
+    {
+      "id": "crafting-recipes-made",
+      "name": "Crafting Recipes Made",
+      "requirement": "Craft all items. The Wedding Ring is not required, even in Multiplayer games.",
+      "totalRequired": 149,
+      "weightPercent": 10
+    },
+    {
+      "id": "fish-caught",
+      "name": "Fish Caught",
+      "requirement": "Catch every fish in the Fish tab in the collections menu.",
+      "totalRequired": 72,
+      "weightPercent": 10
+    },
+    {
+      "id": "golden-walnuts-found",
+      "name": "Golden Walnuts found",
+      "requirement": "Find all Golden Walnuts on Ginger Island .",
+      "totalRequired": 130,
+      "weightPercent": 5
+    }
+  ],
+  "fish": [
+    {
+      "id": "pufferfish",
+      "name": "Pufferfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/ba/Pufferfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Oceans",
+      "time": "12pm – 4pm",
+      "season": "Summer (All Seasons on Ginger Island)",
+      "weather": "Sun",
+      "notes": ""
+    },
+    {
+      "id": "anchovy",
+      "name": "Anchovy",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Anchovy.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "Spring Fall",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "tuna",
+      "name": "Tuna",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c5/Tuna.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Oceans",
+      "time": "6am – 7pm",
+      "season": "Summer Winter (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sardine",
+      "name": "Sardine",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/04/Sardine.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 7pm",
+      "season": "Spring Fall Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "bream",
+      "name": "Bream",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/82/Bream.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River",
+      "time": "6pm – 2am",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "largemouth-bass",
+      "name": "Largemouth Bass",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/11/Largemouth_Bass.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mountain Lake",
+      "time": "6am – 7pm",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "smallmouth-bass",
+      "name": "Smallmouth Bass",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Smallmouth_Bass.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest Pond",
+      "time": "Anytime",
+      "season": "Spring Fall",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "rainbow-trout",
+      "name": "Rainbow Trout",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/14/Rainbow_Trout.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Mountain Lake",
+      "time": "6am – 7pm",
+      "season": "Summer",
+      "weather": "Sun",
+      "notes": ""
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e0/Salmon.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Forest Waterfalls",
+      "time": "6am – 7pm",
+      "season": "Fall",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "walleye",
+      "name": "Walleye",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/05/Walleye.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Forest Pond, Mountain Lake",
+      "time": "12pm – 2am",
+      "season": "Fall Winter with Rain Totem",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "perch",
+      "name": "Perch",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/43/Perch.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Forest Pond, Mountain Lake",
+      "time": "Anytime",
+      "season": "Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "carp",
+      "name": "Carp",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Carp.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mountain Lake, Secret Woods, Sewers",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/99/Catfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Secret Woods, Witch's Swamp",
+      "time": "6am – 12am",
+      "season": "Spring Fall (Spring & Summer in Secret Woods Pond) Winter with Rain Totem",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "pike",
+      "name": "Pike",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/31/Pike.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Forest Pond",
+      "time": "Anytime",
+      "season": "Summer Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sunfish",
+      "name": "Sunfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/56/Sunfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River",
+      "time": "6am – 7pm",
+      "season": "Spring Summer",
+      "weather": "Sun Wind",
+      "notes": ""
+    },
+    {
+      "id": "red-mullet",
+      "name": "Red Mullet",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Red_Mullet.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 7pm",
+      "season": "Summer Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "herring",
+      "name": "Herring",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Herring.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "Spring Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "eel",
+      "name": "Eel",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/91/Eel.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "4pm – 2am",
+      "season": "Spring Fall",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "octopus",
+      "name": "Octopus",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5a/Octopus.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Oceans",
+      "time": "6am – 1pm",
+      "season": "Summer (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "red-snapper",
+      "name": "Red Snapper",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d3/Red_Snapper.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 7pm",
+      "season": "Summer Fall Winter with Rain Totem",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "squid",
+      "name": "Squid",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/81/Squid.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6pm – 2am",
+      "season": "Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sea-cucumber",
+      "name": "Sea Cucumber",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a9/Sea_Cucumber.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 7pm",
+      "season": "Fall Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "super-cucumber",
+      "name": "Super Cucumber",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Super_Cucumber.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Oceans",
+      "time": "6pm – 2am",
+      "season": "Summer Fall (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "ghostfish",
+      "name": "Ghostfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/72/Ghostfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mines (Floors 20 & 60), Ghost Drops",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "stonefish",
+      "name": "Stonefish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/03/Stonefish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mines (Floor 20)",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "ice-pip",
+      "name": "Ice Pip",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/63/Ice_Pip.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mines (Floor 60)",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "lava-eel",
+      "name": "Lava Eel",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/12/Lava_Eel.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mines (Floor 100), Volcano Caldera",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sandfish",
+      "name": "Sandfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/bb/Sandfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Desert",
+      "time": "6am – 8pm",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "scorpion-carp",
+      "name": "Scorpion Carp",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/76/Scorpion_Carp.png",
+      "category": "Fishing Pole Fish",
+      "location": "Desert, Requires fishing level 4",
+      "time": "6am – 8pm",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "flounder",
+      "name": "Flounder",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/85/Flounder.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Oceans",
+      "time": "6am – 8pm",
+      "season": "Spring Summer (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "midnight-carp",
+      "name": "Midnight Carp",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/33/Midnight_Carp.png",
+      "category": "Fishing Pole Fish",
+      "location": "Forest Pond, Mountain Lake, Ginger Island Rivers",
+      "time": "10pm – 2am",
+      "season": "Fall Winter (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sturgeon",
+      "name": "Sturgeon",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/42/Sturgeon.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mountain Lake",
+      "time": "6am – 7pm",
+      "season": "Summer Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "tiger-trout",
+      "name": "Tiger Trout",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/01/Tiger_Trout.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River",
+      "time": "6am – 7pm",
+      "season": "Fall Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "bullhead",
+      "name": "Bullhead",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/db/Bullhead.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mountain Lake",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "tilapia",
+      "name": "Tilapia",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/73/Tilapia.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean, Ginger Island Rivers",
+      "time": "6am – 2pm",
+      "season": "Summer Fall (All Seasons on Ginger Island)",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "chub",
+      "name": "Chub",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Chub.png",
+      "category": "Fishing Pole Fish",
+      "location": "Forest River, Mountain Lake",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "dorado",
+      "name": "Dorado",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Dorado.png",
+      "category": "Fishing Pole Fish",
+      "location": "Forest River",
+      "time": "6am – 7pm",
+      "season": "Summer",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "albacore",
+      "name": "Albacore",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Albacore.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 11am 6pm – 2am",
+      "season": "Fall Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "shad",
+      "name": "Shad",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ef/Shad.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River",
+      "time": "9am – 2am",
+      "season": "Spring Summer Fall",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "lingcod",
+      "name": "Lingcod",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/87/Lingcod.png",
+      "category": "Fishing Pole Fish",
+      "location": "Town River, Forest River, Mountain Lake",
+      "time": "Any time",
+      "season": "Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "halibut",
+      "name": "Halibut",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/02/Halibut.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ocean",
+      "time": "6am – 11am 7pm – 2am",
+      "season": "Spring Summer Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "woodskip",
+      "name": "Woodskip",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/97/Woodskip.png",
+      "category": "Fishing Pole Fish",
+      "location": "Secret Woods, Forest Farm",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "void-salmon",
+      "name": "Void Salmon",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/ad/Void_Salmon.png",
+      "category": "Fishing Pole Fish",
+      "location": "Witch's Swamp",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "slimejack",
+      "name": "Slimejack",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/34/Slimejack.png",
+      "category": "Fishing Pole Fish",
+      "location": "Mutant Bug Lair",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "stingray",
+      "name": "Stingray",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3a/Stingray.png",
+      "category": "Fishing Pole Fish",
+      "location": "Pirate Cove (Ginger Island)",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "lionfish",
+      "name": "Lionfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/bb/Lionfish.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ginger Island Oceans",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "blue-discus",
+      "name": "Blue Discus",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ee/Blue_Discus.png",
+      "category": "Fishing Pole Fish",
+      "location": "Ginger Island Rivers",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "goby",
+      "name": "Goby",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/67/Goby.png",
+      "category": "Fishing Pole Fish",
+      "location": "Forest Waterfalls",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "crimsonfish",
+      "name": "Crimsonfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/dc/Crimsonfish.png",
+      "category": "Legendary Fish",
+      "location": "East Pier on The Beach . Requires level 5 fishing.",
+      "time": "Any",
+      "season": "Summer",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "angler",
+      "name": "Angler",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/bf/Angler.png",
+      "category": "Legendary Fish",
+      "location": "North of JojaMart on the wooden plank bridge. Requires level 3 fishing.",
+      "time": "Any",
+      "season": "Fall",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "legend",
+      "name": "Legend",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/10/Legend.png",
+      "category": "Legendary Fish",
+      "location": "The Mountain Lake near the log. Requires level 10 fishing.",
+      "time": "Any",
+      "season": "Spring",
+      "weather": "Rain",
+      "notes": ""
+    },
+    {
+      "id": "glacierfish",
+      "name": "Glacierfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fd/Glacierfish.png",
+      "category": "Legendary Fish",
+      "location": "South end of Arrowhead Island in Cindersap Forest . Requires level 6 fishing.",
+      "time": "Any",
+      "season": "Winter",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "mutant-carp",
+      "name": "Mutant Carp",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/cb/Mutant_Carp.png",
+      "category": "Legendary Fish",
+      "location": "The Sewers",
+      "time": "Any",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "midnight-squid",
+      "name": "Midnight Squid",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/83/Midnight_Squid.png",
+      "category": "Night Market Fish",
+      "location": "Night Market submarine ride",
+      "time": "5pm - 2am",
+      "season": "Winter 15-17",
+      "weather": "Any",
+      "notes": "Also catchable with Magic Bait at the southwest corner of the Beach."
+    },
+    {
+      "id": "spook-fish",
+      "name": "Spook Fish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8c/Spook_Fish.png",
+      "category": "Night Market Fish",
+      "location": "Night Market submarine ride",
+      "time": "5pm - 2am",
+      "season": "Winter 15-17",
+      "weather": "Any",
+      "notes": "Also catchable with Magic Bait at the southwest corner of the Beach."
+    },
+    {
+      "id": "blobfish",
+      "name": "Blobfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7f/Blobfish.png",
+      "category": "Night Market Fish",
+      "location": "Night Market submarine ride",
+      "time": "5pm - 2am",
+      "season": "Winter 15-17",
+      "weather": "Any",
+      "notes": "Also catchable with Magic Bait at the southwest corner of the Beach."
+    },
+    {
+      "id": "clam",
+      "name": "Clam",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Clam.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 9% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "lobster",
+      "name": "Lobster",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9f/Lobster.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 4% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "crayfish",
+      "name": "Crayfish",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/53/Crayfish.png",
+      "category": "Crab Pot Fish",
+      "location": "Freshwater",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 21% without Mariner, 33% with Mariner."
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/63/Crab.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 8% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "cockle",
+      "name": "Cockle",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/ad/Cockle.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 12% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "mussel",
+      "name": "Mussel",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Mussel.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 10% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/91/Shrimp.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 10% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "snail",
+      "name": "Snail",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d2/Snail.png",
+      "category": "Crab Pot Fish",
+      "location": "Freshwater",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 20% without Mariner, 33% with Mariner."
+    },
+    {
+      "id": "periwinkle",
+      "name": "Periwinkle",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Periwinkle.png",
+      "category": "Crab Pot Fish",
+      "location": "Freshwater",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 21% without Mariner, 33% with Mariner."
+    },
+    {
+      "id": "oyster",
+      "name": "Oyster",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/54/Oyster.png",
+      "category": "Crab Pot Fish",
+      "location": "Ocean",
+      "time": "Anytime",
+      "season": "All Seasons",
+      "weather": "Any",
+      "notes": "Trap chance: 10% without Mariner, 14% with Mariner."
+    },
+    {
+      "id": "seaweed",
+      "name": "Seaweed",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/13/Seaweed.png",
+      "category": "Other Catchables",
+      "location": "Ocean via Fishing Beach via Foraging",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "green-algae",
+      "name": "Green Algae",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Green_Algae.png",
+      "category": "Other Catchables",
+      "location": "Everywhere but the Farm Pond of the Standard Farm",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "white-algae",
+      "name": "White Algae",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f7/White_Algae.png",
+      "category": "Other Catchables",
+      "location": "Mines / Sewers / Mutant Bug Lair / Witch's Swamp",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "sea-jelly",
+      "name": "Sea Jelly",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Sea_Jelly.png",
+      "category": "Other Catchables",
+      "location": "Saltwater locations",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "river-jelly",
+      "name": "River Jelly",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/80/River_Jelly.png",
+      "category": "Other Catchables",
+      "location": "Freshwater locations",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    },
+    {
+      "id": "cave-jelly",
+      "name": "Cave Jelly",
+      "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0a/Cave_Jelly.png",
+      "category": "Other Catchables",
+      "location": "Levels 20, 60, and 100 of the Mines",
+      "time": "Anytime",
+      "season": "Varies / Any",
+      "weather": "Any",
+      "notes": ""
+    }
+  ],
+  "cooking": {
+    "recipes": [
+      {
+        "id": "fried-egg",
+        "name": "Fried Egg",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Fried_Egg.png",
+        "description": "Sunny-side up.",
+        "ingredients": [
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "omelet",
+        "name": "Omelet",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/12/Omelet.png",
+        "description": "It's super fluffy.",
+        "ingredients": [
+          {
+            "item": "Egg",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Spring, Year 1 Stardrop Saloon for 100g"
+      },
+      {
+        "id": "salad",
+        "name": "Salad",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Salad.png",
+        "description": "A healthy garden salad.",
+        "ingredients": [
+          {
+            "item": "Leek",
+            "quantity": 1
+          },
+          {
+            "item": "Dandelion",
+            "quantity": 1
+          },
+          {
+            "item": "Vinegar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Emily (Mail - 3+)"
+      },
+      {
+        "id": "cheese-cauliflower",
+        "name": "Cheese Cauliflower",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Cheese_Cauliflower.png",
+        "description": "It smells great!",
+        "ingredients": [
+          {
+            "item": "Cauliflower",
+            "quantity": 1
+          },
+          {
+            "item": "Cheese",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pam (Mail - 3+)"
+      },
+      {
+        "id": "baked-fish",
+        "name": "Baked Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/94/Baked_Fish.png",
+        "description": "Baked fish on a bed of herbs.",
+        "ingredients": [
+          {
+            "item": "Sunfish",
+            "quantity": 1
+          },
+          {
+            "item": "Bream",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Summer, Year 1"
+      },
+      {
+        "id": "parsnip-soup",
+        "name": "Parsnip Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/76/Parsnip_Soup.png",
+        "description": "It's fresh and hearty.",
+        "ingredients": [
+          {
+            "item": "Parsnip",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Vinegar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Caroline (Mail - 3+)"
+      },
+      {
+        "id": "vegetable-medley",
+        "name": "Vegetable Medley",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0a/Vegetable_Medley.png",
+        "description": "This is very nutritious.",
+        "ingredients": [
+          {
+            "item": "Tomato",
+            "quantity": 1
+          },
+          {
+            "item": "Beet",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Caroline (Mail - 7+)"
+      },
+      {
+        "id": "complete-breakfast",
+        "name": "Complete Breakfast",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3d/Complete_Breakfast.png",
+        "description": "You'll feel ready to take on the world!",
+        "ingredients": [
+          {
+            "item": "Fried Egg",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Hashbrowns",
+            "quantity": 1
+          },
+          {
+            "item": "Pancakes",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Spring, Year 2"
+      },
+      {
+        "id": "fried-calamari",
+        "name": "Fried Calamari",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/25/Fried_Calamari.png",
+        "description": "It's so chewy.",
+        "ingredients": [
+          {
+            "item": "Squid",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Jodi (Mail - 3+)"
+      },
+      {
+        "id": "strange-bun",
+        "name": "Strange Bun",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5e/Strange_Bun.png",
+        "description": "What's inside?",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Periwinkle",
+            "quantity": 1
+          },
+          {
+            "item": "Void Mayonnaise",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Shane (Mail - 7+)"
+      },
+      {
+        "id": "lucky-lunch",
+        "name": "Lucky Lunch",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5d/Lucky_Lunch.png",
+        "description": "A special little meal.",
+        "ingredients": [
+          {
+            "item": "Sea Cucumber",
+            "quantity": 1
+          },
+          {
+            "item": "Tortilla",
+            "quantity": 1
+          },
+          {
+            "item": "Blue Jazz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Spring, Year 2"
+      },
+      {
+        "id": "fried-mushroom",
+        "name": "Fried Mushroom",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4a/Fried_Mushroom.png",
+        "description": "Earthy and aromatic.",
+        "ingredients": [
+          {
+            "item": "Common Mushroom",
+            "quantity": 1
+          },
+          {
+            "item": "Morel",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Demetrius (Mail - 3+)"
+      },
+      {
+        "id": "pizza",
+        "name": "Pizza",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f4/Pizza.png",
+        "description": "It's popular for all the right reasons.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          },
+          {
+            "item": "Cheese",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Spring, Year 2 Stardrop Saloon for 150g"
+      },
+      {
+        "id": "bean-hotpot",
+        "name": "Bean Hotpot",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/24/Bean_Hotpot.png",
+        "description": "It sure is healthy.",
+        "ingredients": [
+          {
+            "item": "Green Bean",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Clint (Mail - 7+)"
+      },
+      {
+        "id": "glazed-yams",
+        "name": "Glazed Yams",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/30/Glazed_Yams.png",
+        "description": "Sweet and satisfying... The sugar gives it a hint of caramel.",
+        "ingredients": [
+          {
+            "item": "Yam",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Fall, Year 1"
+      },
+      {
+        "id": "carp-surprise",
+        "name": "Carp Surprise",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/cc/Carp_Surprise.png",
+        "description": "It's bland and oily.",
+        "ingredients": [
+          {
+            "item": "Carp",
+            "quantity": 4
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Summer, Year 2"
+      },
+      {
+        "id": "hashbrowns",
+        "name": "Hashbrowns",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8f/Hashbrowns.png",
+        "description": "Crispy and golden-brown!",
+        "ingredients": [
+          {
+            "item": "Potato",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Spring, Year 2 Stardrop Saloon for 50g"
+      },
+      {
+        "id": "pancakes",
+        "name": "Pancakes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6b/Pancakes.png",
+        "description": "A double stack of fluffy, soft pancakes.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Summer, Year 1 Stardrop Saloon for 100g"
+      },
+      {
+        "id": "salmon-dinner",
+        "name": "Salmon Dinner",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8b/Salmon_Dinner.png",
+        "description": "The lemon spritz makes it special.",
+        "ingredients": [
+          {
+            "item": "Salmon",
+            "quantity": 1
+          },
+          {
+            "item": "Amaranth",
+            "quantity": 1
+          },
+          {
+            "item": "Kale",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Gus (Mail - 3+)"
+      },
+      {
+        "id": "fish-taco",
+        "name": "Fish Taco",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Fish_Taco.png",
+        "description": "It smells delicious.",
+        "ingredients": [
+          {
+            "item": "Tuna",
+            "quantity": 1
+          },
+          {
+            "item": "Tortilla",
+            "quantity": 1
+          },
+          {
+            "item": "Red Cabbage",
+            "quantity": 1
+          },
+          {
+            "item": "Mayonnaise",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Linus (Mail - 7+)"
+      },
+      {
+        "id": "crispy-bass",
+        "name": "Crispy Bass",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/53/Crispy_Bass.png",
+        "description": "Wow, the breading is perfect.",
+        "ingredients": [
+          {
+            "item": "Largemouth Bass",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Kent (Mail - 3+)"
+      },
+      {
+        "id": "pepper-poppers",
+        "name": "Pepper Poppers",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/08/Pepper_Poppers.png",
+        "description": "Spicy breaded peppers filled with cheese.",
+        "ingredients": [
+          {
+            "item": "Hot Pepper",
+            "quantity": 1
+          },
+          {
+            "item": "Cheese",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Shane (Mail - 3+)"
+      },
+      {
+        "id": "bread",
+        "name": "Bread",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Bread.png",
+        "description": "A crusty baguette.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Summer, Year 1 Stardrop Saloon for 100g"
+      },
+      {
+        "id": "tom-kha-soup",
+        "name": "Tom Kha Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3b/Tom_Kha_Soup.png",
+        "description": "These flavors are incredible!",
+        "ingredients": [
+          {
+            "item": "Coconut",
+            "quantity": 1
+          },
+          {
+            "item": "Shrimp",
+            "quantity": 1
+          },
+          {
+            "item": "Common Mushroom",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Sandy (Mail - 7+)"
+      },
+      {
+        "id": "trout-soup",
+        "name": "Trout Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/48/Trout_Soup.png",
+        "description": "Pretty salty.",
+        "ingredients": [
+          {
+            "item": "Rainbow Trout",
+            "quantity": 1
+          },
+          {
+            "item": "Green Algae",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Fall, Year 1"
+      },
+      {
+        "id": "chocolate-cake",
+        "name": "Chocolate Cake",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/87/Chocolate_Cake.png",
+        "description": "Rich and moist with a thick fudge icing.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Winter, Year 1"
+      },
+      {
+        "id": "pink-cake",
+        "name": "Pink Cake",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/32/Pink_Cake.png",
+        "description": "There's little heart candies on top.",
+        "ingredients": [
+          {
+            "item": "Melon",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Summer, Year 2"
+      },
+      {
+        "id": "rhubarb-pie",
+        "name": "Rhubarb Pie",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/21/Rhubarb_Pie.png",
+        "description": "Mmm, tangy and sweet!",
+        "ingredients": [
+          {
+            "item": "Rhubarb",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Marnie (Mail - 7+)"
+      },
+      {
+        "id": "cookie",
+        "name": "Cookie",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/70/Cookie.png",
+        "description": "Very chewy.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Evelyn (4-heart event)"
+      },
+      {
+        "id": "spaghetti",
+        "name": "Spaghetti",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/08/Spaghetti.png",
+        "description": "An old favorite.",
+        "ingredients": [
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Lewis (Mail - 3+)"
+      },
+      {
+        "id": "fried-eel",
+        "name": "Fried Eel",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/84/Fried_Eel.png",
+        "description": "Greasy but flavorful.",
+        "ingredients": [
+          {
+            "item": "Eel",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "George (Mail - 3+)"
+      },
+      {
+        "id": "spicy-eel",
+        "name": "Spicy Eel",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Spicy_Eel.png",
+        "description": "It's really spicy! Be careful.",
+        "ingredients": [
+          {
+            "item": "Eel",
+            "quantity": 1
+          },
+          {
+            "item": "Hot Pepper",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "George (Mail - 7+)"
+      },
+      {
+        "id": "sashimi",
+        "name": "Sashimi",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/41/Sashimi.png",
+        "description": "Raw fish sliced into thin pieces.",
+        "ingredients": [
+          {
+            "item": "Any Fish",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Linus (Mail - 3+)"
+      },
+      {
+        "id": "maki-roll",
+        "name": "Maki Roll",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b6/Maki_Roll.png",
+        "description": "Fish and rice wrapped in seaweed.",
+        "ingredients": [
+          {
+            "item": "Any Fish",
+            "quantity": 1
+          },
+          {
+            "item": "Seaweed",
+            "quantity": 1
+          },
+          {
+            "item": "Rice",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Summer, Year 1 Stardrop Saloon for 300g"
+      },
+      {
+        "id": "tortilla",
+        "name": "Tortilla",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d7/Tortilla.png",
+        "description": "Can be used as a vessel for food or eaten by itself.",
+        "ingredients": [
+          {
+            "item": "Corn",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Fall, Year 1 Stardrop Saloon for 100g"
+      },
+      {
+        "id": "red-plate",
+        "name": "Red Plate",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/45/Red_Plate.png",
+        "description": "Full of antioxidants.",
+        "ingredients": [
+          {
+            "item": "Red Cabbage",
+            "quantity": 1
+          },
+          {
+            "item": "Radish",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Emily (Mail - 7+)"
+      },
+      {
+        "id": "eggplant-parmesan",
+        "name": "Eggplant Parmesan",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/73/Eggplant_Parmesan.png",
+        "description": "Tangy, cheesy, and wonderful.",
+        "ingredients": [
+          {
+            "item": "Eggplant",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Lewis (Mail - 7+)"
+      },
+      {
+        "id": "rice-pudding",
+        "name": "Rice Pudding",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ec/Rice_Pudding.png",
+        "description": "It's creamy, sweet, and fun to eat.",
+        "ingredients": [
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Rice",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Evelyn (Mail - 7+)"
+      },
+      {
+        "id": "ice-cream",
+        "name": "Ice Cream",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5d/Ice_Cream.png",
+        "description": "It's hard to find someone who doesn't like this.",
+        "ingredients": [
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Jodi (Mail - 7+)"
+      },
+      {
+        "id": "blueberry-tart",
+        "name": "Blueberry Tart",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9b/Blueberry_Tart.png",
+        "description": "It's subtle and refreshing.",
+        "ingredients": [
+          {
+            "item": "Blueberry",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pierre (Mail - 3+)"
+      },
+      {
+        "id": "autumn-s-bounty",
+        "name": "Autumn's Bounty",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f4/Autumn%27s_Bounty.png",
+        "description": "A taste of the season.",
+        "ingredients": [
+          {
+            "item": "Yam",
+            "quantity": 1
+          },
+          {
+            "item": "Pumpkin",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Demetrius (Mail - 7+)"
+      },
+      {
+        "id": "pumpkin-soup",
+        "name": "Pumpkin Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/59/Pumpkin_Soup.png",
+        "description": "A seasonal favorite.",
+        "ingredients": [
+          {
+            "item": "Pumpkin",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Robin (Mail - 7+)"
+      },
+      {
+        "id": "super-meal",
+        "name": "Super Meal",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d2/Super_Meal.png",
+        "description": "It's a really energizing meal.",
+        "ingredients": [
+          {
+            "item": "Bok Choy",
+            "quantity": 1
+          },
+          {
+            "item": "Cranberries",
+            "quantity": 1
+          },
+          {
+            "item": "Artichoke",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Kent (Mail - 7+)"
+      },
+      {
+        "id": "cranberry-sauce",
+        "name": "Cranberry Sauce",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0b/Cranberry_Sauce.png",
+        "description": "A festive treat.",
+        "ingredients": [
+          {
+            "item": "Cranberries",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Gus (Mail - 7+)"
+      },
+      {
+        "id": "stuffing",
+        "name": "Stuffing",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9a/Stuffing.png",
+        "description": "Ahh... the smell of warm bread and sage.",
+        "ingredients": [
+          {
+            "item": "Bread",
+            "quantity": 1
+          },
+          {
+            "item": "Cranberries",
+            "quantity": 1
+          },
+          {
+            "item": "Hazelnut",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pam (Mail - 7+)"
+      },
+      {
+        "id": "farmer-s-lunch",
+        "name": "Farmer's Lunch",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Farmer%27s_Lunch.png",
+        "description": "This'll keep you going.",
+        "ingredients": [
+          {
+            "item": "Omelet",
+            "quantity": 1
+          },
+          {
+            "item": "Parsnip",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 3"
+      },
+      {
+        "id": "survival-burger",
+        "name": "Survival Burger",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/87/Survival_Burger.png",
+        "description": "A convenient snack for the explorer.",
+        "ingredients": [
+          {
+            "item": "Bread",
+            "quantity": 1
+          },
+          {
+            "item": "Cave Carrot",
+            "quantity": 1
+          },
+          {
+            "item": "Eggplant",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 8"
+      },
+      {
+        "id": "dish-o-the-sea",
+        "name": "Dish O' The Sea",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/ff/Dish_O%27_The_Sea.png",
+        "description": "This'll keep you warm in the cold sea air.",
+        "ingredients": [
+          {
+            "item": "Sardine",
+            "quantity": 2
+          },
+          {
+            "item": "Hashbrowns",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 3"
+      },
+      {
+        "id": "miner-s-treat",
+        "name": "Miner's Treat",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/12/Miner%27s_Treat.png",
+        "description": "This should keep your energy up.",
+        "ingredients": [
+          {
+            "item": "Cave Carrot",
+            "quantity": 2
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mining Level 3"
+      },
+      {
+        "id": "roots-platter",
+        "name": "Roots Platter",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e0/Roots_Platter.png",
+        "description": "This'll get you digging for more.",
+        "ingredients": [
+          {
+            "item": "Cave Carrot",
+            "quantity": 1
+          },
+          {
+            "item": "Winter Root",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 3"
+      },
+      {
+        "id": "triple-shot-espresso",
+        "name": "Triple Shot Espresso",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/36/Triple_Shot_Espresso.png",
+        "description": "It's more potent than regular coffee!",
+        "ingredients": [
+          {
+            "item": "Coffee",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "Stardrop Saloon for 5,000g"
+      },
+      {
+        "id": "seafoam-pudding",
+        "name": "Seafoam Pudding",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/33/Seafoam_Pudding.png",
+        "description": "This briny pudding will really get you into the maritime mindset!",
+        "ingredients": [
+          {
+            "item": "Flounder",
+            "quantity": 1
+          },
+          {
+            "item": "Midnight Carp",
+            "quantity": 1
+          },
+          {
+            "item": "Squid Ink",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing (Level 9)"
+      },
+      {
+        "id": "algae-soup",
+        "name": "Algae Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/53/Algae_Soup.png",
+        "description": "It's a little slimy.",
+        "ingredients": [
+          {
+            "item": "Green Algae",
+            "quantity": 4
+          }
+        ],
+        "recipeSource": "Clint (Mail - 3+)"
+      },
+      {
+        "id": "pale-broth",
+        "name": "Pale Broth",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Pale_Broth.png",
+        "description": "A delicate broth with a hint of sulfur.",
+        "ingredients": [
+          {
+            "item": "White Algae",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Marnie (Mail - 3+)"
+      },
+      {
+        "id": "plum-pudding",
+        "name": "Plum Pudding",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a0/Plum_Pudding.png",
+        "description": "A traditional holiday treat.",
+        "ingredients": [
+          {
+            "item": "Wild Plum",
+            "quantity": 2
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Winter, Year 1"
+      },
+      {
+        "id": "artichoke-dip",
+        "name": "Artichoke Dip",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/77/Artichoke_Dip.png",
+        "description": "It's cool and refreshing.",
+        "ingredients": [
+          {
+            "item": "Artichoke",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Fall, Year 1"
+      },
+      {
+        "id": "stir-fry",
+        "name": "Stir Fry",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Stir_Fry.png",
+        "description": "Julienned vegetables on a bed of rice.",
+        "ingredients": [
+          {
+            "item": "Cave Carrot",
+            "quantity": 1
+          },
+          {
+            "item": "Common Mushroom",
+            "quantity": 1
+          },
+          {
+            "item": "Kale",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Spring, Year 1"
+      },
+      {
+        "id": "roasted-hazelnuts",
+        "name": "Roasted Hazelnuts",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Roasted_Hazelnuts.png",
+        "description": "The roasting process creates a rich forest flavor.",
+        "ingredients": [
+          {
+            "item": "Hazelnut",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Summer, Year 2"
+      },
+      {
+        "id": "pumpkin-pie",
+        "name": "Pumpkin Pie",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7d/Pumpkin_Pie.png",
+        "description": "Silky pumpkin cream in a flaky crust.",
+        "ingredients": [
+          {
+            "item": "Pumpkin",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Winter, Year 1"
+      },
+      {
+        "id": "radish-salad",
+        "name": "Radish Salad",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b9/Radish_Salad.png",
+        "description": "The radishes are so crisp!",
+        "ingredients": [
+          {
+            "item": "Oil",
+            "quantity": 1
+          },
+          {
+            "item": "Vinegar",
+            "quantity": 1
+          },
+          {
+            "item": "Radish",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Spring, Year 1"
+      },
+      {
+        "id": "fruit-salad",
+        "name": "Fruit Salad",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9e/Fruit_Salad.png",
+        "description": "A delicious combination of summer fruits.",
+        "ingredients": [
+          {
+            "item": "Blueberry",
+            "quantity": 1
+          },
+          {
+            "item": "Melon",
+            "quantity": 1
+          },
+          {
+            "item": "Apricot",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Fall, Year 2"
+      },
+      {
+        "id": "blackberry-cobbler",
+        "name": "Blackberry Cobbler",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/70/Blackberry_Cobbler.png",
+        "description": "There's nothing quite like it.",
+        "ingredients": [
+          {
+            "item": "Blackberry",
+            "quantity": 2
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Fall, Year 2"
+      },
+      {
+        "id": "cranberry-candy",
+        "name": "Cranberry Candy",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9d/Cranberry_Candy.png",
+        "description": "It's sweet enough to mask the bitter fruit.",
+        "ingredients": [
+          {
+            "item": "Cranberries",
+            "quantity": 1
+          },
+          {
+            "item": "Apple",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Winter, Year 1"
+      },
+      {
+        "id": "bruschetta",
+        "name": "Bruschetta",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/ca/Bruschetta.png",
+        "description": "Roasted tomatoes on a crisp white bread.",
+        "ingredients": [
+          {
+            "item": "Bread",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Winter, Year 2"
+      },
+      {
+        "id": "coleslaw",
+        "name": "Coleslaw",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Coleslaw.png",
+        "description": "It's light, fresh and very healthy.",
+        "ingredients": [
+          {
+            "item": "Red Cabbage",
+            "quantity": 1
+          },
+          {
+            "item": "Vinegar",
+            "quantity": 1
+          },
+          {
+            "item": "Mayonnaise",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Spring, Year 1"
+      },
+      {
+        "id": "fiddlehead-risotto",
+        "name": "Fiddlehead Risotto",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2d/Fiddlehead_Risotto.png",
+        "description": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+        "ingredients": [
+          {
+            "item": "Oil",
+            "quantity": 1
+          },
+          {
+            "item": "Fiddlehead Fern",
+            "quantity": 1
+          },
+          {
+            "item": "Garlic",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Fall, Year 2"
+      },
+      {
+        "id": "poppyseed-muffin",
+        "name": "Poppyseed Muffin",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8e/Poppyseed_Muffin.png",
+        "description": "It has a soothing effect.",
+        "ingredients": [
+          {
+            "item": "Poppy",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 7 Winter, Year 2"
+      },
+      {
+        "id": "chowder",
+        "name": "Chowder",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/95/Chowder.png",
+        "description": "A perfect way to warm yourself after a cold night at sea.",
+        "ingredients": [
+          {
+            "item": "Clam",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Willy (Mail - 3+)"
+      },
+      {
+        "id": "fish-stew",
+        "name": "Fish Stew",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6f/Fish_Stew.png",
+        "description": "It smells a lot like the sea. Tastes better, though.",
+        "ingredients": [
+          {
+            "item": "Crayfish",
+            "quantity": 1
+          },
+          {
+            "item": "Mussel",
+            "quantity": 1
+          },
+          {
+            "item": "Periwinkle",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Willy (Mail - 7+)"
+      },
+      {
+        "id": "escargot",
+        "name": "Escargot",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/78/Escargot.png",
+        "description": "Butter-soaked snails cooked to perfection.",
+        "ingredients": [
+          {
+            "item": "Snail",
+            "quantity": 1
+          },
+          {
+            "item": "Garlic",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Willy (Mail - 5+)"
+      },
+      {
+        "id": "lobster-bisque",
+        "name": "Lobster Bisque",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0a/Lobster_Bisque.png",
+        "description": "This delicate soup is a secret family recipe of Willy's.",
+        "ingredients": [
+          {
+            "item": "Lobster",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Winter, Year 2 Willy (Mail - 9+)"
+      },
+      {
+        "id": "maple-bar",
+        "name": "Maple Bar",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Maple_Bar.png",
+        "description": "It's a sweet doughnut topped with a rich maple glaze.",
+        "ingredients": [
+          {
+            "item": "Maple Syrup",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 14 Summer, Year 2"
+      },
+      {
+        "id": "crab-cakes",
+        "name": "Crab Cakes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/70/Crab_Cakes.png",
+        "description": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+        "ingredients": [
+          {
+            "item": "Crab",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Egg",
+            "quantity": 1
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 21 Fall, Year 2"
+      },
+      {
+        "id": "shrimp-cocktail",
+        "name": "Shrimp Cocktail",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8e/Shrimp_Cocktail.png",
+        "description": "A sumptuous appetizer made with freshly-caught shrimp.",
+        "ingredients": [
+          {
+            "item": "Tomato",
+            "quantity": 1
+          },
+          {
+            "item": "Shrimp",
+            "quantity": 1
+          },
+          {
+            "item": "Wild Horseradish",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Queen of Sauce 28 Winter, Year 2"
+      },
+      {
+        "id": "ginger-ale",
+        "name": "Ginger Ale",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1a/Ginger_Ale.png",
+        "description": "A zesty soda known for its soothing effect on the stomach.",
+        "ingredients": [
+          {
+            "item": "Ginger",
+            "quantity": 3
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Dwarf Shop in Volcano Dungeon for 1,000g"
+      },
+      {
+        "id": "banana-pudding",
+        "name": "Banana Pudding",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/40/Banana_Pudding.png",
+        "description": "A creamy dessert with a wonderful tropical flavor.",
+        "ingredients": [
+          {
+            "item": "Banana",
+            "quantity": 1
+          },
+          {
+            "item": "Milk",
+            "quantity": 1
+          },
+          {
+            "item": "Sugar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Island Trader for Bone Fragment (30)"
+      },
+      {
+        "id": "mango-sticky-rice",
+        "name": "Mango Sticky Rice",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Mango_Sticky_Rice.png",
+        "description": "Sweet mango and coconut transforms this rice into something very special.",
+        "ingredients": [
+          {
+            "item": "Mango",
+            "quantity": 1
+          },
+          {
+            "item": "Coconut",
+            "quantity": 1
+          },
+          {
+            "item": "Rice",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Leo (Mail - 7+)"
+      },
+      {
+        "id": "poi",
+        "name": "Poi",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Poi.png",
+        "description": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+        "ingredients": [
+          {
+            "item": "Taro Root",
+            "quantity": 4
+          }
+        ],
+        "recipeSource": "Leo (Mail - 3+)"
+      },
+      {
+        "id": "tropical-curry",
+        "name": "Tropical Curry",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/32/Tropical_Curry.png",
+        "description": "An exotic, fragrant curry served in a pineapple bowl.",
+        "ingredients": [
+          {
+            "item": "Coconut",
+            "quantity": 1
+          },
+          {
+            "item": "Pineapple",
+            "quantity": 1
+          },
+          {
+            "item": "Hot Pepper",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Ginger Island Resort for 2,000g"
+      },
+      {
+        "id": "squid-ink-ravioli",
+        "name": "Squid Ink Ravioli",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/86/Squid_Ink_Ravioli.png",
+        "description": "Temporarily protects from debuffs.",
+        "ingredients": [
+          {
+            "item": "Squid Ink",
+            "quantity": 1
+          },
+          {
+            "item": "Wheat Flour",
+            "quantity": 1
+          },
+          {
+            "item": "Tomato",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 9"
+      },
+      {
+        "id": "moss-soup",
+        "name": "Moss Soup",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/df/Moss_Soup.png",
+        "description": "It's thick and slimy, but edible.",
+        "ingredients": [
+          {
+            "item": "Moss",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Foraging Level 3"
+      }
+    ],
+    "ingredientCatalog": [
+      {
+        "item": "Amaranth",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f6/Amaranth.png"
+      },
+      {
+        "item": "Apple",
+        "category": "Tree Fruit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png"
+      },
+      {
+        "item": "Apricot",
+        "category": "Tree Fruit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png"
+      },
+      {
+        "item": "Artichoke",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Artichoke.png"
+      },
+      {
+        "item": "Banana",
+        "category": "Tree Fruit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/69/Banana.png"
+      },
+      {
+        "item": "Beet",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a4/Beet.png"
+      },
+      {
+        "item": "Blackberry",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/25/Blackberry.png"
+      },
+      {
+        "item": "Blue Jazz",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2f/Blue_Jazz.png"
+      },
+      {
+        "item": "Blueberry",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9e/Blueberry.png"
+      },
+      {
+        "item": "Bok Choy",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/40/Bok_Choy.png"
+      },
+      {
+        "item": "Bread",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Bread.png"
+      },
+      {
+        "item": "Bream",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/82/Bream.png"
+      },
+      {
+        "item": "Carp",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Carp.png"
+      },
+      {
+        "item": "Cauliflower",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png"
+      },
+      {
+        "item": "Cave Carrot",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/34/Cave_Carrot.png"
+      },
+      {
+        "item": "Cheese",
+        "category": "Artisan Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Cheese.png"
+      },
+      {
+        "item": "Clam",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Clam.png"
+      },
+      {
+        "item": "Coconut",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2f/Coconut.png"
+      },
+      {
+        "item": "Coffee",
+        "category": "Artisan Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e9/Coffee.png"
+      },
+      {
+        "item": "Common Mushroom",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2e/Common_Mushroom.png"
+      },
+      {
+        "item": "Corn",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png"
+      },
+      {
+        "item": "Crab",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/63/Crab.png"
+      },
+      {
+        "item": "Cranberries",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png"
+      },
+      {
+        "item": "Crayfish",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/53/Crayfish.png"
+      },
+      {
+        "item": "Dandelion",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b1/Dandelion.png"
+      },
+      {
+        "item": "Eel",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/91/Eel.png"
+      },
+      {
+        "item": "Egg",
+        "category": "Animal Products",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/26/Egg.png"
+      },
+      {
+        "item": "Eggplant",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png"
+      },
+      {
+        "item": "Fiddlehead Fern",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png"
+      },
+      {
+        "item": "Fish (Any)",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fb/Fish.png"
+      },
+      {
+        "item": "Flounder",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/85/Flounder.png"
+      },
+      {
+        "item": "Fried Egg",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Fried_Egg.png"
+      },
+      {
+        "item": "Garlic",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/cc/Garlic.png"
+      },
+      {
+        "item": "Ginger",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/85/Ginger.png"
+      },
+      {
+        "item": "Green Algae",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Green_Algae.png"
+      },
+      {
+        "item": "Green Bean",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png"
+      },
+      {
+        "item": "Hashbrowns",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8f/Hashbrowns.png"
+      },
+      {
+        "item": "Hazelnut",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/31/Hazelnut.png"
+      },
+      {
+        "item": "Hot Pepper",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png"
+      },
+      {
+        "item": "Kale",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d1/Kale.png"
+      },
+      {
+        "item": "Largemouth Bass",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/11/Largemouth_Bass.png"
+      },
+      {
+        "item": "Leek",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/57/Leek.png"
+      },
+      {
+        "item": "Lobster",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9f/Lobster.png"
+      },
+      {
+        "item": "Mango",
+        "category": "Tree Fruit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/38/Mango.png"
+      },
+      {
+        "item": "Maple Syrup",
+        "category": "Miscellaneous",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png"
+      },
+      {
+        "item": "Mayonnaise",
+        "category": "Artisan Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Mayonnaise.png"
+      },
+      {
+        "item": "Melon",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png"
+      },
+      {
+        "item": "Midnight Carp",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/33/Midnight_Carp.png"
+      },
+      {
+        "item": "Milk",
+        "category": "Animal Products",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/92/Milk.png"
+      },
+      {
+        "item": "Morel",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b1/Morel.png"
+      },
+      {
+        "item": "Moss",
+        "category": "Miscellaneous",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/64/Moss.png"
+      },
+      {
+        "item": "Mussel",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Mussel.png"
+      },
+      {
+        "item": "Oil",
+        "category": "General Store",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/06/Oil.png"
+      },
+      {
+        "item": "Omelet",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/12/Omelet.png"
+      },
+      {
+        "item": "Pancakes",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6b/Pancakes.png"
+      },
+      {
+        "item": "Parsnip",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png"
+      },
+      {
+        "item": "Periwinkle",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Periwinkle.png"
+      },
+      {
+        "item": "Pineapple",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fb/Pineapple.png"
+      },
+      {
+        "item": "Poppy",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/37/Poppy.png"
+      },
+      {
+        "item": "Potato",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png"
+      },
+      {
+        "item": "Pumpkin",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png"
+      },
+      {
+        "item": "Radish",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Radish.png"
+      },
+      {
+        "item": "Rainbow Trout",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/14/Rainbow_Trout.png"
+      },
+      {
+        "item": "Red Cabbage",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png"
+      },
+      {
+        "item": "Rhubarb",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png"
+      },
+      {
+        "item": "Rice",
+        "category": "General Store",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/da/Rice.png"
+      },
+      {
+        "item": "Salmon",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e0/Salmon.png"
+      },
+      {
+        "item": "Sardine",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/04/Sardine.png"
+      },
+      {
+        "item": "Sea Cucumber",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a9/Sea_Cucumber.png"
+      },
+      {
+        "item": "Seaweed",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/13/Seaweed.png"
+      },
+      {
+        "item": "Shrimp",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/91/Shrimp.png"
+      },
+      {
+        "item": "Snail",
+        "category": "Crab Pot Items",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d2/Snail.png"
+      },
+      {
+        "item": "Squid",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/81/Squid.png"
+      },
+      {
+        "item": "Squid Ink",
+        "category": "Miscellaneous",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/ac/Squid_Ink.png"
+      },
+      {
+        "item": "Sugar",
+        "category": "General Store",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a9/Sugar.png"
+      },
+      {
+        "item": "Sunfish",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/56/Sunfish.png"
+      },
+      {
+        "item": "Taro Root",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/01/Taro_Root.png"
+      },
+      {
+        "item": "Tomato",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png"
+      },
+      {
+        "item": "Tortilla",
+        "category": "Ingredient Dishes",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d7/Tortilla.png"
+      },
+      {
+        "item": "Tuna",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c5/Tuna.png"
+      },
+      {
+        "item": "Vinegar",
+        "category": "General Store",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fe/Vinegar.png"
+      },
+      {
+        "item": "Void Mayonnaise",
+        "category": "Artisan Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f3/Void_Mayonnaise.png"
+      },
+      {
+        "item": "Wheat Flour",
+        "category": "General Store",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2c/Wheat_Flour.png"
+      },
+      {
+        "item": "White Algae",
+        "category": "Fish",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f7/White_Algae.png"
+      },
+      {
+        "item": "Wild Horseradish",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/90/Wild_Horseradish.png"
+      },
+      {
+        "item": "Wild Plum",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3b/Wild_Plum.png"
+      },
+      {
+        "item": "Winter Root",
+        "category": "Foraged Goods",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/11/Winter_Root.png"
+      },
+      {
+        "item": "Yam",
+        "category": "Crops",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/52/Yam.png"
+      }
+    ]
+  },
+  "crafting": {
+    "recipes": [
+      {
+        "id": "cherry-bomb",
+        "name": "Cherry Bomb",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Cherry_Bomb.png",
+        "category": "Bombs",
+        "description": "Generates a small explosion. Stand back!",
+        "ingredients": [
+          {
+            "item": "Copper Ore",
+            "quantity": 4
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mining Level 1"
+      },
+      {
+        "id": "bomb",
+        "name": "Bomb",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3b/Bomb.png",
+        "category": "Bombs",
+        "description": "Generates an explosion. Watch out!",
+        "ingredients": [
+          {
+            "item": "Iron Ore",
+            "quantity": 4
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mining Level 6"
+      },
+      {
+        "id": "mega-bomb",
+        "name": "Mega Bomb",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4f/Mega_Bomb.png",
+        "category": "Bombs",
+        "description": "Generates a powerful explosion. Use with extreme caution.",
+        "ingredients": [
+          {
+            "item": "Gold Ore",
+            "quantity": 4
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 1
+          },
+          {
+            "item": "Void Essence",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mining Level 8"
+      },
+      {
+        "id": "gate",
+        "name": "Gate",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/94/Gate.png",
+        "category": "Fences",
+        "description": "Allows you to pass through a fence.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "wood-fence",
+        "name": "Wood Fence",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1e/Wood_Fence.png",
+        "category": "Fences",
+        "description": "Keeps grass and animals contained!",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "stone-fence",
+        "name": "Stone Fence",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2d/Stone_Fence.png",
+        "category": "Fences",
+        "description": "Lasts longer than a wood fence.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Farming Level 2"
+      },
+      {
+        "id": "iron-fence",
+        "name": "Iron Fence",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9d/Iron_Fence.png",
+        "category": "Fences",
+        "description": "Lasts longer than a stone fence.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 4"
+      },
+      {
+        "id": "hardwood-fence",
+        "name": "Hardwood Fence",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5c/Hardwood_Fence.png",
+        "category": "Fences",
+        "description": "The most durable type of fence.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 6"
+      },
+      {
+        "id": "sprinkler",
+        "name": "Sprinkler",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/08/Sprinkler.png",
+        "category": "Sprinklers",
+        "description": "Waters the 4 adjacent tiles every morning.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 2"
+      },
+      {
+        "id": "quality-sprinkler",
+        "name": "Quality Sprinkler",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/af/Quality_Sprinkler.png",
+        "category": "Sprinklers",
+        "description": "Waters the 8 adjacent tiles every morning.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Refined Quartz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 6"
+      },
+      {
+        "id": "iridium-sprinkler",
+        "name": "Iridium Sprinkler",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/90/Iridium_Sprinkler.png",
+        "category": "Sprinklers",
+        "description": "Waters the 24 adjacent tiles every morning.",
+        "ingredients": [
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Iridium Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 9"
+      },
+      {
+        "id": "mayonnaise-machine",
+        "name": "Mayonnaise Machine",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ef/Mayonnaise_Machine.png",
+        "category": "Artisan Equipment",
+        "description": "Turns eggs into mayonnaise.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 15
+          },
+          {
+            "item": "Stone",
+            "quantity": 15
+          },
+          {
+            "item": "Earth Crystal",
+            "quantity": 1
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 2"
+      },
+      {
+        "id": "bee-house",
+        "name": "Bee House",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/ce/Bee_House.png",
+        "category": "Artisan Equipment",
+        "description": "Place outside and wait for delicious honey! (Except in Winter).",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 40
+          },
+          {
+            "item": "Coal",
+            "quantity": 8
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Maple Syrup",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 3"
+      },
+      {
+        "id": "preserves-jar",
+        "name": "Preserves Jar",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1e/Preserves_Jar.png",
+        "category": "Artisan Equipment",
+        "description": "Turns vegetables into pickles and fruit into jam.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          },
+          {
+            "item": "Stone",
+            "quantity": 40
+          },
+          {
+            "item": "Coal",
+            "quantity": 8
+          }
+        ],
+        "recipeSource": "Farming Level 4"
+      },
+      {
+        "id": "cheese-press",
+        "name": "Cheese Press",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Cheese_Press.png",
+        "category": "Artisan Equipment",
+        "description": "Turns milk into cheese.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 45
+          },
+          {
+            "item": "Stone",
+            "quantity": 45
+          },
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 6"
+      },
+      {
+        "id": "loom",
+        "name": "Loom",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3b/Loom.png",
+        "category": "Artisan Equipment",
+        "description": "Turns raw wool into fine cloth.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 60
+          },
+          {
+            "item": "Fiber",
+            "quantity": 30
+          },
+          {
+            "item": "Pine Tar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 7"
+      },
+      {
+        "id": "keg",
+        "name": "Keg",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png",
+        "category": "Artisan Equipment",
+        "description": "Place a fruit or vegetable in here. Eventually it will turn into a beverage.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 30
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Oak Resin",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 8"
+      },
+      {
+        "id": "oil-maker",
+        "name": "Oil Maker",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c5/Oil_Maker.png",
+        "category": "Artisan Equipment",
+        "description": "Makes gourmet truffle oil.",
+        "ingredients": [
+          {
+            "item": "Slime",
+            "quantity": 50
+          },
+          {
+            "item": "Hardwood",
+            "quantity": 20
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 8"
+      },
+      {
+        "id": "cask",
+        "name": "Cask",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png",
+        "category": "Artisan Equipment",
+        "description": "Use in the cellar to age products like wine and cheese.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 20
+          },
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farmhouse cellar upgrade"
+      },
+      {
+        "id": "fish-smoker",
+        "name": "Fish Smoker",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Fish_Smoker.png",
+        "category": "Artisan Equipment",
+        "description": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Sea Jelly",
+            "quantity": 1
+          },
+          {
+            "item": "River Jelly",
+            "quantity": 1
+          },
+          {
+            "item": "Cave Jelly",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fish Shop for 10,000g"
+      },
+      {
+        "id": "dehydrator",
+        "name": "Dehydrator",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/02/Dehydrator.png",
+        "category": "Artisan Equipment",
+        "description": "Place 5 pieces of fruit or edible mushrooms inside to dry them.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 30
+          },
+          {
+            "item": "Clay",
+            "quantity": 2
+          },
+          {
+            "item": "Fire Quartz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pierre's for 10,000g"
+      },
+      {
+        "id": "basic-fertilizer",
+        "name": "Basic Fertilizer",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9b/Basic_Fertilizer.png",
+        "category": "Fertilizer",
+        "description": "Improves soil quality a little, increasing your chance to grow quality crops. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Sap",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Farming Level 1"
+      },
+      {
+        "id": "quality-fertilizer",
+        "name": "Quality Fertilizer",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a0/Quality_Fertilizer.png",
+        "category": "Fertilizer",
+        "description": "Improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Sap",
+            "quantity": 4
+          },
+          {
+            "item": "Any Fish",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 9"
+      },
+      {
+        "id": "deluxe-fertilizer",
+        "name": "Deluxe Fertilizer",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1c/Deluxe_Fertilizer.png",
+        "category": "Fertilizer",
+        "description": "Greatly improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Sap",
+            "quantity": 40
+          }
+        ],
+        "recipeSource": "Purchase from Mr Qi for 20"
+      },
+      {
+        "id": "speed-gro",
+        "name": "Speed-Gro",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/94/Speed-Gro.png",
+        "category": "Fertilizer",
+        "description": "Stimulates leaf production. Guaranteed to increase growth rate by at least 10%. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Pine Tar",
+            "quantity": 1
+          },
+          {
+            "item": "Moss",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Farming Level 3"
+      },
+      {
+        "id": "deluxe-speed-gro",
+        "name": "Deluxe Speed-Gro",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Deluxe_Speed-Gro.png",
+        "category": "Fertilizer",
+        "description": "Stimulates leaf production. Guaranteed to increase growth rate by at least 25%. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Oak Resin",
+            "quantity": 1
+          },
+          {
+            "item": "Bone Fragment",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Farming Level 8"
+      },
+      {
+        "id": "hyper-speed-gro",
+        "name": "Hyper Speed-Gro",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/53/Hyper_Speed-Gro.png",
+        "category": "Fertilizer",
+        "description": "Greatly stimulates leaf production. Guaranteed to increase growth rate by at least 33%. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Radioactive Ore",
+            "quantity": 1
+          },
+          {
+            "item": "Bone Fragment",
+            "quantity": 3
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Purchase from Mr Qi for 30"
+      },
+      {
+        "id": "basic-retaining-soil",
+        "name": "Basic Retaining Soil",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c7/Basic_Retaining_Soil.png",
+        "category": "Fertilizer",
+        "description": "This soil has a chance of staying watered overnight. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Farming Level 4"
+      },
+      {
+        "id": "quality-retaining-soil",
+        "name": "Quality Retaining Soil",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0a/Quality_Retaining_Soil.png",
+        "category": "Fertilizer",
+        "description": "This soil has a good chance of staying watered overnight. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 3
+          },
+          {
+            "item": "Clay",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 7"
+      },
+      {
+        "id": "deluxe-retaining-soil",
+        "name": "Deluxe Retaining Soil",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c3/Deluxe_Retaining_Soil.png",
+        "category": "Fertilizer",
+        "description": "This soil has a 100% chance of staying watered overnight. Mix into tilled soil.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 5
+          },
+          {
+            "item": "Fiber",
+            "quantity": 3
+          },
+          {
+            "item": "Clay",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Purchase from Island Trader for Cinder Shard (50)"
+      },
+      {
+        "id": "tree-fertilizer",
+        "name": "Tree Fertilizer",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5d/Tree_Fertilizer.png",
+        "category": "Fertilizer",
+        "description": "Sprinkle on a wild tree to ensure rapid growth, even in winter. Doesn't work on fruit trees.",
+        "ingredients": [
+          {
+            "item": "Fiber",
+            "quantity": 5
+          },
+          {
+            "item": "Stone",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Foraging Level 7"
+      },
+      {
+        "id": "spring-seeds",
+        "name": "Spring Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/39/Spring_Seeds.png",
+        "category": "Seeds",
+        "description": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
+        "ingredients": [
+          {
+            "item": "Wild Horseradish",
+            "quantity": 1
+          },
+          {
+            "item": "Daffodil",
+            "quantity": 1
+          },
+          {
+            "item": "Leek",
+            "quantity": 1
+          },
+          {
+            "item": "Dandelion",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 1"
+      },
+      {
+        "id": "summer-seeds",
+        "name": "Summer Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c4/Summer_Seeds.png",
+        "category": "Seeds",
+        "description": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
+        "ingredients": [
+          {
+            "item": "Spice Berry",
+            "quantity": 1
+          },
+          {
+            "item": "Grape",
+            "quantity": 1
+          },
+          {
+            "item": "Sweet Pea",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 4"
+      },
+      {
+        "id": "fall-seeds",
+        "name": "Fall Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/55/Fall_Seeds.png",
+        "category": "Seeds",
+        "description": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
+        "ingredients": [
+          {
+            "item": "Common Mushroom",
+            "quantity": 1
+          },
+          {
+            "item": "Wild Plum",
+            "quantity": 1
+          },
+          {
+            "item": "Hazelnut",
+            "quantity": 1
+          },
+          {
+            "item": "Blackberry",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 6"
+      },
+      {
+        "id": "winter-seeds",
+        "name": "Winter Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Winter_Seeds.png",
+        "category": "Seeds",
+        "description": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
+        "ingredients": [
+          {
+            "item": "Winter Root",
+            "quantity": 1
+          },
+          {
+            "item": "Crystal Fruit",
+            "quantity": 1
+          },
+          {
+            "item": "Snow Yam",
+            "quantity": 1
+          },
+          {
+            "item": "Crocus",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 7"
+      },
+      {
+        "id": "ancient-seeds",
+        "name": "Ancient Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ec/Ancient_Seeds.png",
+        "category": "Seeds",
+        "description": "Could these still grow?",
+        "ingredients": [
+          {
+            "item": "Ancient Seed",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Donating Ancient Seed to museum"
+      },
+      {
+        "id": "grass-starter",
+        "name": "Grass Starter",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/14/Grass_Starter.png",
+        "category": "Seeds",
+        "description": "Place this on your farm to start a new patch of grass.",
+        "ingredients": [
+          {
+            "item": "Fiber",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Purchase from Pierre's for 1,000g"
+      },
+      {
+        "id": "blue-grass-starter",
+        "name": "Blue Grass Starter",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/18/Blue_Grass_Starter.png",
+        "category": "Seeds",
+        "description": "Place this on your farm to plant a clump of blue grass.",
+        "ingredients": [
+          {
+            "item": "Fiber",
+            "quantity": 25
+          },
+          {
+            "item": "Moss",
+            "quantity": 10
+          },
+          {
+            "item": "Mystic Syrup",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Qi's Walnut Room for 40"
+      },
+      {
+        "id": "tea-sapling",
+        "name": "Tea Sapling",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/12/Tea_Sapling.png",
+        "category": "Seeds",
+        "description": "Takes 20 days to mature. Produces tea leaves during the final week of each season, except winter. No watering necessary!",
+        "ingredients": [
+          {
+            "item": "",
+            "quantity": 2
+          },
+          {
+            "item": "Fiber",
+            "quantity": 5
+          },
+          {
+            "item": "Wood",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Mail the day after Caroline 's 2-heart event"
+      },
+      {
+        "id": "fiber-seeds",
+        "name": "Fiber Seeds",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/05/Fiber_Seeds.png",
+        "category": "Seeds",
+        "description": "Plant these in any season. Does not require watering. Harvest with the scythe. Takes 7 days to grow.",
+        "ingredients": [
+          {
+            "item": "Mixed Seeds",
+            "quantity": 1
+          },
+          {
+            "item": "Sap",
+            "quantity": 5
+          },
+          {
+            "item": "Clay",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Linus (Special Order)"
+      },
+      {
+        "id": "mystic-tree-seed",
+        "name": "Mystic Tree Seed",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/ff/Mystic_Tree_Seed.png",
+        "category": "Seeds",
+        "description": "This can be planted to grow a special tree.",
+        "ingredients": [
+          {
+            "item": "Acorn",
+            "quantity": 5
+          },
+          {
+            "item": "Maple Seed",
+            "quantity": 5
+          },
+          {
+            "item": "Pine Cone",
+            "quantity": 5
+          },
+          {
+            "item": "Mahogany Seed",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Foraging Mastery"
+      },
+      {
+        "id": "wood-floor",
+        "name": "Wood Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/58/Wood_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to decorate your floors.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 100g"
+      },
+      {
+        "id": "rustic-plank-floor",
+        "name": "Rustic Plank Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9e/Rustic_Plank_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to decorate your floors.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 200g"
+      },
+      {
+        "id": "straw-floor",
+        "name": "Straw Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/85/Straw_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 200g"
+      },
+      {
+        "id": "weathered-floor",
+        "name": "Weathered Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2a/Weathered_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Dwarf (500g)"
+      },
+      {
+        "id": "crystal-floor",
+        "name": "Crystal Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a4/Crystal_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Refined Quartz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Krobus (500g)"
+      },
+      {
+        "id": "stone-floor",
+        "name": "Stone Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Stone_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 100g"
+      },
+      {
+        "id": "stone-walkway-floor",
+        "name": "Stone Walkway Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/51/Stone_Walkway_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to decorate your floors.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 200g"
+      },
+      {
+        "id": "brick-floor",
+        "name": "Brick Floor",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/29/Brick_Floor.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to decorate your floors.",
+        "ingredients": [
+          {
+            "item": "Clay",
+            "quantity": 2
+          },
+          {
+            "item": "Stone",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 500g"
+      },
+      {
+        "id": "wood-path",
+        "name": "Wood Path",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e3/Wood_Path.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "gravel-path",
+        "name": "Gravel Path",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/15/Gravel_Path.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "cobblestone-path",
+        "name": "Cobblestone Path",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/90/Cobblestone_Path.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "stepping-stone-path",
+        "name": "Stepping Stone Path",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Stepping_Stone_Path.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 100g"
+      },
+      {
+        "id": "crystal-path",
+        "name": "Crystal Path",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/9b/Crystal_Path.png",
+        "category": "Decor",
+        "description": "Place on the ground to create paths or to spruce up your floors.",
+        "ingredients": [
+          {
+            "item": "Refined Quartz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 200g"
+      },
+      {
+        "id": "spinner",
+        "name": "Spinner",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7b/Spinner.png",
+        "category": "Fishing",
+        "description": "The shape makes it spin around in the water. Slightly increases the bite-rate when fishing.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Level 6"
+      },
+      {
+        "id": "trap-bobber",
+        "name": "Trap Bobber",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/da/Trap_Bobber.png",
+        "category": "Fishing",
+        "description": "Causes fish to escape slower when you aren't reeling them in.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Sap",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Fishing Level 6"
+      },
+      {
+        "id": "sonar-bobber",
+        "name": "Sonar Bobber",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/33/Sonar_Bobber.png",
+        "category": "Fishing",
+        "description": "Shows what fish is on the line before it's caught.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Refined Quartz",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Level 6"
+      },
+      {
+        "id": "cork-bobber",
+        "name": "Cork Bobber",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0b/Cork_Bobber.png",
+        "category": "Fishing",
+        "description": "Slightly increases the size of your \"fishing bar\".",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 10
+          },
+          {
+            "item": "Hardwood",
+            "quantity": 5
+          },
+          {
+            "item": "Slime",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Fishing Level 7"
+      },
+      {
+        "id": "quality-bobber",
+        "name": "Quality Bobber",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/01/Quality_Bobber.png",
+        "category": "Fishing",
+        "description": "Boosts the quality of fish that you catch.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Sap",
+            "quantity": 20
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Willy (Special Order)"
+      },
+      {
+        "id": "treasure-hunter",
+        "name": "Treasure Hunter",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Treasure_Hunter.png",
+        "category": "Fishing",
+        "description": "Fish don't escape while collecting treasures. Also slightly increases the chance to find treasures.",
+        "ingredients": [
+          {
+            "item": "Gold Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Level 7"
+      },
+      {
+        "id": "dressed-spinner",
+        "name": "Dressed Spinner",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e8/Dressed_Spinner.png",
+        "category": "Fishing",
+        "description": "The metal tab and colorful streamers create an enticing spectacle for fish. Increases the bite-rate when fishing.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Cloth",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 8"
+      },
+      {
+        "id": "barbed-hook",
+        "name": "Barbed Hook",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4f/Barbed_Hook.png",
+        "category": "Fishing",
+        "description": "Makes your catch more secure, causing the \"fishing bar\" to cling to your catch. Works best on slow, weak fish.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 8"
+      },
+      {
+        "id": "magnet",
+        "name": "Magnet",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8c/Magnet.png",
+        "category": "Fishing",
+        "description": "Increases the chance of finding treasures when fishing. However, fish aren't crazy about the taste.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 9"
+      },
+      {
+        "id": "bait",
+        "name": "Bait",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/ff/Bait.png",
+        "category": "Fishing",
+        "description": "Causes fish to bite faster. Must first be attached to a fishing rod.",
+        "ingredients": [
+          {
+            "item": "Bug Meat",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 2"
+      },
+      {
+        "id": "deluxe-bait",
+        "name": "Deluxe Bait",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/43/Deluxe_Bait.png",
+        "category": "Fishing",
+        "description": "Causes fish to bite even faster and increases size of the \"fishing bar\".",
+        "ingredients": [
+          {
+            "item": "Bait",
+            "quantity": 5
+          },
+          {
+            "item": "Moss",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Level 4"
+      },
+      {
+        "id": "wild-bait",
+        "name": "Wild Bait",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/da/Wild_Bait.png",
+        "category": "Fishing",
+        "description": "A unique recipe from Linus that gives you a chance to catch two fish at once.",
+        "ingredients": [
+          {
+            "item": "Fiber",
+            "quantity": 10
+          },
+          {
+            "item": "Bug Meat",
+            "quantity": 5
+          },
+          {
+            "item": "Slime",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Linus 4-heart event"
+      },
+      {
+        "id": "magic-bait",
+        "name": "Magic Bait",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/58/Magic_Bait.png",
+        "category": "Fishing",
+        "description": "Allows you to catch fish from any season, time, or weather, from whichever type of water you cast into.",
+        "ingredients": [
+          {
+            "item": "Radioactive Ore",
+            "quantity": 1
+          },
+          {
+            "item": "Bug Meat",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "Purchase from Mr Qi for 20"
+      },
+      {
+        "id": "challenge-bait",
+        "name": "Challenge Bait",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/96/Challenge_Bait.png",
+        "category": "Fishing",
+        "description": "A \"perfect\" catch yields triple the fish. However, each time a fish escapes the \"fishing bar\", the catch is reduced.",
+        "ingredients": [
+          {
+            "item": "Bone Fragment",
+            "quantity": 5
+          },
+          {
+            "item": "Moss",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Mastery"
+      },
+      {
+        "id": "crab-pot",
+        "name": "Crab Pot",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/92/Crab_Pot.png",
+        "category": "Fishing",
+        "description": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 40
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 3
+          },
+          {
+            "item": "With Trapper profession: Wood",
+            "quantity": 25
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Fishing Level 3"
+      },
+      {
+        "id": "sturdy-ring",
+        "name": "Sturdy Ring",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Sturdy_Ring.png",
+        "category": "Rings",
+        "description": "Cuts the duration of negative status effects in half.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Bug Meat",
+            "quantity": 25
+          },
+          {
+            "item": "Slime",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Combat Level 1"
+      },
+      {
+        "id": "warrior-ring",
+        "name": "Warrior Ring",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/13/Warrior_Ring.png",
+        "category": "Rings",
+        "description": "Occasionally infuses the wearer with \"warrior energy\" after slaying a monster.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 10
+          },
+          {
+            "item": "Coal",
+            "quantity": 25
+          },
+          {
+            "item": "Frozen Tear",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Combat Level 4"
+      },
+      {
+        "id": "ring-of-yoba",
+        "name": "Ring of Yoba",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/21/Ring_of_Yoba.png",
+        "category": "Rings",
+        "description": "Occasionally shields the wearer from damage.",
+        "ingredients": [
+          {
+            "item": "Gold Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Diamond",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 7"
+      },
+      {
+        "id": "thorns-ring",
+        "name": "Thorns Ring",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5b/Thorns_Ring.png",
+        "category": "Rings",
+        "description": "When enemies damage you, they will take damage themselves.",
+        "ingredients": [
+          {
+            "item": "Bone Fragment",
+            "quantity": 50
+          },
+          {
+            "item": "Stone",
+            "quantity": 50
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 7"
+      },
+      {
+        "id": "glowstone-ring",
+        "name": "Glowstone Ring",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/65/Glowstone_Ring.png",
+        "category": "Rings",
+        "description": "Emits a constant light, and also increases your radius for collecting items.",
+        "ingredients": [
+          {
+            "item": "Solar Essence",
+            "quantity": 5
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Mining Level 4"
+      },
+      {
+        "id": "iridium-band",
+        "name": "Iridium Band",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/77/Iridium_Band.png",
+        "category": "Rings",
+        "description": "Glows, attracts items, and increases attack damage by 10%.",
+        "ingredients": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 50
+          },
+          {
+            "item": "Void Essence",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Combat Level 9"
+      },
+      {
+        "id": "field-snack",
+        "name": "Field Snack",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Field_Snack.png",
+        "category": "Edible Items",
+        "description": "A quick snack to fuel the hungry forager.",
+        "ingredients": [
+          {
+            "item": "Acorn",
+            "quantity": 1
+          },
+          {
+            "item": "Maple Seed",
+            "quantity": 1
+          },
+          {
+            "item": "Pine Cone",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 1"
+      },
+      {
+        "id": "bug-steak",
+        "name": "Bug Steak",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b7/Bug_Steak.png",
+        "category": "Edible Items",
+        "description": "The last resort of the hungry cave diver.",
+        "ingredients": [
+          {
+            "item": "Bug Meat",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Combat Level 1"
+      },
+      {
+        "id": "life-elixir",
+        "name": "Life Elixir",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6e/Life_Elixir.png",
+        "category": "Edible Items",
+        "description": "Restores health to full.",
+        "ingredients": [
+          {
+            "item": "Red Mushroom",
+            "quantity": 1
+          },
+          {
+            "item": "Purple Mushroom",
+            "quantity": 1
+          },
+          {
+            "item": "Morel",
+            "quantity": 1
+          },
+          {
+            "item": "Chanterelle",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 2"
+      },
+      {
+        "id": "oil-of-garlic",
+        "name": "Oil of Garlic",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4b/Oil_of_Garlic.png",
+        "category": "Edible Items",
+        "description": "Drink this and weaker monsters will avoid you.",
+        "ingredients": [
+          {
+            "item": "Garlic",
+            "quantity": 10
+          },
+          {
+            "item": "Oil",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 6"
+      },
+      {
+        "id": "monster-musk",
+        "name": "Monster Musk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/af/Monster_Musk.png",
+        "category": "Consumables",
+        "description": "Spray this on to draw more monsters out of hiding.",
+        "ingredients": [
+          {
+            "item": "Bat Wing",
+            "quantity": 30
+          },
+          {
+            "item": "Slime",
+            "quantity": 30
+          }
+        ],
+        "recipeSource": "Wizard (Special Order)"
+      },
+      {
+        "id": "fairy-dust",
+        "name": "Fairy Dust",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/fc/Fairy_Dust.png",
+        "category": "Consumables",
+        "description": "Sprinkle on kegs, furnaces, and other refining equipment to instantly receive their product.",
+        "ingredients": [
+          {
+            "item": "Diamond",
+            "quantity": 1
+          },
+          {
+            "item": "Fairy Rose",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "The Pirate's Wife Quest"
+      },
+      {
+        "id": "warp-totem-beach",
+        "name": "Warp Totem: Beach",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2f/Warp_Totem_Beach.png",
+        "category": "Consumables",
+        "description": "Warp directly to the beach. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          },
+          {
+            "item": "Coral",
+            "quantity": 2
+          },
+          {
+            "item": "Fiber",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Foraging Level 6"
+      },
+      {
+        "id": "warp-totem-mountains",
+        "name": "Warp Totem: Mountains",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d8/Warp_Totem_Mountains.png",
+        "category": "Consumables",
+        "description": "Warp directly to the mountains. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Stone",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Foraging Level 7"
+      },
+      {
+        "id": "warp-totem-farm",
+        "name": "Warp Totem: Farm",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e4/Warp_Totem_Farm.png",
+        "category": "Consumables",
+        "description": "Warp directly to your house. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          },
+          {
+            "item": "Honey",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Foraging Level 8"
+      },
+      {
+        "id": "warp-totem-desert",
+        "name": "Warp Totem: Desert",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/83/Warp_Totem_Desert.png",
+        "category": "Consumables",
+        "description": "Warp directly to Calico Desert. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 2
+          },
+          {
+            "item": "Coconut",
+            "quantity": 1
+          },
+          {
+            "item": "Iridium Ore",
+            "quantity": 4
+          }
+        ],
+        "recipeSource": "Desert Trader for Iridium Bar (10)"
+      },
+      {
+        "id": "warp-totem-island",
+        "name": "Warp Totem: Island",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b9/Warp_Totem_Island.png",
+        "category": "Consumables",
+        "description": "Warp directly to Ginger Island. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 5
+          },
+          {
+            "item": "Dragon Tooth",
+            "quantity": 1
+          },
+          {
+            "item": "Ginger",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Volcano Dwarf shop for 10,000g"
+      },
+      {
+        "id": "rain-totem",
+        "name": "Rain Totem",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f7/Rain_Totem.png",
+        "category": "Consumables",
+        "description": "Activate to greatly increase the chance for rain tomorrow. Consumed on use.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 1
+          },
+          {
+            "item": "Truffle Oil",
+            "quantity": 1
+          },
+          {
+            "item": "Pine Tar",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Foraging Level 9"
+      },
+      {
+        "id": "treasure-totem",
+        "name": "Treasure Totem",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/06/Treasure_Totem.png",
+        "category": "Consumables",
+        "description": "Use on diggable terrain to summon a ring of treasure spots.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 5
+          },
+          {
+            "item": "Mystic Syrup",
+            "quantity": 1
+          },
+          {
+            "item": "Moss",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Foraging Mastery"
+      },
+      {
+        "id": "torch",
+        "name": "Torch",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b2/Torch.png",
+        "category": "Lighting",
+        "description": "Provides a modest amount of light.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 1
+          },
+          {
+            "item": "Sap",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "campfire",
+        "name": "Campfire",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/01/Campfire.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 10
+          },
+          {
+            "item": "Wood",
+            "quantity": 10
+          },
+          {
+            "item": "Fiber",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "wooden-brazier",
+        "name": "Wooden Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/34/Wooden_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 10
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 250g"
+      },
+      {
+        "id": "stone-brazier",
+        "name": "Stone Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1a/Stone_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 10
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 400g"
+      },
+      {
+        "id": "gold-brazier",
+        "name": "Gold Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b7/Gold_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 1,000g"
+      },
+      {
+        "id": "carved-brazier",
+        "name": "Carved Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/3c/Carved_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 2,000g"
+      },
+      {
+        "id": "stump-brazier",
+        "name": "Stump Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Stump_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 5
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 800g"
+      },
+      {
+        "id": "barrel-brazier",
+        "name": "Barrel Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/78/Barrel_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 1
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 800g"
+      },
+      {
+        "id": "skull-brazier",
+        "name": "Skull Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e6/Skull_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Bone Fragment",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 3,000g"
+      },
+      {
+        "id": "marble-brazier",
+        "name": "Marble Brazier",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e0/Marble_Brazier.png",
+        "category": "Lighting",
+        "description": "Provides a moderate amount of light.",
+        "ingredients": [
+          {
+            "item": "Marble",
+            "quantity": 1
+          },
+          {
+            "item": "Aquamarine",
+            "quantity": 1
+          },
+          {
+            "item": "Stone",
+            "quantity": 100
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 5,000g"
+      },
+      {
+        "id": "wood-lamp-post",
+        "name": "Wood Lamp-post",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c8/Wood_Lamp-post.png",
+        "category": "Lighting",
+        "description": "Provides a good amount of light.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 500g"
+      },
+      {
+        "id": "iron-lamp-post",
+        "name": "Iron Lamp-post",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b0/Iron_Lamp-post.png",
+        "category": "Lighting",
+        "description": "Provides a good amount of light.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 1,000g"
+      },
+      {
+        "id": "jack-o-lantern",
+        "name": "Jack-O-Lantern",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/17/Jack-O-Lantern.png",
+        "category": "Lighting",
+        "description": "A whimsical fall decoration.",
+        "ingredients": [
+          {
+            "item": "Pumpkin",
+            "quantity": 1
+          },
+          {
+            "item": "Torch",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pierre 's stand at Spirit's Eve festival (2,000g)"
+      },
+      {
+        "id": "charcoal-kiln",
+        "name": "Charcoal Kiln",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/76/Charcoal_Kiln.png",
+        "category": "Refining Equipment",
+        "description": "Turns 10 pieces of wood into one piece of coal.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 20
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Foraging Level 2"
+      },
+      {
+        "id": "crystalarium",
+        "name": "Crystalarium",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/63/Crystalarium.png",
+        "category": "Refining Equipment",
+        "description": "Insert a gem of your choice and it will grow copies.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 99
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Iridium Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mining Level 9"
+      },
+      {
+        "id": "furnace",
+        "name": "Furnace",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0f/Furnace.png",
+        "category": "Refining Equipment",
+        "description": "Turns ore and coal into metal bars.",
+        "ingredients": [
+          {
+            "item": "Copper Ore",
+            "quantity": 20
+          },
+          {
+            "item": "Stone",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Clint (Morning after collecting 1+ Copper Ore)"
+      },
+      {
+        "id": "heavy-furnace",
+        "name": "Heavy Furnace",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a9/Heavy_Furnace.png",
+        "category": "Refining Equipment",
+        "description": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use.",
+        "ingredients": [
+          {
+            "item": "Furnace",
+            "quantity": 2
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 3
+          },
+          {
+            "item": "Stone",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Mining Mastery"
+      },
+      {
+        "id": "lightning-rod",
+        "name": "Lightning Rod",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/62/Lightning_Rod.png",
+        "category": "Refining Equipment",
+        "description": "Collects energy from lightning storms and turns it into battery packs.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Refined Quartz",
+            "quantity": 1
+          },
+          {
+            "item": "Bat Wing",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Foraging Level 6"
+      },
+      {
+        "id": "solar-panel",
+        "name": "Solar Panel",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/5d/Solar_Panel.png",
+        "category": "Refining Equipment",
+        "description": "Slowly generates batteries when left in the sun.",
+        "ingredients": [
+          {
+            "item": "Refined Quartz",
+            "quantity": 10
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Caroline (Special Order)"
+      },
+      {
+        "id": "recycling-machine",
+        "name": "Recycling Machine",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/26/Recycling_Machine.png",
+        "category": "Refining Equipment",
+        "description": "Turns fishing trash into resources.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 25
+          },
+          {
+            "item": "Stone",
+            "quantity": 25
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing Level 4"
+      },
+      {
+        "id": "seed-maker",
+        "name": "Seed Maker",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/19/Seed_Maker.png",
+        "category": "Refining Equipment",
+        "description": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 25
+          },
+          {
+            "item": "Coal",
+            "quantity": 10
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Farming Level 9"
+      },
+      {
+        "id": "slime-incubator",
+        "name": "Slime Incubator",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c0/Slime_Incubator.png",
+        "category": "Refining Equipment",
+        "description": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors.",
+        "ingredients": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Slime",
+            "quantity": 100
+          }
+        ],
+        "recipeSource": "Combat Level 8"
+      },
+      {
+        "id": "ostrich-incubator",
+        "name": "Ostrich Incubator",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/51/Ostrich_Incubator.png",
+        "category": "Refining Equipment",
+        "description": "Hatches ostrich eggs into baby ostriches. Place in a barn.",
+        "ingredients": [
+          {
+            "item": "Bone Fragment",
+            "quantity": 50
+          },
+          {
+            "item": "Hardwood",
+            "quantity": 50
+          },
+          {
+            "item": "Cinder Shard",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Complete the Island Field Office Collection"
+      },
+      {
+        "id": "slime-egg-press",
+        "name": "Slime Egg-Press",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/79/Slime_Egg-Press.png",
+        "category": "Refining Equipment",
+        "description": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!",
+        "ingredients": [
+          {
+            "item": "Coal",
+            "quantity": 25
+          },
+          {
+            "item": "Fire Quartz",
+            "quantity": 1
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Combat Level 6"
+      },
+      {
+        "id": "tapper",
+        "name": "Tapper",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/da/Tapper.png",
+        "category": "Refining Equipment",
+        "description": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 40
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Foraging Level 4"
+      },
+      {
+        "id": "heavy-tapper",
+        "name": "Heavy Tapper",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/0c/Heavy_Tapper.png",
+        "category": "Refining Equipment",
+        "description": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 30
+          },
+          {
+            "item": "Radioactive Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Purchase from Mr Qi for 20"
+      },
+      {
+        "id": "worm-bin",
+        "name": "Worm Bin",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/71/Worm_Bin.png",
+        "category": "Refining Equipment",
+        "description": "Produces bait on a regular basis. The worms are self-sufficient.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 15
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Fishing Level 4"
+      },
+      {
+        "id": "deluxe-worm-bin",
+        "name": "Deluxe Worm Bin",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/ea/Deluxe_Worm_Bin.png",
+        "category": "Refining Equipment",
+        "description": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient.",
+        "ingredients": [
+          {
+            "item": "Worm Bin",
+            "quantity": 1
+          },
+          {
+            "item": "Moss",
+            "quantity": 30
+          }
+        ],
+        "recipeSource": "Fishing Level 8"
+      },
+      {
+        "id": "bone-mill",
+        "name": "Bone Mill",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/cc/Bone_Mill.png",
+        "category": "Refining Equipment",
+        "description": "Turns bone items into fertilizers.",
+        "ingredients": [
+          {
+            "item": "Bone Fragment",
+            "quantity": 10
+          },
+          {
+            "item": "Clay",
+            "quantity": 3
+          },
+          {
+            "item": "Stone",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Gunther (Special Order)"
+      },
+      {
+        "id": "geode-crusher",
+        "name": "Geode Crusher",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/02/Geode_Crusher.png",
+        "category": "Refining Equipment",
+        "description": "Breaks geodes open automatically.",
+        "ingredients": [
+          {
+            "item": "Gold Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Stone",
+            "quantity": 50
+          },
+          {
+            "item": "Diamond",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Clint (Special Order)"
+      },
+      {
+        "id": "mushroom-log",
+        "name": "Mushroom Log",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/39/Mushroom_Log.png",
+        "category": "Refining Equipment",
+        "description": "Grows mushrooms every so often. The more wild trees are nearby, the better it works.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Moss",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Foraging (Level 4)"
+      },
+      {
+        "id": "bait-maker",
+        "name": "Bait Maker",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c0/Bait_Maker.png",
+        "category": "Refining Equipment",
+        "description": "Place a fish inside to create targeted bait.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 3
+          },
+          {
+            "item": "Coral",
+            "quantity": 3
+          },
+          {
+            "item": "Sea Urchin",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Fishing (Level 6)"
+      },
+      {
+        "id": "tub-o-flowers",
+        "name": "Tub o' Flowers",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/d9/Tub_o%27_Flowers.png",
+        "category": "Furniture",
+        "description": "Flowers planted in an oak barrel. Blooms in spring and summer.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 15
+          },
+          {
+            "item": "Tulip Bulb",
+            "quantity": 1
+          },
+          {
+            "item": "Jazz Seeds",
+            "quantity": 1
+          },
+          {
+            "item": "Poppy Seeds",
+            "quantity": 1
+          },
+          {
+            "item": "Spangle Seeds",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Pierre 's stand at Flower Dance (2,000g)"
+      },
+      {
+        "id": "wicked-statue",
+        "name": "Wicked Statue",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4a/Wicked_Statue.png",
+        "category": "Furniture",
+        "description": "There's something unsettling about the looks of this statue.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 25
+          },
+          {
+            "item": "Coal",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Krobus ' Shop (1,000g)"
+      },
+      {
+        "id": "flute-block",
+        "name": "Flute Block",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/3/31/Flute_Block.png",
+        "category": "Furniture",
+        "description": "Plays a flute sound when you walk past.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 10
+          },
+          {
+            "item": "Copper Ore",
+            "quantity": 2
+          },
+          {
+            "item": "Fiber",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Robin 6-heart event"
+      },
+      {
+        "id": "drum-block",
+        "name": "Drum Block",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/dc/Drum_Block.png",
+        "category": "Furniture",
+        "description": "Plays a drum sound when you walk past.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 10
+          },
+          {
+            "item": "Copper Ore",
+            "quantity": 2
+          },
+          {
+            "item": "Fiber",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Robin 6-heart event"
+      },
+      {
+        "id": "chest",
+        "name": "Chest",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/b/b3/Chest.png",
+        "category": "Storage Equipment",
+        "description": "A place to store your items.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "stone-chest",
+        "name": "Stone Chest",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Stone_Chest.png",
+        "category": "Storage Equipment",
+        "description": "A place to store your items.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Robin special order"
+      },
+      {
+        "id": "big-chest",
+        "name": "Big Chest",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/89/Big_Chest.png",
+        "category": "Storage Equipment",
+        "description": "It can store almost twice as much as a regular chest.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 120
+          },
+          {
+            "item": "Copper Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Carpenter's Shop for 5,000g"
+      },
+      {
+        "id": "big-stone-chest",
+        "name": "Big Stone Chest",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a6/Big_Stone_Chest.png",
+        "category": "Storage Equipment",
+        "description": "It can store almost twice as much as a regular chest.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 250
+          }
+        ],
+        "recipeSource": "Dwarf (5,000g)"
+      },
+      {
+        "id": "wood-sign",
+        "name": "Wood Sign",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/ce/Wood_Sign.png",
+        "category": "Signs",
+        "description": "Use an item on this to change what's displayed. The item won't be consumed.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "stone-sign",
+        "name": "Stone Sign",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f3/Stone_Sign.png",
+        "category": "Signs",
+        "description": "Use an item on this to change what's displayed. The item won't be consumed.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "dark-sign",
+        "name": "Dark Sign",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/72/Dark_Sign.png",
+        "category": "Signs",
+        "description": "Use an item on this to change what's displayed. The item won't be consumed.",
+        "ingredients": [
+          {
+            "item": "Bat Wing",
+            "quantity": 5
+          },
+          {
+            "item": "Bone Fragment",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Krobus (Mail - 3+)"
+      },
+      {
+        "id": "text-sign",
+        "name": "Text Sign",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/93/Text_Sign.png",
+        "category": "Signs",
+        "description": "You can write a custom message on this sign.",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 25
+          }
+        ],
+        "recipeSource": "Starter"
+      },
+      {
+        "id": "garden-pot",
+        "name": "Garden Pot",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/2/2c/Garden_Pot.png",
+        "category": "Misc",
+        "description": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops.",
+        "ingredients": [
+          {
+            "item": "Clay",
+            "quantity": 1
+          },
+          {
+            "item": "Stone",
+            "quantity": 10
+          },
+          {
+            "item": "Refined Quartz",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Evelyn cutscene after completing the Greenhouse"
+      },
+      {
+        "id": "scarecrow",
+        "name": "Scarecrow",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/7/75/Scarecrow.png",
+        "category": "Misc",
+        "description": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\").",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          },
+          {
+            "item": "Coal",
+            "quantity": 1
+          },
+          {
+            "item": "Fiber",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Farming Level 1"
+      },
+      {
+        "id": "deluxe-scarecrow",
+        "name": "Deluxe Scarecrow",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/5/59/Deluxe_Scarecrow.png",
+        "category": "Misc",
+        "description": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\").",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 50
+          },
+          {
+            "item": "Fiber",
+            "quantity": 40
+          },
+          {
+            "item": "Iridium Ore",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Mail the day after collecting all rarecrows"
+      },
+      {
+        "id": "staircase",
+        "name": "Staircase",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/8c/Staircase.png",
+        "category": "Misc",
+        "description": "Use this to move down a level in the mines.",
+        "ingredients": [
+          {
+            "item": "Stone",
+            "quantity": 99
+          }
+        ],
+        "recipeSource": "Mining Level 2"
+      },
+      {
+        "id": "explosive-ammo",
+        "name": "Explosive Ammo",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f3/Explosive_Ammo.png",
+        "category": "Misc",
+        "description": "Fire this with the slingshot.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Coal",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Combat Level 8"
+      },
+      {
+        "id": "transmute-fe",
+        "name": "Transmute (Fe)",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6c/Iron_Bar.png",
+        "category": "Misc",
+        "description": "A bar of pure iron.",
+        "ingredients": [
+          {
+            "item": "Copper Bar",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "Mining Level 4"
+      },
+      {
+        "id": "transmute-au",
+        "name": "Transmute (Au)",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Gold_Bar.png",
+        "category": "Misc",
+        "description": "A bar of pure gold.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 2
+          }
+        ],
+        "recipeSource": "Mining Level 7"
+      },
+      {
+        "id": "mini-jukebox",
+        "name": "Mini-Jukebox",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/02/Mini-Jukebox.png",
+        "category": "Misc",
+        "description": "Allows you to play your favorite tunes.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 2
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Gus 5-Heart Event"
+      },
+      {
+        "id": "mini-obelisk",
+        "name": "Mini-Obelisk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/c/c9/Mini-Obelisk.png",
+        "category": "Misc",
+        "description": "Place two on the farm to warp between them.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 30
+          },
+          {
+            "item": "Solar Essence",
+            "quantity": 20
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "Wizard special order"
+      },
+      {
+        "id": "farm-computer",
+        "name": "Farm Computer",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Farm_Computer.png",
+        "category": "Misc",
+        "description": "Scans the farm and displays useful information.",
+        "ingredients": [
+          {
+            "item": "Dwarf Gadget",
+            "quantity": 1
+          },
+          {
+            "item": "Battery Pack",
+            "quantity": 1
+          },
+          {
+            "item": "Refined Quartz",
+            "quantity": 10
+          }
+        ],
+        "recipeSource": "Demetrius special order"
+      },
+      {
+        "id": "hopper",
+        "name": "Hopper",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/8/81/Hopper.png",
+        "category": "Misc",
+        "description": "Items placed inside will automatically be loaded into the machine in front of it.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Iridium Bar",
+            "quantity": 1
+          },
+          {
+            "item": "Radioactive Bar",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Purchase from Mr Qi for 50"
+      },
+      {
+        "id": "cookout-kit",
+        "name": "Cookout Kit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/9/91/Cookout_Kit.png",
+        "category": "Misc",
+        "description": "Use this to create a cooking campfire, allowing you to cook on-the-go!",
+        "ingredients": [
+          {
+            "item": "Wood",
+            "quantity": 15
+          },
+          {
+            "item": "Fiber",
+            "quantity": 10
+          },
+          {
+            "item": "Coal",
+            "quantity": 3
+          }
+        ],
+        "recipeSource": "Foraging Level 3"
+      },
+      {
+        "id": "tent-kit",
+        "name": "Tent Kit",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/0/05/Tent_Kit.png",
+        "category": "Misc",
+        "description": "Use this to deploy a one-time-use tent for sleeping. Can only be used outdoors.",
+        "ingredients": [
+          {
+            "item": "Hardwood",
+            "quantity": 10
+          },
+          {
+            "item": "Fiber",
+            "quantity": 25
+          },
+          {
+            "item": "Cloth",
+            "quantity": 1
+          }
+        ],
+        "recipeSource": "Foraging Level 8"
+      },
+      {
+        "id": "statue-of-the-dwarf-king",
+        "name": "Statue Of The Dwarf King",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e4/Statue_Of_The_Dwarf_King.png",
+        "category": "Misc",
+        "description": "Choose from two mining-related powers each day.",
+        "ingredients": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 20
+          }
+        ],
+        "recipeSource": "Mining Mastery"
+      },
+      {
+        "id": "statue-of-blessings",
+        "name": "Statue Of Blessings",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/e/e9/Statue_Of_Blessings.png",
+        "category": "Misc",
+        "description": "Touching the statue gives a unique blessing every day.",
+        "ingredients": [
+          {
+            "item": "Sap",
+            "quantity": 999
+          },
+          {
+            "item": "Fiber",
+            "quantity": 999
+          },
+          {
+            "item": "Stone",
+            "quantity": 999
+          },
+          {
+            "item": "Moss",
+            "quantity": 333
+          }
+        ],
+        "recipeSource": "Farming Mastery"
+      },
+      {
+        "id": "anvil",
+        "name": "Anvil",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Anvil.png",
+        "category": "Misc",
+        "description": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use.",
+        "ingredients": [
+          {
+            "item": "Iron Bar",
+            "quantity": 50
+          }
+        ],
+        "recipeSource": "Combat Mastery"
+      },
+      {
+        "id": "mini-forge",
+        "name": "Mini-Forge",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/6/6c/Mini-Forge.png",
+        "category": "Misc",
+        "description": "Now, you can use a dwarvish forge from the convenience of your home.",
+        "ingredients": [
+          {
+            "item": "Dragon Tooth",
+            "quantity": 5
+          },
+          {
+            "item": "Iron Bar",
+            "quantity": 10
+          },
+          {
+            "item": "Gold Bar",
+            "quantity": 10
+          },
+          {
+            "item": "Iridium Bar",
+            "quantity": 5
+          }
+        ],
+        "recipeSource": "Combat Mastery"
+      }
+    ]
+  },
+  "other": {
+    "shippingPages": [
+      {
+        "id": "shipping-page-1",
+        "name": "Shipping Collection Page 1",
+        "items": [
+          {
+            "id": "page-1-1-1-wild-horseradish",
+            "name": "Wild Horseradish"
+          },
+          {
+            "id": "page-1-1-2-daffodil",
+            "name": "Daffodil"
+          },
+          {
+            "id": "page-1-1-3-leek",
+            "name": "Leek"
+          },
+          {
+            "id": "page-1-1-4-dandelion",
+            "name": "Dandelion"
+          },
+          {
+            "id": "page-1-1-5-parsnip",
+            "name": "Parsnip"
+          },
+          {
+            "id": "page-1-1-6-cave-carrot",
+            "name": "Cave Carrot"
+          },
+          {
+            "id": "page-1-1-7-coconut",
+            "name": "Coconut"
+          },
+          {
+            "id": "page-1-1-8-cactus-fruit",
+            "name": "Cactus Fruit"
+          },
+          {
+            "id": "page-1-1-9-banana",
+            "name": "Banana"
+          },
+          {
+            "id": "page-1-1-10-sap",
+            "name": "Sap"
+          },
+          {
+            "id": "page-1-2-1-large-egg-white",
+            "name": "Large Egg (white)"
+          },
+          {
+            "id": "page-1-2-2-egg-white",
+            "name": "Egg (white)"
+          },
+          {
+            "id": "page-1-2-3-egg-brown",
+            "name": "Egg (brown)"
+          },
+          {
+            "id": "page-1-2-4-large-egg-brown",
+            "name": "Large Egg (brown)"
+          },
+          {
+            "id": "page-1-2-5-milk",
+            "name": "Milk"
+          },
+          {
+            "id": "page-1-2-6-large-milk",
+            "name": "Large Milk"
+          },
+          {
+            "id": "page-1-2-7-green-bean",
+            "name": "Green Bean"
+          },
+          {
+            "id": "page-1-2-8-cauliflower",
+            "name": "Cauliflower"
+          },
+          {
+            "id": "page-1-2-9-potato",
+            "name": "Potato"
+          },
+          {
+            "id": "page-1-2-10-garlic",
+            "name": "Garlic"
+          },
+          {
+            "id": "page-1-3-1-kale",
+            "name": "Kale"
+          },
+          {
+            "id": "page-1-3-2-rhubarb",
+            "name": "Rhubarb"
+          },
+          {
+            "id": "page-1-3-3-melon",
+            "name": "Melon"
+          },
+          {
+            "id": "page-1-3-4-tomato",
+            "name": "Tomato"
+          },
+          {
+            "id": "page-1-3-5-morel",
+            "name": "Morel"
+          },
+          {
+            "id": "page-1-3-6-blueberry",
+            "name": "Blueberry"
+          },
+          {
+            "id": "page-1-3-7-fiddlehead-fern",
+            "name": "Fiddlehead Fern"
+          },
+          {
+            "id": "page-1-3-8-hot-pepper",
+            "name": "Hot Pepper"
+          },
+          {
+            "id": "page-1-3-9-wheat",
+            "name": "Wheat"
+          },
+          {
+            "id": "page-1-3-10-radish",
+            "name": "Radish"
+          },
+          {
+            "id": "page-1-4-1-red-cabbage",
+            "name": "Red Cabbage"
+          },
+          {
+            "id": "page-1-4-2-starfruit",
+            "name": "Starfruit"
+          },
+          {
+            "id": "page-1-4-3-corn",
+            "name": "Corn"
+          },
+          {
+            "id": "page-1-4-4-unmilled-rice",
+            "name": "Unmilled Rice"
+          },
+          {
+            "id": "page-1-4-5-eggplant",
+            "name": "Eggplant"
+          },
+          {
+            "id": "page-1-4-6-artichoke",
+            "name": "Artichoke"
+          },
+          {
+            "id": "page-1-4-7-pumpkin",
+            "name": "Pumpkin"
+          },
+          {
+            "id": "page-1-4-8-bok-choy",
+            "name": "Bok Choy"
+          },
+          {
+            "id": "page-1-4-9-yam",
+            "name": "Yam"
+          },
+          {
+            "id": "page-1-4-10-chanterelle",
+            "name": "Chanterelle"
+          },
+          {
+            "id": "page-1-5-1-cranberries",
+            "name": "Cranberries"
+          },
+          {
+            "id": "page-1-5-2-holly",
+            "name": "Holly"
+          },
+          {
+            "id": "page-1-5-3-beet",
+            "name": "Beet"
+          },
+          {
+            "id": "page-1-5-4-ostrich-egg",
+            "name": "Ostrich Egg"
+          },
+          {
+            "id": "page-1-5-5-salmonberry",
+            "name": "Salmonberry"
+          },
+          {
+            "id": "page-1-5-6-amaranth",
+            "name": "Amaranth"
+          },
+          {
+            "id": "page-1-5-7-pale-ale",
+            "name": "Pale Ale"
+          },
+          {
+            "id": "page-1-5-8-hops",
+            "name": "Hops"
+          },
+          {
+            "id": "page-1-5-9-void-egg",
+            "name": "Void Egg"
+          },
+          {
+            "id": "page-1-5-10-mayonnaise",
+            "name": "Mayonnaise"
+          },
+          {
+            "id": "page-1-6-1-duck-mayonnaise",
+            "name": "Duck Mayonnaise"
+          },
+          {
+            "id": "page-1-6-2-void-mayonnaise",
+            "name": "Void Mayonnaise"
+          },
+          {
+            "id": "page-1-6-3-clay",
+            "name": "Clay"
+          },
+          {
+            "id": "page-1-6-4-copper-bar",
+            "name": "Copper Bar"
+          },
+          {
+            "id": "page-1-6-5-iron-bar",
+            "name": "Iron Bar"
+          },
+          {
+            "id": "page-1-6-6-gold-bar",
+            "name": "Gold Bar"
+          },
+          {
+            "id": "page-1-6-7-iridium-bar",
+            "name": "Iridium Bar"
+          },
+          {
+            "id": "page-1-6-8-refined-quartz",
+            "name": "Refined Quartz"
+          },
+          {
+            "id": "page-1-6-9-honey-any",
+            "name": "Honey (any)"
+          },
+          {
+            "id": "page-1-6-10-pickles-any",
+            "name": "Pickles (any)"
+          },
+          {
+            "id": "page-1-7-1-jelly-any",
+            "name": "Jelly (any)"
+          },
+          {
+            "id": "page-1-7-2-beer",
+            "name": "Beer"
+          },
+          {
+            "id": "page-1-7-3-wine-any",
+            "name": "Wine (any)"
+          },
+          {
+            "id": "page-1-7-4-juice-any",
+            "name": "Juice (any)"
+          },
+          {
+            "id": "page-1-7-5-poppy",
+            "name": "Poppy"
+          },
+          {
+            "id": "page-1-7-6-copper-ore",
+            "name": "Copper Ore"
+          },
+          {
+            "id": "page-1-7-7-iron-ore",
+            "name": "Iron Ore"
+          },
+          {
+            "id": "page-1-7-8-coal",
+            "name": "Coal"
+          },
+          {
+            "id": "page-1-7-9-gold-ore",
+            "name": "Gold Ore"
+          },
+          {
+            "id": "page-1-7-10-iridium-ore",
+            "name": "Iridium Ore"
+          }
+        ]
+      },
+      {
+        "id": "shipping-page-2",
+        "name": "Shipping Collection Page 2",
+        "items": [
+          {
+            "id": "page-2-1-1-wood",
+            "name": "Wood"
+          },
+          {
+            "id": "page-2-1-2-stone",
+            "name": "Stone"
+          },
+          {
+            "id": "page-2-1-3-nautilus-shell",
+            "name": "Nautilus Shell"
+          },
+          {
+            "id": "page-2-1-4-coral",
+            "name": "Coral"
+          },
+          {
+            "id": "page-2-1-5-rainbow-shell",
+            "name": "Rainbow Shell"
+          },
+          {
+            "id": "page-2-1-6-spice-berry",
+            "name": "Spice Berry"
+          },
+          {
+            "id": "page-2-1-7-sea-urchin",
+            "name": "Sea Urchin"
+          },
+          {
+            "id": "page-2-1-8-grape",
+            "name": "Grape"
+          },
+          {
+            "id": "page-2-1-9-spring-onion",
+            "name": "Spring Onion"
+          },
+          {
+            "id": "page-2-1-10-strawberry",
+            "name": "Strawberry"
+          },
+          {
+            "id": "page-2-2-1-sweet-pea",
+            "name": "Sweet Pea"
+          },
+          {
+            "id": "page-2-2-2-common-mushroom",
+            "name": "Common Mushroom"
+          },
+          {
+            "id": "page-2-2-3-wild-plum",
+            "name": "Wild Plum"
+          },
+          {
+            "id": "page-2-2-4-hazelnut",
+            "name": "Hazelnut"
+          },
+          {
+            "id": "page-2-2-5-blackberry",
+            "name": "Blackberry"
+          },
+          {
+            "id": "page-2-2-6-winter-root",
+            "name": "Winter Root"
+          },
+          {
+            "id": "page-2-2-7-crystal-fruit",
+            "name": "Crystal Fruit"
+          },
+          {
+            "id": "page-2-2-8-snow-yam",
+            "name": "Snow Yam"
+          },
+          {
+            "id": "page-2-2-9-sweet-gem-berry",
+            "name": "Sweet Gem Berry"
+          },
+          {
+            "id": "page-2-2-10-crocus",
+            "name": "Crocus"
+          },
+          {
+            "id": "page-2-3-1-red-mushroom",
+            "name": "Red Mushroom"
+          },
+          {
+            "id": "page-2-3-2-sunflower",
+            "name": "Sunflower"
+          },
+          {
+            "id": "page-2-3-3-purple-mushroom",
+            "name": "Purple Mushroom"
+          },
+          {
+            "id": "page-2-3-4-cheese",
+            "name": "Cheese"
+          },
+          {
+            "id": "page-2-3-5-goat-cheese",
+            "name": "Goat Cheese"
+          },
+          {
+            "id": "page-2-3-6-cloth",
+            "name": "Cloth"
+          },
+          {
+            "id": "page-2-3-7-truffle",
+            "name": "Truffle"
+          },
+          {
+            "id": "page-2-3-8-truffle-oil",
+            "name": "Truffle Oil"
+          },
+          {
+            "id": "page-2-3-9-coffee-bean",
+            "name": "Coffee Bean"
+          },
+          {
+            "id": "page-2-3-10-goat-milk",
+            "name": "Goat Milk"
+          },
+          {
+            "id": "page-2-4-1-large-goat-milk",
+            "name": "Large Goat Milk"
+          },
+          {
+            "id": "page-2-4-2-wool",
+            "name": "Wool"
+          },
+          {
+            "id": "page-2-4-3-duck-egg",
+            "name": "Duck Egg"
+          },
+          {
+            "id": "page-2-4-4-duck-feather",
+            "name": "Duck Feather"
+          },
+          {
+            "id": "page-2-4-5-caviar",
+            "name": "Caviar"
+          },
+          {
+            "id": "page-2-4-6-rabbit-s-foot",
+            "name": "Rabbit's Foot"
+          },
+          {
+            "id": "page-2-4-7-aged-roe-any",
+            "name": "Aged Roe (any)"
+          },
+          {
+            "id": "page-2-4-8-ancient-fruit",
+            "name": "Ancient Fruit"
+          },
+          {
+            "id": "page-2-4-9-mead",
+            "name": "Mead"
+          },
+          {
+            "id": "page-2-4-10-tulip",
+            "name": "Tulip"
+          },
+          {
+            "id": "page-2-5-1-summer-spangle",
+            "name": "Summer Spangle"
+          },
+          {
+            "id": "page-2-5-2-fairy-rose",
+            "name": "Fairy Rose"
+          },
+          {
+            "id": "page-2-5-3-blue-jazz",
+            "name": "Blue Jazz"
+          },
+          {
+            "id": "page-2-5-4-apple",
+            "name": "Apple"
+          },
+          {
+            "id": "page-2-5-5-green-tea",
+            "name": "Green Tea"
+          },
+          {
+            "id": "page-2-5-6-apricot",
+            "name": "Apricot"
+          },
+          {
+            "id": "page-2-5-7-orange",
+            "name": "Orange"
+          },
+          {
+            "id": "page-2-5-8-peach",
+            "name": "Peach"
+          },
+          {
+            "id": "page-2-5-9-pomegranate",
+            "name": "Pomegranate"
+          },
+          {
+            "id": "page-2-5-10-cherry",
+            "name": "Cherry"
+          },
+          {
+            "id": "page-2-6-1-bug-meat",
+            "name": "Bug Meat"
+          },
+          {
+            "id": "page-2-6-2-hardwood",
+            "name": "Hardwood"
+          },
+          {
+            "id": "page-2-6-3-maple-syrup",
+            "name": "Maple Syrup"
+          },
+          {
+            "id": "page-2-6-4-oak-resin",
+            "name": "Oak Resin"
+          },
+          {
+            "id": "page-2-6-5-pine-tar",
+            "name": "Pine Tar"
+          },
+          {
+            "id": "page-2-6-6-slime",
+            "name": "Slime"
+          },
+          {
+            "id": "page-2-6-7-bat-wing",
+            "name": "Bat Wing"
+          },
+          {
+            "id": "page-2-6-8-solar-essence",
+            "name": "Solar Essence"
+          },
+          {
+            "id": "page-2-6-9-void-essence",
+            "name": "Void Essence"
+          },
+          {
+            "id": "page-2-6-10-fiber",
+            "name": "Fiber"
+          },
+          {
+            "id": "page-2-7-1-battery-pack",
+            "name": "Battery Pack"
+          },
+          {
+            "id": "page-2-7-2-dinosaur-mayonnaise",
+            "name": "Dinosaur Mayonnaise"
+          },
+          {
+            "id": "page-2-7-3-roe-any",
+            "name": "Roe (any)"
+          },
+          {
+            "id": "page-2-7-4-squid-ink",
+            "name": "Squid Ink"
+          },
+          {
+            "id": "page-2-7-5-tea-leaves",
+            "name": "Tea Leaves"
+          },
+          {
+            "id": "page-2-7-6-ginger",
+            "name": "Ginger"
+          },
+          {
+            "id": "page-2-7-7-taro-root",
+            "name": "Taro Root"
+          },
+          {
+            "id": "page-2-7-8-pineapple",
+            "name": "Pineapple"
+          },
+          {
+            "id": "page-2-7-9-mango",
+            "name": "Mango"
+          },
+          {
+            "id": "page-2-7-10-cinder-shard",
+            "name": "Cinder Shard"
+          }
+        ]
+      },
+      {
+        "id": "shipping-page-3",
+        "name": "Shipping Collection Page 3",
+        "items": [
+          {
+            "id": "page-3-1-1-magma-cap",
+            "name": "Magma Cap"
+          },
+          {
+            "id": "page-3-1-2-bone-fragment",
+            "name": "Bone Fragment"
+          },
+          {
+            "id": "page-3-1-3-radioactive-ore",
+            "name": "Radioactive Ore"
+          },
+          {
+            "id": "page-3-1-4-radioactive-bar",
+            "name": "Radioactive Bar"
+          },
+          {
+            "id": "page-3-1-5-smoked-fish-any",
+            "name": "Smoked Fish (any)"
+          },
+          {
+            "id": "page-3-1-6-moss",
+            "name": "Moss"
+          },
+          {
+            "id": "page-3-1-7-mystic-syrup",
+            "name": "Mystic Syrup"
+          },
+          {
+            "id": "page-3-1-8-raisins",
+            "name": "Raisins"
+          },
+          {
+            "id": "page-3-1-9-dried-fruit-any",
+            "name": "Dried Fruit (any)"
+          },
+          {
+            "id": "page-3-1-10-dried-mushrooms-any",
+            "name": "Dried Mushrooms (any)"
+          },
+          {
+            "id": "page-3-2-1-carrot",
+            "name": "Carrot"
+          },
+          {
+            "id": "page-3-2-2-summer-squash",
+            "name": "Summer Squash"
+          },
+          {
+            "id": "page-3-2-3-broccoli",
+            "name": "Broccoli"
+          },
+          {
+            "id": "page-3-2-4-powdermelon",
+            "name": "Powdermelon"
+          }
+        ]
+      }
+    ],
+    "villagers": [
+      {
+        "id": "abigail",
+        "name": "Abigail",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "alex",
+        "name": "Alex",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "caroline",
+        "name": "Caroline",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "clint",
+        "name": "Clint",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "demetrius",
+        "name": "Demetrius",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "dwarf",
+        "name": "Dwarf",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "elliott",
+        "name": "Elliott",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "emily",
+        "name": "Emily",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "evelyn",
+        "name": "Evelyn",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "george",
+        "name": "George",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "gus",
+        "name": "Gus",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "haley",
+        "name": "Haley",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "harvey",
+        "name": "Harvey",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "jas",
+        "name": "Jas",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "jodi",
+        "name": "Jodi",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "kent",
+        "name": "Kent",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "krobus",
+        "name": "Krobus",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "leah",
+        "name": "Leah",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "leo",
+        "name": "Leo",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "lewis",
+        "name": "Lewis",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "linus",
+        "name": "Linus",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "marnie",
+        "name": "Marnie",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "maru",
+        "name": "Maru",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "pam",
+        "name": "Pam",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "penny",
+        "name": "Penny",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "pierre",
+        "name": "Pierre",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "robin",
+        "name": "Robin",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "sam",
+        "name": "Sam",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "sandy",
+        "name": "Sandy",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "sebastian",
+        "name": "Sebastian",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "shane",
+        "name": "Shane",
+        "targetHearts": 8,
+        "type": "datable",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "vincent",
+        "name": "Vincent",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "willy",
+        "name": "Willy",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      },
+      {
+        "id": "wizard",
+        "name": "Wizard",
+        "targetHearts": 10,
+        "type": "villager",
+        "sourceUrl": "https://stardewvalleywiki.com/Friendship"
+      }
+    ],
+    "skills": [
+      {
+        "id": "farming",
+        "name": "Farming",
+        "targetLevel": 10
+      },
+      {
+        "id": "fishing",
+        "name": "Fishing",
+        "targetLevel": 10
+      },
+      {
+        "id": "foraging",
+        "name": "Foraging",
+        "targetLevel": 10
+      },
+      {
+        "id": "mining",
+        "name": "Mining",
+        "targetLevel": 10
+      },
+      {
+        "id": "combat",
+        "name": "Combat",
+        "targetLevel": 10
+      }
+    ],
+    "stardrops": [
+      {
+        "id": "stardew-valley-fair",
+        "name": "Stardew Valley Fair",
+        "details": "Buy for 2,000 Star Tokens at the fair.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "mines-floor-100",
+        "name": "The Mines Floor 100",
+        "details": "Open the treasure chest on floor 100.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "spouse-or-roommate",
+        "name": "Spouse / Roommate",
+        "details": "Reach 12.5 hearts with your spouse or roommate.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "krobus-sewers",
+        "name": "Krobus",
+        "details": "Buy for 20,000g in the Sewers.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "old-master-cannoli",
+        "name": "Old Master Cannoli",
+        "details": "Give a Sweet Gem Berry in the Secret Woods.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "master-angler",
+        "name": "Master Angler",
+        "details": "Receive Willy's letter after earning the Master Angler achievement.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      },
+      {
+        "id": "museum-donation",
+        "name": "Museum Donation Reward",
+        "details": "Donate all 95 items to the Museum.",
+        "sourceUrl": "https://stardewvalleywiki.com/Stardrop",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Stardrop.png"
+      }
+    ],
+    "monsterGoals": [
+      {
+        "id": "slime-any-color-excludes-big-slimes-and-slimes-in-the-slime-hutch",
+        "monsterType": "Slime (any color, excludes Big Slimes and Slimes in the Slime Hutch)",
+        "target": 1000,
+        "reward": "Slime Charmer Ring",
+        "rewardDescription": "Prevents damage from slimes."
+      },
+      {
+        "id": "void-spirits-shadow-shaman-shadow-shaman-dangerous-shadow-brute-shadow-brute-dangerous-shadow-sniper",
+        "monsterType": "Void Spirits: Shadow Shaman Shadow Shaman (dangerous) Shadow Brute Shadow Brute (dangerous) Shadow Sniper",
+        "target": 150,
+        "reward": "Savage Ring",
+        "rewardDescription": "Gain a short speed boost whenever you slay a monster."
+      },
+      {
+        "id": "bats-bat-bat-dangerous-frost-bat-frost-bat-dangerous-lava-bat-iridium-bat",
+        "monsterType": "Bats: Bat Bat (dangerous) Frost Bat Frost Bat (dangerous) Lava Bat Iridium Bat",
+        "target": 200,
+        "reward": "Vampire Ring",
+        "rewardDescription": "Gain a little health every time you slay a monster."
+      },
+      {
+        "id": "skeletons-skeleton-skeleton-dangerous-skeleton-mage",
+        "monsterType": "Skeletons: Skeleton Skeleton (dangerous) Skeleton Mage",
+        "target": 50,
+        "reward": "Skeleton Mask",
+        "rewardDescription": "The red eyes are glowing mysteriously."
+      },
+      {
+        "id": "cave-insects-bug-bug-dangerous-cave-fly-cave-fly-dangerous-grub-grub-dangerous-mutant-fly-mutant-grub-armored-bug-armored-bug-dangerous",
+        "monsterType": "Cave Insects: Bug Bug (dangerous) Cave Fly Cave Fly (dangerous) Grub Grub (dangerous) Mutant Fly Mutant Grub Armored Bug Armored Bug (dangerous)",
+        "target": 80,
+        "reward": "Insect Head",
+        "rewardDescription": "Not very pleasant to wield."
+      },
+      {
+        "id": "duggies-duggy-duggy-dangerous-magma-duggy",
+        "monsterType": "Duggies: Duggy Duggy (dangerous) Magma Duggy",
+        "target": 30,
+        "reward": "Hard Hat",
+        "rewardDescription": "Keep your dome in one piece."
+      },
+      {
+        "id": "dust-sprites-dust-sprite-dust-sprite-dangerous",
+        "monsterType": "Dust Sprites: Dust Sprite Dust Sprite (dangerous)",
+        "target": 500,
+        "reward": "Burglar's Ring",
+        "rewardDescription": "Monsters have a greater chance of dropping loot."
+      },
+      {
+        "id": "rock-crabs-rock-crab-rock-crab-dangerous-lava-crab-lava-crab-dangerous-iridium-crab",
+        "monsterType": "Rock Crabs: Rock Crab Rock Crab (dangerous) Lava Crab Lava Crab (dangerous) Iridium Crab",
+        "target": 60,
+        "reward": "Crabshell Ring",
+        "rewardDescription": "The top of the ring is made from enchanted crab shell."
+      },
+      {
+        "id": "mummies-mummy-mummy-dangerous",
+        "monsterType": "Mummies: Mummy Mummy (dangerous)",
+        "target": 100,
+        "reward": "Arcane Hat",
+        "rewardDescription": "The type of cowboy hat worn by a wizard."
+      },
+      {
+        "id": "pepper-rex",
+        "monsterType": "Pepper Rex",
+        "target": 50,
+        "reward": "Knight's Helmet",
+        "rewardDescription": "It looks just like the real thing!"
+      },
+      {
+        "id": "serpents-serpent-royal-serpent",
+        "monsterType": "Serpents: Serpent Royal Serpent",
+        "target": 250,
+        "reward": "Napalm Ring",
+        "rewardDescription": "When you defeat an enemy, they explode."
+      },
+      {
+        "id": "magma-sprites-magma-sprite-magma-sparker",
+        "monsterType": "Magma Sprites: Magma Sprite Magma Sparker",
+        "target": 150,
+        "reward": "Marlon's Phone Number",
+        "rewardDescription": "Can call to utilize Item Recovery Service from home"
+      }
+    ],
+    "buildings": [
+      {
+        "id": "earth-obelisk",
+        "name": "Earth Obelisk",
+        "type": "obelisk",
+        "goldCost": 500000,
+        "materials": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 10
+          },
+          {
+            "item": "Earth Crystal",
+            "quantity": 10
+          }
+        ],
+        "sourceUrl": "https://stardewvalleywiki.com/Earth_Obelisk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3c/Earth_Obelisk.png/100px-Earth_Obelisk.png"
+      },
+      {
+        "id": "water-obelisk",
+        "name": "Water Obelisk",
+        "type": "obelisk",
+        "goldCost": 500000,
+        "materials": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 5
+          },
+          {
+            "item": "Clam",
+            "quantity": 10
+          },
+          {
+            "item": "Coral",
+            "quantity": 10
+          }
+        ],
+        "sourceUrl": "https://stardewvalleywiki.com/Water_Obelisk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b7/Water_Obelisk.png/100px-Water_Obelisk.png"
+      },
+      {
+        "id": "desert-obelisk",
+        "name": "Desert Obelisk",
+        "type": "obelisk",
+        "goldCost": 1000000,
+        "materials": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 20
+          },
+          {
+            "item": "Coconut",
+            "quantity": 10
+          },
+          {
+            "item": "Cactus Fruit",
+            "quantity": 10
+          }
+        ],
+        "sourceUrl": "https://stardewvalleywiki.com/Desert_Obelisk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/thumb/6/60/Desert_Obelisk.png/100px-Desert_Obelisk.png"
+      },
+      {
+        "id": "island-obelisk",
+        "name": "Island Obelisk",
+        "type": "obelisk",
+        "goldCost": 1000000,
+        "materials": [
+          {
+            "item": "Iridium Bar",
+            "quantity": 10
+          },
+          {
+            "item": "Dragon Tooth",
+            "quantity": 10
+          },
+          {
+            "item": "Banana",
+            "quantity": 10
+          }
+        ],
+        "sourceUrl": "https://stardewvalleywiki.com/Island_Obelisk",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/thumb/1/18/Island_Obelisk.png/100px-Island_Obelisk.png"
+      },
+      {
+        "id": "gold-clock",
+        "name": "Gold Clock",
+        "type": "clock",
+        "goldCost": 10000000,
+        "materials": [],
+        "sourceUrl": "https://stardewvalleywiki.com/Gold_Clock",
+        "imageUrl": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b5/Gold_Clock.png/100px-Gold_Clock.png"
+      }
+    ],
+    "goldenWalnutsTarget": 130
+  }
+};
