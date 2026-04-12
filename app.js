@@ -902,7 +902,7 @@ function renderMonsterGoals() {
   const goals = [...data.other.monsterGoals].sort((left, right) => {
     const leftRemaining = Math.max(left.target - state.monsterGoals[left.id], 0);
     const rightRemaining = Math.max(right.target - state.monsterGoals[right.id], 0);
-    return rightRemaining - leftRemaining || left.monsterType.localeCompare(right.monsterType);
+    return rightRemaining - leftRemaining || getMonsterGoalLabel(left).localeCompare(getMonsterGoalLabel(right));
   });
 
   document.getElementById("monster-content").innerHTML = `
@@ -911,7 +911,7 @@ function renderMonsterGoals() {
         <thead>
           <tr>
             <th>Done</th>
-            <th>Monster type</th>
+            <th>Goal</th>
             <th>Target</th>
             <th>Current kills</th>
             <th>Reward</th>
@@ -936,7 +936,7 @@ function renderMonsterGoals() {
                     </label>
                   </td>
                   <td>
-                    <strong>${escapeHtml(goal.monsterType)}</strong>
+                    <strong>${escapeHtml(getMonsterGoalLabel(goal))}</strong>
                     <div class="subtle">${escapeHtml(goal.rewardDescription)}</div>
                   </td>
                   <td>${formatNumber(goal.target)}</td>
@@ -1215,7 +1215,7 @@ function getRemainingSnapshot() {
       const current = state.monsterGoals[entry.id];
       const left = entry.target - current;
       return {
-        name: entry.monsterType,
+        name: getMonsterGoalLabel(entry),
         meta: `${current}/${entry.target} kills`,
         value: `${left} left`,
         left,
@@ -1281,6 +1281,10 @@ function getRemainingSnapshot() {
     walnutsLeft,
     materials,
   };
+}
+
+function getMonsterGoalLabel(entry) {
+  return entry.monsterType.split(":")[0].trim();
 }
 
 function getProgressSnapshot() {
