@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Open Stardew-style book with a Junimo on the right page</title>
+  <desc id="desc">An open brown storybook inspired by Stardew Valley, with warm cream pages and a green Junimo sitting on the right page.</desc>
+  <defs>
+    <linearGradient id="bgGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7edc8" />
+      <stop offset="100%" stop-color="#edd29c" />
+    </linearGradient>
+    <linearGradient id="coverBrown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a6248" />
+      <stop offset="100%" stop-color="#5e402c" />
+    </linearGradient>
+    <linearGradient id="coverEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#463022" />
+      <stop offset="50%" stop-color="#6e4c35" />
+      <stop offset="100%" stop-color="#3e291d" />
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e1" />
+      <stop offset="100%" stop-color="#f1ddb0" />
+    </linearGradient>
+    <linearGradient id="paperShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#edd5a1" />
+      <stop offset="100%" stop-color="#fff4d1" />
+    </linearGradient>
+    <radialGradient id="pageGlow" cx="65%" cy="48%" r="28%">
+      <stop offset="0%" stop-color="#fff2b0" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#fff2b0" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="junimoBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69d15b" />
+      <stop offset="100%" stop-color="#34a53d" />
+    </linearGradient>
+    <linearGradient id="junimoLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#79d15b" />
+      <stop offset="100%" stop-color="#2f9145" />
+    </linearGradient>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#4d311f" flood-opacity="0.28" />
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#4f331e" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="640" height="480" fill="none" />
+  <ellipse cx="325" cy="418" rx="228" ry="34" fill="#5a3c23" opacity="0.16" />
+
+  <g filter="url(#drop)">
+    <path
+      d="M110 348c18-95 72-155 159-176 44-10 84-7 117 12v148c-35-22-76-30-132-20-49 8-93 24-137 50l-7-14Z"
+      fill="url(#coverBrown)"
+      stroke="#4d3425"
+      stroke-width="8"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M530 348c-17-95-72-155-158-176-44-10-84-7-118 12v148c35-22 77-30 132-20 49 8 94 24 138 50l6-14Z"
+      fill="url(#coverBrown)"
+      stroke="#4d3425"
+      stroke-width="8"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M129 334c15-77 62-128 136-148 40-11 80-8 121 12v131c-32-19-71-24-120-15-44 7-84 21-128 43-1-7-3-14-3-23Z"
+      fill="url(#paper)"
+      stroke="#c9a064"
+      stroke-width="5"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M511 334c-15-77-62-128-136-148-40-11-80-8-121 12v131c32-19 71-24 120-15 44 7 84 21 128 43 1-7 3-14 3-23Z"
+      fill="url(#paper)"
+      stroke="#c9a064"
+      stroke-width="5"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M298 182c8-4 16-5 23-5 8 0 16 1 24 5v163c-8 4-16 5-24 5-7 0-15-1-23-5V182Z"
+      fill="url(#coverEdge)"
+    />
+
+    <path d="M154 258c48-20 104-31 147-26" stroke="#d7c08f" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+    <path d="M169 289c43-14 88-21 125-18" stroke="#d7c08f" stroke-width="4" stroke-linecap="round" opacity="0.62" />
+    <path d="M488 258c-46-21-100-31-145-27" stroke="#d7c08f" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+    <path d="M475 289c-40-15-84-22-121-19" stroke="#d7c08f" stroke-width="4" stroke-linecap="round" opacity="0.62" />
+
+    <path
+      d="M149 333c24-12 52-23 84-32 30-9 60-13 91-14"
+      fill="none"
+      stroke="url(#paperShade)"
+      stroke-width="8"
+      stroke-linecap="round"
+      opacity="0.4"
+    />
+    <path
+      d="M494 333c-24-12-52-23-84-32-30-9-60-13-91-14"
+      fill="none"
+      stroke="url(#paperShade)"
+      stroke-width="8"
+      stroke-linecap="round"
+      opacity="0.38"
+    />
+  </g>
+
+  <circle cx="426" cy="239" r="94" fill="url(#pageGlow)" />
+
+  <g filter="url(#soft)" transform="translate(28 22) scale(0.88)">
+    <path
+      d="M405 185c11-16 27-25 45-25 35 0 60 27 60 66 0 43-29 80-61 102-30-20-62-57-62-102 0-37 23-67 58-67 10 0 21 3 30 9"
+      fill="url(#junimoBody)"
+      stroke="#2c6f2f"
+      stroke-width="5"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M464 154c9-15 24-24 41-22-4 17-16 28-34 34"
+      fill="none"
+      stroke="#2e7b37"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+    <path
+      d="M470 126c16 2 28 11 34 27-14 5-28 1-40-12"
+      fill="url(#junimoLeaf)"
+      stroke="#22692d"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+    <ellipse cx="427" cy="210" rx="7" ry="10" fill="#162210" />
+    <ellipse cx="471" cy="210" rx="7" ry="10" fill="#162210" />
+    <path d="M436 236c9 7 19 7 28 0" fill="none" stroke="#21461d" stroke-width="5" stroke-linecap="round" />
+    <path d="M409 254c-15 16-24 37-25 58" fill="none" stroke="#2f8338" stroke-width="6" stroke-linecap="round" />
+    <path d="M486 254c15 16 24 37 24 58" fill="none" stroke="#2f8338" stroke-width="6" stroke-linecap="round" />
+    <path d="M424 309c-1 17-10 31-24 42" fill="none" stroke="#2f8338" stroke-width="6" stroke-linecap="round" />
+    <path d="M469 309c2 17 11 31 25 42" fill="none" stroke="#2f8338" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="416" cy="221" rx="9" ry="5" fill="#d6ffb1" opacity="0.34" />
+  </g>
+
+  <g opacity="0.55">
+    <circle cx="390" cy="157" r="4" fill="#fff9dc" />
+    <circle cx="522" cy="201" r="5" fill="#fff0bb" />
+    <circle cx="380" cy="261" r="3" fill="#fff9dc" />
+  </g>
+</svg>
