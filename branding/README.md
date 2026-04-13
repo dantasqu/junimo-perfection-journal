@@ -22,7 +22,7 @@ This folder tracks the visual direction for Junimo Perfection Journal.
 
 - `current/journal-art-transparent.png`: latest transparent artwork from Downloads
 - `current/journal-art-scene.png`: scene/background version of the same concept
-- `site/hero-journal.png`: current hero artwork used on the live site
+- `site/hero-junimo-sprite.png`: current hero artwork used on the live site
 - `social/github-social-preview.jpg`: GitHub-friendly social preview upload
 
 ## Reference Files

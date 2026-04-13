@@ -26,7 +26,7 @@ A cozy Stardew Valley perfection tracker for everything standing between a farm 
 
 ### Live Site
 
-- Open [dantasqu.github.io/junimo-perfection-journal](https://dantasqu.github.io/junimo-perfection-journal/?v=20260412)
+- Open [dantasqu.github.io/junimo-perfection-journal](https://dantasqu.github.io/junimo-perfection-journal/?v=20260412b)
 - Best for quickly using the tracker on any computer with a browser
 - Limitations: progress is saved only in that browser on that device, so it does not sync automatically between computers
 - If someone wants to move progress between computers, they need to export their save file on one device and import it on the other
