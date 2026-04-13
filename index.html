@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Junimo Perfection Journal</title>
-    <link rel="stylesheet" href="./styles.css?v=20260412h" />
-    <script src="./data/wiki-data.js?v=20260412h"></script>
-    <script src="./app.js?v=20260412h" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260412i" />
+    <script src="./data/wiki-data.js?v=20260412i"></script>
+    <script src="./app.js?v=20260412i" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -53,15 +53,31 @@
         </section>
 
         <section id="fish" class="tab-panel" aria-labelledby="fish-tab">
-          <div class="panel-toolbar">
+          <div class="panel-toolbar fish-toolbar">
             <label class="field">
-              <span>Search fish</span>
-              <input id="fish-search" type="search" placeholder="Search by name, spot, or season" />
+              <span>Where</span>
+              <select id="fish-spot">
+                <option value="all">All places</option>
+              </select>
             </label>
             <label class="field">
-              <span>Fishing spot</span>
-              <select id="fish-spot">
-                <option value="all">All spots</option>
+              <span>Season</span>
+              <select id="fish-season">
+                <option value="all">All seasons</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+                <option value="varies">Varies / Any</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Weather</span>
+              <select id="fish-weather">
+                <option value="all">All weather</option>
+                <option value="sun">Sun</option>
+                <option value="rain">Rain</option>
+                <option value="wind">Wind</option>
               </select>
             </label>
             <label class="field">
@@ -71,6 +87,10 @@
                 <option value="all">All</option>
                 <option value="done">Caught</option>
               </select>
+            </label>
+            <label class="field fish-search-field">
+              <span>Search</span>
+              <input id="fish-search" type="search" placeholder="Search anything" />
             </label>
           </div>
           <div id="fish-summary" class="summary-grid compact"></div>

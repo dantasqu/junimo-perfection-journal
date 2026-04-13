@@ -336,6 +336,20 @@ select {
   flex: 1 1 220px;
 }
 
+.fish-toolbar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: end;
+}
+
+.fish-toolbar .field {
+  min-width: 0;
+}
+
+.fish-search-field {
+  grid-column: 1 / -1;
+}
+
 .field span {
   color: var(--ink-soft);
   font-size: 0.88rem;
