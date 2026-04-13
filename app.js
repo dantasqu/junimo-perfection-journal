@@ -481,7 +481,7 @@ function renderFish() {
     (fish) => fish.category === "Legendary Fish" && !state.fish[fish.id]
   ).length;
   document.getElementById("fish-summary").innerHTML = `
-    ${summaryCard("Fish left", `${fishLeft}`, "Default view is unfinished fish", ratioToPercent(fishLeft / data.fish.length))}
+    ${summaryCard("Fish left", `${fishLeft}`, "Unfished fish", ratioToPercent(fishLeft / data.fish.length))}
     ${summaryCard("Caught", `${progress.fish.done}/${data.fish.length}`, "Completion so far", ratioToPercent(progress.fish.ratio))}
     ${summaryCard("Legendary left", `${legendaryLeft}`, "Only the original legendaries count for perfection", ratioToPercent(legendaryLeft / 5))}
     ${summaryCard("Showing", `${filtered.length}`, "Results in the current filter", ratioToPercent(filtered.length / data.fish.length))}
