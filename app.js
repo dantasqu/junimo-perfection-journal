@@ -226,8 +226,8 @@ function renderGeneral() {
     (flatShippingItems.length - progress.shipping.done);
 
   document.getElementById("general-top").innerHTML = `
-    ${summaryCard("Overall perfection", `${progress.overallPercent.toFixed(1)}%`, `${progress.overallWeighted.toFixed(1)} / 100 weighted`, progress.overallPercent)}
-    ${summaryCard("Main checklist left", `${totalTasksRemaining}`, "Fish + cooking + crafting + shipping still unfinished", ratioToPercent(totalTasksRemaining / (data.fish.length + data.cooking.recipes.length + data.crafting.recipes.length + flatShippingItems.length)))}
+    ${summaryCard("Overall perfection", `${progress.overallPercent.toFixed(1)}%`, `${progress.overallWeighted.toFixed(1)} / 100`, progress.overallPercent)}
+    ${summaryCard("Main checklist left", `${totalTasksRemaining}`, "Fish + cooking + crafting + shipping unfinished", ratioToPercent(totalTasksRemaining / (data.fish.length + data.cooking.recipes.length + data.crafting.recipes.length + flatShippingItems.length)))}
     ${summaryCard("Fish left", `${remaining.fish.length}`, "Uncaught fish", ratioToPercent(remaining.fish.length / data.fish.length))}
     ${summaryCard("Cooking left", `${remaining.cooking.length}`, "Recipes still to cook", ratioToPercent(remaining.cooking.length / data.cooking.recipes.length))}
     ${summaryCard("Crafting left", `${remaining.crafting.length}`, "Recipes still to craft", ratioToPercent(remaining.crafting.length / data.crafting.recipes.length))}
@@ -289,7 +289,7 @@ function renderGeneralLeftBoard(remaining) {
       <div class="section-header">
         <div>
           <p class="section-kicker">What&apos;s Left</p>
-          <h2>Unfinished stuff first</h2>
+          <h2>Unfinished</h2>
         </div>
       </div>
       <div class="remaining-grid">
@@ -520,10 +520,6 @@ function getFilteredFish() {
         (ui.fishCategory === "all" || fish.category === ui.fishCategory) &&
         matchesStatus(done, ui.fishStatus)
       );
-    })
-    .sort((left, right) => {
-      const doneGap = Number(state.fish[left.id]) - Number(state.fish[right.id]);
-      return doneGap || left.category.localeCompare(right.category) || left.name.localeCompare(right.name);
     });
 }
 
@@ -632,10 +628,6 @@ function renderRecipePlanner(config) {
         .join(" ")
         .toLowerCase();
       return matchesSearch(searchText, search) && matchesStatus(done, status);
-    })
-    .sort((left, right) => {
-      const doneGap = Number(statusMap[left.id]) - Number(statusMap[right.id]);
-      return doneGap || (left.category || "").localeCompare(right.category || "") || left.name.localeCompare(right.name);
     });
 
   const doneCount = Object.values(statusMap).filter(Boolean).length;
@@ -794,17 +786,11 @@ function renderShipping() {
   const term = ui.shippingSearch.toLowerCase().trim();
   const pages = data.other.shippingPages
     .map((page) => {
-      const items = page.items
-        .filter((item) => matchesSearch(item.name.toLowerCase(), term))
-        .sort((left, right) => {
-          const doneGap = Number(state.shipping[left.id]) - Number(state.shipping[right.id]);
-          return doneGap || left.name.localeCompare(right.name);
-        });
+      const items = page.items.filter((item) => matchesSearch(item.name.toLowerCase(), term));
       const completed = items.filter((item) => state.shipping[item.id]).length;
       return { ...page, items, completed, remaining: items.length - completed };
     })
     .filter((page) => page.items.length);
-  pages.sort((left, right) => right.remaining - left.remaining || left.name.localeCompare(right.name));
 
   if (!pages.length) {
     document.getElementById("shipping-content").innerHTML = emptyState("No shipped items match that search.");
@@ -1184,18 +1170,10 @@ function renderBuildings() {
 }
 
 function getRemainingSnapshot() {
-  const fish = data.fish
-    .filter((entry) => !state.fish[entry.id])
-    .sort((left, right) => left.category.localeCompare(right.category) || left.name.localeCompare(right.name));
-  const cooking = data.cooking.recipes
-    .filter((entry) => !state.cooking.recipes[entry.id])
-    .sort((left, right) => left.name.localeCompare(right.name));
-  const crafting = data.crafting.recipes
-    .filter((entry) => !state.crafting.recipes[entry.id])
-    .sort((left, right) => left.category.localeCompare(right.category) || left.name.localeCompare(right.name));
-  const shipping = flatShippingItems
-    .filter((entry) => !state.shipping[entry.id])
-    .sort((left, right) => left.name.localeCompare(right.name));
+  const fish = data.fish.filter((entry) => !state.fish[entry.id]);
+  const cooking = data.cooking.recipes.filter((entry) => !state.cooking.recipes[entry.id]);
+  const crafting = data.crafting.recipes.filter((entry) => !state.crafting.recipes[entry.id]);
+  const shipping = flatShippingItems.filter((entry) => !state.shipping[entry.id]);
   const villagers = data.other.villagers
     .filter((entry) => state.villagers[entry.id] < entry.targetHearts)
     .map((entry) => {
