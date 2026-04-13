@@ -18,7 +18,7 @@ let state = buildState(initialSave.state);
 const ui = {
   activeTab: "general",
   fishSearch: "",
-  fishCategory: "all",
+  fishSpot: "all",
   fishStatus: "remaining",
   cookingSearch: "",
   cookingStatus: "remaining",
@@ -28,6 +28,23 @@ const ui = {
   shippingSearch: "",
 };
 
+const FISH_SPOT_ORDER = [
+  "Legendary",
+  "Beach",
+  "River",
+  "Mountain Lake",
+  "Cindersap Forest Pond",
+  "Secret Woods",
+  "Mines",
+  "Sewers",
+  "Desert",
+  "Mutant Bug Lair",
+  "Witch's Swamp",
+  "Night Market",
+  "Crab Pot",
+  "Ginger Island",
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   populateStaticOptions();
   bindEvents();
@@ -36,15 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function populateStaticOptions() {
-  const fishCategory = document.getElementById("fish-category");
-  const fishCategories = [...new Set(data.fish.map((fish) => fish.category))];
-  fishCategory.insertAdjacentHTML(
+  const fishSpot = document.getElementById("fish-spot");
+  const fishSpots = FISH_SPOT_ORDER.filter((spot) =>
+    data.fish.some((fish) => getFishSpots(fish).includes(spot))
+  );
+  fishSpot.insertAdjacentHTML(
     "beforeend",
-    fishCategories
-      .map(
-        (category) =>
-          `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`
-      )
+    fishSpots
+      .map((spot) => `<option value="${escapeHtml(spot)}">${escapeHtml(spot)}</option>`)
       .join("")
   );
 
@@ -62,6 +78,7 @@ function populateStaticOptions() {
       .join("")
   );
 
+  document.getElementById("fish-spot").value = ui.fishSpot;
   document.getElementById("fish-status").value = ui.fishStatus;
   document.getElementById("cooking-status").value = ui.cookingStatus;
   document.getElementById("cooking-ingredient-category").value = ui.cookingIngredientCategory;
@@ -88,8 +105,8 @@ function bindEvents() {
     ui.fishSearch = event.target.value;
     renderFish();
   });
-  document.getElementById("fish-category").addEventListener("change", (event) => {
-    ui.fishCategory = event.target.value;
+  document.getElementById("fish-spot").addEventListener("change", (event) => {
+    ui.fishSpot = event.target.value;
     renderFish();
   });
   document.getElementById("fish-status").addEventListener("change", (event) => {
@@ -299,7 +316,7 @@ function renderGeneralLeftBoard(remaining) {
           renderRemainingList(
             remaining.fish,
             (fish) => fish.name,
-            (fish) => `${fish.location} • ${fish.season} • ${fish.weather}`
+            (fish) => `${fish.location} • ${formatFishSeason(fish.season)} • ${fish.weather}`
           ),
           remaining.fish.length ? "Uncaught fish" : "Fish complete"
         )}
@@ -456,7 +473,7 @@ function renderFish() {
           <tr>
             <th>Done</th>
             <th>Fish</th>
-            <th>Category</th>
+            <th>Type</th>
             <th>Where</th>
             <th>When</th>
             <th>Season</th>
@@ -484,10 +501,10 @@ function renderFish() {
                       </div>
                     </div>
                   </td>
-                  <td>${escapeHtml(fish.category)}</td>
+                  <td>${escapeHtml(getFishTypeLabel(fish))}</td>
                   <td>${escapeHtml(fish.location)}</td>
                   <td>${escapeHtml(fish.time)}</td>
-                  <td>${escapeHtml(fish.season)}</td>
+                  <td>${escapeHtml(formatFishSeason(fish.season))}</td>
                   <td>${escapeHtml(fish.weather)}</td>
                 </tr>
               `;
@@ -505,10 +522,11 @@ function getFilteredFish() {
       const done = state.fish[fish.id];
       const searchText = [
         fish.name,
-        fish.category,
+        getFishTypeLabel(fish),
+        getFishSpots(fish).join(" "),
         fish.location,
         fish.time,
-        fish.season,
+        formatFishSeason(fish.season),
         fish.weather,
         fish.notes,
       ]
@@ -517,7 +535,7 @@ function getFilteredFish() {
 
       return (
         matchesSearch(searchText, ui.fishSearch) &&
-        (ui.fishCategory === "all" || fish.category === ui.fishCategory) &&
+        (ui.fishSpot === "all" || getFishSpots(fish).includes(ui.fishSpot)) &&
         matchesStatus(done, ui.fishStatus)
       );
     });
@@ -531,7 +549,7 @@ function reconcileTabFilterForVisibility(tab) {
   if (tab === "fish") {
     const canAutoSwitch =
       ui.fishStatus === "remaining" &&
-      ui.fishCategory === "all" &&
+      ui.fishSpot === "all" &&
       !ui.fishSearch.trim() &&
       getFilteredFish().length === 0;
     if (canAutoSwitch) {
@@ -1263,6 +1281,84 @@ function getRemainingSnapshot() {
 
 function getMonsterGoalLabel(entry) {
   return entry.monsterType.split(":")[0].trim();
+}
+
+function getFishTypeLabel(fish) {
+  if (fish.category === "Legendary Fish") {
+    return "Legendary";
+  }
+  if (fish.category === "Night Market Fish") {
+    return "Night Market";
+  }
+  if (fish.category === "Crab Pot Fish") {
+    return "Crab Pot";
+  }
+  if (fish.category === "Other Catchables") {
+    return "Catchable";
+  }
+  return "Fish";
+}
+
+function getFishSpots(fish) {
+  const spots = new Set();
+  const location = fish.location || "";
+  const season = fish.season || "";
+
+  if (fish.category === "Legendary Fish") {
+    spots.add("Legendary");
+  }
+  if (fish.category === "Night Market Fish" || /Night Market/i.test(location)) {
+    spots.add("Night Market");
+  }
+  if (fish.category === "Crab Pot Fish") {
+    spots.add("Crab Pot");
+  }
+  if (/(Ocean|Saltwater|Beach|East Pier|Pirate Cove)/i.test(location)) {
+    spots.add("Beach");
+  }
+  if (/(Town River|Forest River|Forest Waterfalls|Freshwater|Everywhere but the Farm Pond)/i.test(location)) {
+    spots.add("River");
+  }
+  if (/Mountain Lake/i.test(location)) {
+    spots.add("Mountain Lake");
+  }
+  if (/(Forest Pond|Forest Farm)/i.test(location)) {
+    spots.add("Cindersap Forest Pond");
+  }
+  if (/Secret Woods/i.test(location)) {
+    spots.add("Secret Woods");
+  }
+  if (/(Mines|Ghost Drops|Levels 20, 60, and 100 of the Mines)/i.test(location)) {
+    spots.add("Mines");
+  }
+  if (/Sewers/i.test(location)) {
+    spots.add("Sewers");
+  }
+  if (/Desert/i.test(location)) {
+    spots.add("Desert");
+  }
+  if (/Mutant Bug Lair/i.test(location)) {
+    spots.add("Mutant Bug Lair");
+  }
+  if (/Witch's Swamp/i.test(location)) {
+    spots.add("Witch's Swamp");
+  }
+  if (/(Ginger Island|Pirate Cove|Volcano Caldera|Arrowhead Island)/i.test(location) || /Ginger Island/i.test(season)) {
+    spots.add("Ginger Island");
+  }
+
+  return [...spots].sort(
+    (left, right) => FISH_SPOT_ORDER.indexOf(left) - FISH_SPOT_ORDER.indexOf(right)
+  );
+}
+
+function formatFishSeason(season) {
+  return (season || "")
+    .replace(
+      /\b(Spring|Summer|Fall|Winter)\s+(?=(Spring|Summer|Fall|Winter)\b)/g,
+      "$1, "
+    )
+    .replace(/\)\s+(?=(Spring|Summer|Fall|Winter)\b)/g, "), ");
 }
 
 function getProgressSnapshot() {
