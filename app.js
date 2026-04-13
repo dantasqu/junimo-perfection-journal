@@ -19,6 +19,8 @@ const ui = {
   activeTab: "general",
   fishSearch: "",
   fishSpot: "all",
+  fishSeason: "all",
+  fishWeather: "all",
   fishStatus: "remaining",
   cookingSearch: "",
   cookingStatus: "remaining",
@@ -80,6 +82,8 @@ function populateStaticOptions() {
   );
 
   document.getElementById("fish-spot").value = ui.fishSpot;
+  document.getElementById("fish-season").value = ui.fishSeason;
+  document.getElementById("fish-weather").value = ui.fishWeather;
   document.getElementById("fish-status").value = ui.fishStatus;
   document.getElementById("cooking-status").value = ui.cookingStatus;
   document.getElementById("cooking-ingredient-category").value = ui.cookingIngredientCategory;
@@ -108,6 +112,14 @@ function bindEvents() {
   });
   document.getElementById("fish-spot").addEventListener("change", (event) => {
     ui.fishSpot = event.target.value;
+    renderFish();
+  });
+  document.getElementById("fish-season").addEventListener("change", (event) => {
+    ui.fishSeason = event.target.value;
+    renderFish();
+  });
+  document.getElementById("fish-weather").addEventListener("change", (event) => {
+    ui.fishWeather = event.target.value;
     renderFish();
   });
   document.getElementById("fish-status").addEventListener("change", (event) => {
@@ -554,6 +566,8 @@ function getFilteredFish() {
       return (
         matchesSearch(searchText, ui.fishSearch) &&
         (ui.fishSpot === "all" || getFishSpots(fish).includes(ui.fishSpot)) &&
+        matchesFishSeason(fish) &&
+        matchesFishWeather(fish) &&
         matchesStatus(done, ui.fishStatus)
       );
     });
@@ -582,6 +596,8 @@ function reconcileTabFilterForVisibility(tab) {
     const canAutoSwitch =
       ui.fishStatus === "remaining" &&
       ui.fishSpot === "all" &&
+      ui.fishSeason === "all" &&
+      ui.fishWeather === "all" &&
       !ui.fishSearch.trim() &&
       getFilteredFish().length === 0;
     if (canAutoSwitch) {
@@ -1315,6 +1331,28 @@ function getMonsterGoalLabel(entry) {
   return entry.monsterType.split(":")[0].trim();
 }
 
+function matchesFishSeason(fish) {
+  if (ui.fishSeason === "all") {
+    return true;
+  }
+
+  const tags = getFishSeasonTags(fish);
+  if (ui.fishSeason === "varies") {
+    return tags.includes("varies");
+  }
+
+  return tags.includes("all") || tags.includes(ui.fishSeason);
+}
+
+function matchesFishWeather(fish) {
+  if (ui.fishWeather === "all") {
+    return true;
+  }
+
+  const tags = getFishWeatherTags(fish);
+  return tags.includes("any") || tags.includes(ui.fishWeather);
+}
+
 function getFishTypeLabel(fish) {
   if (fish.category === "Legendary Fish") {
     return "Legendary";
@@ -1382,6 +1420,52 @@ function getFishSpots(fish) {
   return [...spots].sort(
     (left, right) => FISH_SPOT_ORDER.indexOf(left) - FISH_SPOT_ORDER.indexOf(right)
   );
+}
+
+function getFishSeasonTags(fish) {
+  const season = (fish.season || "").toLowerCase();
+  const tags = [];
+
+  if (season.includes("all seasons")) {
+    tags.push("all");
+  }
+  if (season.includes("varies")) {
+    tags.push("varies");
+  }
+  if (season.includes("spring")) {
+    tags.push("spring");
+  }
+  if (season.includes("summer")) {
+    tags.push("summer");
+  }
+  if (season.includes("fall")) {
+    tags.push("fall");
+  }
+  if (season.includes("winter")) {
+    tags.push("winter");
+  }
+
+  return tags;
+}
+
+function getFishWeatherTags(fish) {
+  const weather = (fish.weather || "").toLowerCase();
+  const tags = [];
+
+  if (weather.includes("any")) {
+    tags.push("any");
+  }
+  if (weather.includes("sun")) {
+    tags.push("sun");
+  }
+  if (weather.includes("rain")) {
+    tags.push("rain");
+  }
+  if (weather.includes("wind")) {
+    tags.push("wind");
+  }
+
+  return tags;
 }
 
 function formatFishSeason(season) {
