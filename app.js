@@ -482,7 +482,7 @@ function renderFish() {
   ).length;
   document.getElementById("fish-summary").innerHTML = `
     ${summaryCard("Fish left", `${fishLeft}`, "Unfished fish", ratioToPercent(fishLeft / data.fish.length))}
-    ${summaryCard("Caught", `${progress.fish.done}/${data.fish.length}`, "Completion so far", ratioToPercent(progress.fish.ratio))}
+    ${summaryCard("Caught", `${progress.fish.done}/${data.fish.length}`, "", ratioToPercent(progress.fish.ratio))}
     ${summaryCard("Legendary left", `${legendaryLeft}`, "Only the original legendaries count for perfection", ratioToPercent(legendaryLeft / 5))}
     ${summaryCard("Showing", `${filtered.length}`, "Results in the current filter", ratioToPercent(filtered.length / data.fish.length))}
   `;
@@ -1786,7 +1786,7 @@ function summaryCard(label, value, detail, progressPercent) {
     <article class="summary-card">
       <p>${escapeHtml(label)}</p>
       <strong>${escapeHtml(value)}</strong>
-      <p>${escapeHtml(detail)}</p>
+      ${detail ? `<p>${escapeHtml(detail)}</p>` : ""}
       ${progressBar(progressPercent / 100)}
     </article>
   `;
