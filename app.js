@@ -687,7 +687,7 @@ function renderRecipePlanner(config) {
       const searchText = [
         recipe.name,
         recipe.description,
-        recipe.recipeSource,
+        kind === "cooking" ? "" : recipe.recipeSource,
         recipe.ingredients.map((ingredient) => ingredient.item).join(" "),
         recipe.category || "",
       ]
@@ -817,10 +817,16 @@ function renderRecipePlanner(config) {
                       .join("")}
                   </div>
                 </div>
+                ${
+                  kind === "cooking"
+                    ? ""
+                    : `
                 <div>
                   <div class="meta-label">Source</div>
                   <div>${escapeHtml(recipe.recipeSource)}</div>
                 </div>
+                `
+                }
               </div>
             </article>
           `;
