@@ -127,9 +127,13 @@ function bindEvents() {
     renderFish();
   });
 
-  document.getElementById("cooking-search").addEventListener("input", (event) => {
+  const cookingSearchInput = document.getElementById("cooking-search");
+  const handleCookingSearch = (event) => {
     ui.cookingSearch = event.target.value;
     renderCooking();
+  };
+  ["input", "change", "search"].forEach((eventName) => {
+    cookingSearchInput.addEventListener(eventName, handleCookingSearch);
   });
   document.getElementById("cooking-status").addEventListener("change", (event) => {
     ui.cookingStatus = event.target.value;
@@ -698,7 +702,8 @@ function renderRecipePlanner(config) {
 
   const doneCount = Object.values(statusMap).filter(Boolean).length;
   const remainingRecipes = recipes.length - doneCount;
-  const ingredientTotals = aggregateRemainingIngredients(recipes, statusMap);
+  const plannerRecipes = search.trim() ? filtered : recipes;
+  const ingredientTotals = aggregateRemainingIngredients(plannerRecipes, statusMap);
   const ingredientRows = Object.entries(ingredientTotals)
     .map(([item, needed]) => ({
       item,
