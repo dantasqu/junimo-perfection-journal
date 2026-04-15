@@ -968,11 +968,18 @@ function renderVillagers() {
           const done = current >= villager.targetHearts;
           return `
             <article class="villager-card">
-              <div class="recipe-top">
-                <div>
-                  <h3>${escapeHtml(villager.name)}</h3>
-                  <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${villager.targetHearts - current} left`}</span>
-                </div>
+              <h3>${escapeHtml(villager.name)}</h3>
+              <div class="villager-topline">
+                <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${villager.targetHearts - current} left`}</span>
+                <label class="toggle-line villager-toggle-line">
+                  <input
+                    type="checkbox"
+                    data-action="villager-complete"
+                    data-id="${villager.id}"
+                    ${done ? "checked" : ""}
+                  />
+                  <span>Max hearts</span>
+                </label>
               </div>
               <div class="control-stack">
                 <div class="number-line villager-number-line">
@@ -991,15 +998,6 @@ function renderVillagers() {
                     />
                   </div>
                 </div>
-                <label class="toggle-line villager-toggle-line">
-                  <input
-                    type="checkbox"
-                    data-action="villager-complete"
-                    data-id="${villager.id}"
-                    ${done ? "checked" : ""}
-                  />
-                  <span>Max hearts</span>
-                </label>
               </div>
             </article>
           `;

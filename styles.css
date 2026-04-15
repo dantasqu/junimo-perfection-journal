@@ -944,23 +944,31 @@ input[type="checkbox"] {
   align-items: center;
 }
 
+.villager-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
 .villager-heart-entry {
   display: grid;
   justify-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .villager-portrait {
-  min-height: 34px;
+  min-height: 30px;
   display: flex;
   align-items: end;
   justify-content: center;
 }
 
 .villager-portrait .item-thumb {
-  width: 38px;
-  height: 38px;
-  flex-basis: 38px;
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
   border-radius: 12px;
 }
 
@@ -981,23 +989,24 @@ input[type="checkbox"] {
 }
 
 .villager-card .toggle-line {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .villager-card {
-  padding: 10px 12px;
+  padding: 8px 12px;
 }
 
-.villager-card .recipe-top {
-  margin-bottom: 6px;
+.villager-card h3 {
+  margin: 0 0 4px;
 }
 
 .villager-card .control-stack {
-  gap: 6px;
+  gap: 4px;
 }
 
 .villager-toggle-line {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
+  white-space: nowrap;
 }
 
 .monster-done-cell {
