@@ -908,6 +908,10 @@ input[type="checkbox"] {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
 
+.collectibles-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .villager-card,
 .building-card,
 .mini-card {
@@ -922,6 +926,18 @@ input[type="checkbox"] {
 .mini-card h3 {
   margin: 0 0 8px;
   font-size: 1rem;
+}
+
+.collectible-card {
+  height: 100%;
+}
+
+.collectible-card .recipe-top {
+  margin-bottom: 8px;
+}
+
+.walnut-card .number-line input {
+  width: 74px;
 }
 
 .number-line {
@@ -1097,6 +1113,10 @@ a {
   .planner-split {
     grid-template-columns: 1fr;
   }
+
+  .collectibles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -1135,6 +1155,10 @@ a {
 
   .hero-emblem {
     width: min(100%, 280px);
+  }
+
+  .collectibles-grid {
+    grid-template-columns: 1fr;
   }
 
   .version-pill {

@@ -1124,13 +1124,13 @@ function renderStardropsAndWalnuts() {
     return doneGap || left.name.localeCompare(right.name);
   });
 
-  document.getElementById("stardrops-content").innerHTML = `
-    <div class="stardrop-grid">
+  document.getElementById("collectibles-content").innerHTML = `
+    <div class="stardrop-grid collectibles-grid">
       ${stardrops
         .map((stardrop) => {
           const done = state.stardrops[stardrop.id];
           return `
-            <article class="mini-card">
+            <article class="mini-card collectible-card">
               <div class="recipe-top">
                 <div>
                   <div class="item-inline">
@@ -1145,38 +1145,35 @@ function renderStardropsAndWalnuts() {
           `;
         })
         .join("")}
-    </div>
-  `;
-
-  document.getElementById("walnuts-content").innerHTML = `
-    <article class="mini-card" style="margin-top: 14px;">
-      <div class="item-inline">
-        ${itemThumb(GOLDEN_WALNUT_ITEM, GOLDEN_WALNUT_ITEM.name)}
-        <h3>Golden Walnuts</h3>
-      </div>
-      <div class="control-stack">
-        <div class="number-line">
-          <span class="subtle">Current walnuts found</span>
-          <input
-            type="number"
-            min="0"
-            max="${data.other.goldenWalnutsTarget}"
-            step="1"
-            value="${state.goldenWalnuts}"
-            data-action="golden-walnuts"
-          />
+      <article class="mini-card collectible-card walnut-card">
+        <div class="item-inline">
+          ${itemThumb(GOLDEN_WALNUT_ITEM, GOLDEN_WALNUT_ITEM.name)}
+          <h3>Golden Walnuts</h3>
         </div>
-        <label class="toggle-line">
-          <input
-            type="checkbox"
-            data-action="golden-walnuts-complete"
-            ${state.goldenWalnuts >= data.other.goldenWalnutsTarget ? "checked" : ""}
-          />
-          <span>All found</span>
-        </label>
-      </div>
-      ${progressBar(state.goldenWalnuts / data.other.goldenWalnutsTarget)}
-    </article>
+        <div class="control-stack">
+          <div class="number-line">
+            <span class="subtle">Current found</span>
+            <input
+              type="number"
+              min="0"
+              max="${data.other.goldenWalnutsTarget}"
+              step="1"
+              value="${state.goldenWalnuts}"
+              data-action="golden-walnuts"
+            />
+          </div>
+          <label class="toggle-line">
+            <input
+              type="checkbox"
+              data-action="golden-walnuts-complete"
+              ${state.goldenWalnuts >= data.other.goldenWalnutsTarget ? "checked" : ""}
+            />
+            <span>All found</span>
+          </label>
+        </div>
+        ${progressBar(state.goldenWalnuts / data.other.goldenWalnutsTarget)}
+      </article>
+    </div>
   `;
 }
 
