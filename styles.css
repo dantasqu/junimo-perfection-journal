@@ -739,6 +739,16 @@ input[type="checkbox"] {
   margin-bottom: 18px;
 }
 
+.section-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.section-card-grid .section-card {
+  margin-bottom: 0;
+}
+
 .section-card.two-up {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1061,6 +1071,7 @@ a {
 
 @media (max-width: 980px) {
   .hero,
+  .section-card-grid,
   .section-card.two-up,
   .planner-split {
     grid-template-columns: 1fr;
