@@ -1108,7 +1108,7 @@ function renderSkills() {
                     data-id="${skill.id}"
                     ${done ? "checked" : ""}
                   />
-                  <span>Mark level 10 reached</span>
+                  <span>Max level</span>
                 </label>
               </div>
               <div class="token-row">
@@ -1208,7 +1208,7 @@ function renderBuildings() {
               <div class="control-stack building-controls">
                 <label class="toggle-line">
                   <input type="checkbox" data-action="building-toggle" data-id="${building.id}" ${done ? "checked" : ""} />
-                  <span>Mark built on farm</span>
+                  <span>Built</span>
                 </label>
               </div>
             </article>
