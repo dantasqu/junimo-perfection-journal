@@ -969,18 +969,6 @@ function renderVillagers() {
           return `
             <article class="villager-card">
               <h3>${escapeHtml(villager.name)}</h3>
-              <div class="villager-topline">
-                <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${villager.targetHearts - current} left`}</span>
-                <label class="toggle-line villager-toggle-line">
-                  <input
-                    type="checkbox"
-                    data-action="villager-complete"
-                    data-id="${villager.id}"
-                    ${done ? "checked" : ""}
-                  />
-                  <span>Max hearts</span>
-                </label>
-              </div>
               <div class="control-stack">
                 <div class="number-line villager-number-line">
                   <label class="subtle" for="villager-${villager.id}">Current hearts</label>
@@ -998,6 +986,18 @@ function renderVillagers() {
                     />
                   </div>
                 </div>
+              </div>
+              <div class="villager-topline">
+                <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${villager.targetHearts - current} left`}</span>
+                <label class="toggle-line villager-toggle-line">
+                  <input
+                    type="checkbox"
+                    data-action="villager-complete"
+                    data-id="${villager.id}"
+                    ${done ? "checked" : ""}
+                  />
+                  <span>Max hearts</span>
+                </label>
               </div>
             </article>
           `;
