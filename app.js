@@ -1187,16 +1187,11 @@ function renderBuildings() {
           return `
             <article class="building-card">
               <div class="recipe-top">
-                <div>
-                  <div class="item-inline">
-                    ${itemThumb(building, building.name)}
-                    <h3>${escapeHtml(building.name)}</h3>
-                  </div>
-                  <div class="token-row">
-                    <span class="token">${escapeHtml(building.type === "clock" ? "Gold clock" : "Farm obelisk")}</span>
-                    <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Built" : "Need"}</span>
-                  </div>
+                <div class="item-inline">
+                  ${itemThumb(building, building.name)}
+                  <h3>${escapeHtml(building.name)}</h3>
                 </div>
+                <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Built" : "Need"}</span>
               </div>
               <div class="control-stack building-controls">
                 <label class="toggle-line">
