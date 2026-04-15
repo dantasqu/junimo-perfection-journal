@@ -805,9 +805,9 @@ function renderRecipePlanner(config) {
     ? filtered
         .map((recipe) => {
           const done = statusMap[recipe.id];
-          return `
-            <article class="recipe-card ${done ? "is-done" : ""}">
-              <div class="recipe-top">
+	          return `
+	            <article class="recipe-card ${done ? "is-done" : ""}">
+	              <div class="recipe-top">
                 <div class="recipe-title">
                   <input type="checkbox" data-action="${kind}-toggle" data-id="${recipe.id}" ${done ? "checked" : ""} />
                   <div>
@@ -823,11 +823,11 @@ function renderRecipePlanner(config) {
                           : ""
                       }
                     </div>
-                  </div>
-                </div>
-              </div>
-              <p>${escapeHtml(recipe.description)}</p>
-              <div class="meta-block">
+	                  </div>
+	                </div>
+	              </div>
+	              ${kind === "cooking" ? "" : `<p>${escapeHtml(recipe.description)}</p>`}
+	              <div class="meta-block">
                 <div>
                   <div class="meta-label">Ingredients</div>
                   <div class="token-row">

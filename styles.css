@@ -826,11 +826,36 @@ input[type="checkbox"] {
   text-align: left;
 }
 
+.planner-table-cooking th:first-child,
+.planner-table-cooking td:first-child {
+  width: 42%;
+}
+
+.planner-table-cooking th:nth-child(2),
+.planner-table-cooking td:nth-child(2) {
+  width: 19%;
+  padding-left: 10px;
+}
+
+.planner-table-cooking th:nth-child(3),
+.planner-table-cooking td:nth-child(3),
+.planner-table-cooking th:nth-child(4),
+.planner-table-cooking td:nth-child(4),
+.planner-table-cooking th:nth-child(5),
+.planner-table-cooking td:nth-child(5) {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .planner-table-cooking td:nth-child(3),
 .planner-table-cooking th:nth-child(3),
 .planner-table-cooking td:nth-child(5),
 .planner-table-cooking th:nth-child(5) {
   text-align: right;
+}
+
+.planner-table-cooking input {
+  min-width: 74px;
 }
 
 .planner-table input {
