@@ -29,6 +29,7 @@ const ui = {
   cookingSearch: "",
   cookingStatus: "remaining",
   cookingIngredientCategory: "all",
+  cookingView: "recipes",
   craftingSearch: "",
   craftingStatus: "remaining",
   shippingSearch: "",
@@ -146,6 +147,12 @@ function bindEvents() {
   document.getElementById("cooking-ingredient-category").addEventListener("change", (event) => {
     ui.cookingIngredientCategory = event.target.value;
     renderCooking();
+  });
+  document.querySelectorAll("[data-action='cooking-view']").forEach((button) => {
+    button.addEventListener("click", () => {
+      ui.cookingView = button.dataset.view;
+      renderCooking();
+    });
   });
 
   const craftingSearchInput = document.getElementById("crafting-search");
@@ -662,6 +669,20 @@ function reconcileTabFilterForVisibility(tab) {
 }
 
 function renderCooking() {
+  const cookingLayout = document.getElementById("cooking-layout");
+  const ingredientCategory = document.getElementById("cooking-ingredient-category");
+  if (cookingLayout) {
+    cookingLayout.classList.remove("is-recipes", "is-planner", "is-split");
+    cookingLayout.classList.add(`is-${ui.cookingView}`);
+  }
+  if (ingredientCategory) {
+    ingredientCategory.disabled = ui.cookingView === "recipes";
+  }
+  document.querySelectorAll("[data-action='cooking-view']").forEach((button) => {
+    const isActive = button.dataset.view === ui.cookingView;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
   renderRecipePlanner({
     kind: "cooking",
     recipes: data.cooking.recipes,
@@ -675,6 +696,7 @@ function renderCooking() {
     stockAction: "cooking-owned",
     ingredientCategory: ui.cookingIngredientCategory,
     extraBadge: null,
+    showPlanner: ui.cookingView !== "recipes",
   });
 }
 

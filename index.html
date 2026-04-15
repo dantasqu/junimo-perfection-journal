@@ -6,9 +6,9 @@
     <title>Junimo Perfection Journal</title>
     <link rel="icon" type="image/png" href="./branding/site/favicon-junimo.png?v=20260412p" />
     <link rel="apple-touch-icon" href="./branding/site/favicon-junimo.png?v=20260412p" />
-    <link rel="stylesheet" href="./styles.css?v=20260414v" />
-    <script src="./data/wiki-data.js?v=20260414v"></script>
-    <script src="./app.js?v=20260414v" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260414w" />
+    <script src="./data/wiki-data.js?v=20260414w"></script>
+    <script src="./app.js?v=20260414w" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -100,7 +100,7 @@
         </section>
 
         <section id="cooking" class="tab-panel" aria-labelledby="cooking-tab">
-          <div class="panel-toolbar">
+          <div class="panel-toolbar cooking-toolbar">
             <label class="field">
               <span>Search</span>
               <input id="cooking-search" type="search" placeholder="Search recipes or ingredients" />
@@ -119,9 +119,23 @@
                 <option value="all">All ingredients</option>
               </select>
             </label>
+            <div class="field">
+              <span>View</span>
+              <div class="view-switch" id="cooking-view-switch" role="group" aria-label="Cooking layout">
+                <button type="button" class="view-switch-button" data-action="cooking-view" data-view="recipes">
+                  Recipes
+                </button>
+                <button type="button" class="view-switch-button" data-action="cooking-view" data-view="planner">
+                  Planner
+                </button>
+                <button type="button" class="view-switch-button" data-action="cooking-view" data-view="split">
+                  Split
+                </button>
+              </div>
+            </div>
           </div>
           <div id="cooking-summary" class="summary-grid compact"></div>
-          <div class="planner-split">
+          <div id="cooking-layout" class="planner-split cooking-layout is-recipes">
             <div id="cooking-ingredients" class="section-stack"></div>
             <div id="cooking-recipes" class="recipe-grid"></div>
           </div>

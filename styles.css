@@ -347,8 +347,51 @@ select {
   min-width: 0;
 }
 
+.cooking-toolbar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: end;
+}
+
+.cooking-toolbar .field {
+  min-width: 0;
+}
+
 .fish-search-field {
   grid-column: 1 / -1;
+}
+
+.view-switch {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 6px;
+  border: 2px solid rgba(119, 74, 31, 0.24);
+  border-radius: 16px;
+  background: rgba(255, 248, 228, 0.7);
+}
+
+.view-switch-button {
+  border: 2px solid rgba(119, 74, 31, 0.24);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(247, 231, 192, 0.9);
+  color: var(--ink-soft);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease, color 140ms ease;
+}
+
+.view-switch-button:hover {
+  transform: translateY(-1px);
+}
+
+.view-switch-button.is-active {
+  border-color: rgba(119, 74, 31, 0.42);
+  background: linear-gradient(180deg, rgba(217, 171, 96, 0.95), rgba(196, 143, 72, 0.95));
+  color: #fff8ea;
+  box-shadow: 0 3px 0 rgba(119, 74, 31, 0.32);
 }
 
 .field span {
@@ -717,6 +760,21 @@ input[type="checkbox"] {
 
 .planner-split .table-shell {
   overflow-x: auto;
+}
+
+.cooking-layout.is-recipes,
+.cooking-layout.is-planner {
+  grid-template-columns: 1fr;
+}
+
+.cooking-layout.is-recipes #cooking-ingredients,
+.cooking-layout.is-planner #cooking-recipes {
+  display: none;
+}
+
+.cooking-layout.is-recipes #cooking-recipes.recipe-grid,
+.cooking-layout.is-planner #cooking-ingredients.section-stack {
+  grid-column: 1 / -1;
 }
 
 .planner-split #cooking-recipes.recipe-grid {
@@ -1140,6 +1198,7 @@ a {
   .hero,
   .section-card-grid,
   .section-card.two-up,
+  .cooking-toolbar,
   .planner-split {
     grid-template-columns: 1fr;
   }
