@@ -355,7 +355,6 @@ function renderGeneralLeftBoard(remaining) {
       <div class="section-header">
         <div>
           <p class="section-kicker">What&apos;s Left</p>
-          <h2>Unfinished</h2>
         </div>
       </div>
       <div class="remaining-grid">
