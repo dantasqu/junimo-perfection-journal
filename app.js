@@ -170,7 +170,7 @@ function bindEvents() {
 
   document.getElementById("shipping-search").addEventListener("input", (event) => {
     ui.shippingSearch = event.target.value;
-    renderOther();
+    renderShipping();
   });
 
   document.body.addEventListener("input", handleStateChange);
@@ -249,6 +249,7 @@ function renderAllDynamic() {
   renderFish();
   renderCooking();
   renderCrafting();
+  renderShipping();
   renderOther();
 }
 
@@ -259,6 +260,8 @@ function renderActiveTab() {
     renderCooking();
   } else if (ui.activeTab === "crafting") {
     renderCrafting();
+  } else if (ui.activeTab === "shipping") {
+    renderShipping();
   } else if (ui.activeTab === "other") {
     renderOther();
   } else {
@@ -930,17 +933,14 @@ function renderRecipePlanner(config) {
 }
 
 function renderOther() {
-  const progress = getProgressSnapshot();
   const remaining = getRemainingSnapshot();
 
   document.getElementById("other-summary").innerHTML = `
-    ${summaryCard("Shipping left", `${remaining.shipping.length}`, "Items still to ship", ratioToPercent(remaining.shipping.length / flatShippingItems.length))}
     ${summaryCard("Friends left", `${remaining.villagers.length}`, "Villagers not yet at perfection hearts", ratioToPercent(remaining.villagers.length / data.other.villagers.length))}
     ${summaryCard("Monster goals left", `${remaining.monsters.length}`, "Eradication goals still unfinished", ratioToPercent(remaining.monsters.length / data.other.monsterGoals.length))}
     ${summaryCard("Walnuts left", `${remaining.walnutsLeft}`, "Golden walnuts still missing", ratioToPercent(remaining.walnutsLeft / data.other.goldenWalnutsTarget))}
   `;
 
-  renderShipping();
   renderVillagers();
   renderMonsterGoals();
   renderSkills();
@@ -950,7 +950,7 @@ function renderOther() {
 
 function renderShipping() {
   const term = ui.shippingSearch.toLowerCase().trim();
-  const pages = data.other.shippingPages
+  const filteredPages = data.other.shippingPages
     .map((page) => {
       const items = page.items.filter((item) => matchesSearch(item.name.toLowerCase(), term));
       const completed = items.filter((item) => state.shipping[item.id]).length;
@@ -958,14 +958,26 @@ function renderShipping() {
     })
     .filter((page) => page.items.length);
 
-  if (!pages.length) {
+  const totalDone = countTrueValues(state.shipping);
+  const totalLeft = flatShippingItems.length - totalDone;
+  const filteredItemCount = filteredPages.reduce((sum, page) => sum + page.items.length, 0);
+  const filteredRemaining = filteredPages.reduce((sum, page) => sum + page.remaining, 0);
+
+  document.getElementById("shipping-summary").innerHTML = `
+    ${summaryCard("Shipping left", `${totalLeft}`, "Items still to ship", ratioToPercent(totalLeft / flatShippingItems.length))}
+    ${summaryCard("Shipped", `${totalDone}/${flatShippingItems.length}`, "", ratioToPercent(totalDone / flatShippingItems.length))}
+    ${summaryCard("Showing", `${filteredItemCount}`, "Items in the current search", ratioToPercent(filteredItemCount / flatShippingItems.length))}
+    ${summaryCard("Left in view", `${filteredRemaining}`, "", filteredItemCount ? ratioToPercent(filteredRemaining / filteredItemCount) : 0)}
+  `;
+
+  if (!filteredPages.length) {
     document.getElementById("shipping-content").innerHTML = emptyState("No shipped items match that search.");
     return;
   }
 
   document.getElementById("shipping-content").innerHTML = `
     <div class="shipping-pages">
-      ${pages
+      ${filteredPages
         .map((page) => {
           return `
             <article class="page-card">

@@ -6,9 +6,9 @@
     <title>Junimo Perfection Journal</title>
     <link rel="icon" type="image/png" href="./branding/site/favicon-junimo.png?v=20260412p" />
     <link rel="apple-touch-icon" href="./branding/site/favicon-junimo.png?v=20260412p" />
-    <link rel="stylesheet" href="./styles.css?v=20260415g" />
-    <script src="./data/wiki-data.js?v=20260415g"></script>
-    <script src="./app.js?v=20260415g" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260415h" />
+    <script src="./data/wiki-data.js?v=20260415h"></script>
+    <script src="./app.js?v=20260415h" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -43,6 +43,7 @@
         <button class="tab-button" data-tab="fish">Fish</button>
         <button class="tab-button" data-tab="cooking">Cooking</button>
         <button class="tab-button" data-tab="crafting">Crafting</button>
+        <button class="tab-button" data-tab="shipping">Shipping</button>
         <button class="tab-button" data-tab="other">Other Perfection</button>
       </nav>
 
@@ -161,23 +162,20 @@
           <div id="crafting-recipes" class="recipe-grid"></div>
         </section>
 
+        <section id="shipping" class="tab-panel" aria-labelledby="shipping-tab">
+          <div class="panel-toolbar">
+            <label class="field">
+              <span>Search</span>
+              <input id="shipping-search" type="search" placeholder="Search shipped items" />
+            </label>
+          </div>
+          <div id="shipping-summary" class="summary-grid compact"></div>
+          <div id="shipping-content"></div>
+        </section>
+
         <section id="other" class="tab-panel" aria-labelledby="other-tab">
           <div id="other-summary" class="summary-grid compact"></div>
           <div class="section-stack">
-            <section class="section-card">
-              <div class="section-header">
-                <div>
-                  <p class="section-kicker">Shipping</p>
-                  <h2>Items Shipped</h2>
-                </div>
-                <label class="field field-inline">
-                  <span>Search shipped items</span>
-                  <input id="shipping-search" type="search" placeholder="Search shipped items" />
-                </label>
-              </div>
-              <div id="shipping-content"></div>
-            </section>
-
             <section class="section-card">
               <div class="section-header">
                 <div>
