@@ -1172,7 +1172,7 @@ function renderStardropsAndWalnuts() {
             data-action="golden-walnuts-complete"
             ${state.goldenWalnuts >= data.other.goldenWalnutsTarget ? "checked" : ""}
           />
-          <span>Mark all 130 found</span>
+          <span>All found</span>
         </label>
       </div>
       ${progressBar(state.goldenWalnuts / data.other.goldenWalnutsTarget)}
