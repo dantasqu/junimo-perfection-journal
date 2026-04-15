@@ -468,7 +468,7 @@ function renderRemainingList(items, labelFn, metaFn, valueFn) {
                   ${itemThumb(item, labelFn(item))}
                   <div>
                     <strong>${escapeHtml(labelFn(item))}</strong>
-                    ${metaFn ? `<div class="remaining-meta">${escapeHtml(metaFn(item))}</div>` : ""}
+                    ${metaFn && metaFn(item) ? `<div class="remaining-meta">${escapeHtml(metaFn(item))}</div>` : ""}
                   </div>
                 </div>
               </div>
@@ -1264,7 +1264,7 @@ function getRemainingSnapshot() {
     .filter((entry) => !state.buildings[entry.id])
     .map((entry) => ({
       name: entry.name,
-      meta: entry.type === "clock" ? "Gold clock" : "Farm obelisk",
+      meta: "",
       value: "Not built",
       imageUrl: entry.imageUrl,
     }));
