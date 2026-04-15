@@ -1018,6 +1018,18 @@ input[type="checkbox"] {
   margin: 0;
 }
 
+.monster-number-cell {
+  width: 180px;
+}
+
+.monster-number-cell input {
+  width: 88px;
+}
+
+.monster-remaining-cell {
+  white-space: nowrap;
+}
+
 .building-controls {
   margin-top: 8px;
 }

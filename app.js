@@ -1023,6 +1023,7 @@ function renderMonsterGoals() {
             <th>Goal</th>
             <th>Target</th>
             <th>Current kills</th>
+            <th>Still need</th>
           </tr>
         </thead>
         <tbody>
@@ -1030,11 +1031,12 @@ function renderMonsterGoals() {
             .map((goal) => {
               const current = state.monsterGoals[goal.id];
               const done = current >= goal.target;
+              const remaining = Math.max(goal.target - current, 0);
 	          return `
-	                <tr>
-	                  <td class="monster-done-cell">
-	                    <input
-	                      type="checkbox"
+		                <tr>
+		                  <td class="monster-done-cell">
+		                    <input
+		                      type="checkbox"
 	                      data-action="monster-complete"
 	                      data-id="${goal.id}"
 	                      ${done ? "checked" : ""}
@@ -1044,24 +1046,19 @@ function renderMonsterGoals() {
                     <strong>${escapeHtml(getMonsterGoalLabel(goal))}</strong>
                   </td>
                   <td>${formatNumber(goal.target)}</td>
-                  <td>
-                    <div class="control-stack">
-                      <div class="number-line">
-                        <span class="subtle">Current kills</span>
-                        <input
-                          type="number"
-                          min="0"
-                          step="1"
-                          value="${current}"
-                          data-action="monster-count"
-                          data-id="${goal.id}"
-                        />
-                      </div>
-                      <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${goal.target - current} left`}</span>
-                    </div>
-                  </td>
-                </tr>
-              `;
+	                  <td class="monster-number-cell">
+	                    <input
+	                      type="number"
+	                      min="0"
+	                      step="1"
+	                      value="${current}"
+	                      data-action="monster-count"
+	                      data-id="${goal.id}"
+	                    />
+	                  </td>
+	                  <td class="monster-remaining-cell"><strong>${formatNumber(remaining)}</strong></td>
+	                </tr>
+	              `;
             })
             .join("")}
         </tbody>
