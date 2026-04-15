@@ -292,7 +292,7 @@ function renderGeneral() {
     (flatShippingItems.length - progress.shipping.done);
 
   document.getElementById("general-top").innerHTML = `
-    ${summaryCard("Overall perfection", `${progress.overallPercent.toFixed(1)}%`, `${progress.overallWeighted.toFixed(1)} / 100`, progress.overallPercent)}
+    ${summaryCard("Overall perfection", `${progress.overallPercent.toFixed(1)}%`, "", progress.overallPercent)}
     ${summaryCard("Main checklist left", `${totalTasksRemaining}`, "Fish + cooking + crafting + shipping unfinished", ratioToPercent(totalTasksRemaining / (data.fish.length + data.cooking.recipes.length + data.crafting.recipes.length + flatShippingItems.length)))}
     ${summaryCard("Fish left", `${remaining.fish.length}`, "Uncaught fish", ratioToPercent(remaining.fish.length / data.fish.length))}
     ${summaryCard("Cooking left", `${remaining.cooking.length}`, "Recipes still to cook", ratioToPercent(remaining.cooking.length / data.cooking.recipes.length))}
