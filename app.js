@@ -33,6 +33,7 @@ const ui = {
   craftingSearch: "",
   craftingStatus: "remaining",
   shippingSearch: "",
+  shippingStatus: "all",
 };
 let scheduledRenderHandle = 0;
 
@@ -93,6 +94,7 @@ function populateStaticOptions() {
   document.getElementById("cooking-status").value = ui.cookingStatus;
   document.getElementById("cooking-ingredient-category").value = ui.cookingIngredientCategory;
   document.getElementById("crafting-status").value = ui.craftingStatus;
+  document.getElementById("shipping-status").value = ui.shippingStatus;
 
   const versionPill = document.getElementById("version-pill");
   if (versionPill) {
@@ -170,6 +172,10 @@ function bindEvents() {
 
   document.getElementById("shipping-search").addEventListener("input", (event) => {
     ui.shippingSearch = event.target.value;
+    renderShipping();
+  });
+  document.getElementById("shipping-status").addEventListener("change", (event) => {
+    ui.shippingStatus = event.target.value;
     renderShipping();
   });
 
@@ -956,9 +962,21 @@ function renderShipping() {
   }
 
   const term = ui.shippingSearch.toLowerCase().trim();
+  const matchesStatus = (item) => {
+    const done = Boolean(state.shipping[item.id]);
+    if (ui.shippingStatus === "done") {
+      return done;
+    }
+    if (ui.shippingStatus === "remaining") {
+      return !done;
+    }
+    return true;
+  };
   const filteredPages = data.other.shippingPages
     .map((page) => {
-      const items = page.items.filter((item) => matchesSearch(item.name.toLowerCase(), term));
+      const items = page.items.filter(
+        (item) => matchesSearch(item.name.toLowerCase(), term) && matchesStatus(item)
+      );
       const completed = items.filter((item) => state.shipping[item.id]).length;
       return { ...page, items, completed, remaining: items.length - completed };
     })
@@ -966,14 +984,10 @@ function renderShipping() {
 
   const totalDone = countTrueValues(state.shipping);
   const totalLeft = flatShippingItems.length - totalDone;
-  const filteredItemCount = filteredPages.reduce((sum, page) => sum + page.items.length, 0);
-  const filteredRemaining = filteredPages.reduce((sum, page) => sum + page.remaining, 0);
 
   summaryEl.innerHTML = `
     ${summaryCard("Shipping left", `${totalLeft}`, "Items still to ship", ratioToPercent(totalLeft / flatShippingItems.length))}
     ${summaryCard("Shipped", `${totalDone}/${flatShippingItems.length}`, "", ratioToPercent(totalDone / flatShippingItems.length))}
-    ${summaryCard("Showing", `${filteredItemCount}`, "Items in the current search", ratioToPercent(filteredItemCount / flatShippingItems.length))}
-    ${summaryCard("Left in view", `${filteredRemaining}`, "", filteredItemCount ? ratioToPercent(filteredRemaining / filteredItemCount) : 0)}
   `;
 
   if (!filteredPages.length) {

@@ -6,9 +6,9 @@
     <title>Junimo Perfection Journal</title>
     <link rel="icon" type="image/png" href="./branding/site/favicon-junimo.png?v=20260412p" />
     <link rel="apple-touch-icon" href="./branding/site/favicon-junimo.png?v=20260412p" />
-    <link rel="stylesheet" href="./styles.css?v=20260415k" />
-    <script src="./data/wiki-data.js?v=20260415k"></script>
-    <script src="./app.js?v=20260415k" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260415l" />
+    <script src="./data/wiki-data.js?v=20260415l"></script>
+    <script src="./app.js?v=20260415l" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -167,6 +167,14 @@
             <label class="field">
               <span>Search</span>
               <input id="shipping-search" type="search" placeholder="Search shipped items" />
+            </label>
+            <label class="field">
+              <span>Status</span>
+              <select id="shipping-status">
+                <option value="all">All</option>
+                <option value="remaining">Still need</option>
+                <option value="done">Shipped</option>
+              </select>
             </label>
           </div>
           <div id="shipping-summary" class="summary-grid compact"></div>
