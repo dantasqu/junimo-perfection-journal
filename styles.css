@@ -706,13 +706,33 @@ input[type="checkbox"] {
 
 .planner-split {
   display: grid;
-  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.35fr);
+  grid-template-columns: minmax(520px, 1.18fr) minmax(280px, 0.82fr);
   gap: 18px;
   align-items: start;
 }
 
 .planner-split > * {
   min-width: 0;
+}
+
+.planner-split .table-shell {
+  overflow-x: auto;
+}
+
+.planner-split #cooking-recipes.recipe-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.planner-split #cooking-recipes .recipe-card {
+  padding: 16px;
+}
+
+.planner-split #cooking-recipes .recipe-card h3 {
+  font-size: 1.08rem;
+}
+
+.planner-split #cooking-recipes .recipe-card p {
+  font-size: 0.96rem;
 }
 
 .section-card {
