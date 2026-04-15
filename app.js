@@ -723,6 +723,21 @@ function renderRecipePlanner(config) {
   const doneCount = Object.values(statusMap).filter(Boolean).length;
   const remainingRecipes = recipes.length - doneCount;
   const plannerRecipes = search.trim() ? filtered : recipes;
+  const summaryIngredientRows = Object.entries(aggregateRemainingIngredients(recipes, statusMap))
+    .map(([item, needed]) => ({
+      item,
+      category:
+        kind === "cooking"
+          ? cookingIngredientCatalogMap[item]?.category || "Other"
+          : "Material",
+      imageUrl: kind === "cooking" ? cookingIngredientCatalogMap[item]?.imageUrl || "" : "",
+      needed,
+      owned: clampNumber(stockMap[item], 0, 999999),
+      remaining: Math.max(needed - clampNumber(stockMap[item], 0, 999999), 0),
+    }))
+    .sort((left, right) => right.remaining - left.remaining || left.item.localeCompare(right.item));
+  const summaryVisibleIngredientRows =
+    status === "remaining" ? summaryIngredientRows.filter((row) => row.remaining > 0) : summaryIngredientRows;
   const ingredientTotals = aggregateRemainingIngredients(plannerRecipes, statusMap);
   const ingredientRows = Object.entries(ingredientTotals)
     .map(([item, needed]) => ({
@@ -741,14 +756,14 @@ function renderRecipePlanner(config) {
 
   const visibleIngredientRows =
     status === "remaining" ? ingredientRows.filter((row) => row.remaining > 0) : ingredientRows;
-  const remainingUnits = visibleIngredientRows.reduce((sum, row) => sum + row.remaining, 0);
+  const remainingUnits = summaryVisibleIngredientRows.reduce((sum, row) => sum + row.remaining, 0);
 
   document.getElementById(summaryEl).innerHTML = showPlanner
     ? `
     ${summaryCard(kind === "cooking" ? "Recipes left" : "Recipes left", `${remainingRecipes}`, kind === "cooking" ? "" : "Still to craft", ratioToPercent(remainingRecipes / recipes.length))}
     ${summaryCard(kind === "cooking" ? "Cooked" : "Crafted", `${doneCount}/${recipes.length}`, kind === "cooking" ? "" : "Completion so far", ratioToPercent(doneCount / recipes.length))}
-    ${summaryCard("Materials left", `${remainingUnits}`, "", visibleIngredientRows.length ? 100 : 0)}
-    ${summaryCard("Ingredients tracked", `${visibleIngredientRows.length}`, "", ratioToPercent(Math.min(visibleIngredientRows.length, recipes.length) / recipes.length))}
+    ${summaryCard("Materials left", `${remainingUnits}`, "", summaryVisibleIngredientRows.length ? 100 : 0)}
+    ${summaryCard("Ingredients tracked", `${summaryVisibleIngredientRows.length}`, "", ratioToPercent(Math.min(summaryVisibleIngredientRows.length, recipes.length) / recipes.length))}
   `
     : `
     ${summaryCard("Recipes left", `${remainingRecipes}`, "", ratioToPercent(remainingRecipes / recipes.length))}
