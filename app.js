@@ -960,28 +960,30 @@ function renderVillagers() {
                 </div>
               </div>
               <div class="control-stack">
-                <div class="villager-heart-box">
-                  <div class="villager-portrait">${itemThumb(villager, villager.name)}</div>
+                <div class="number-line villager-number-line">
                   <label class="subtle" for="villager-${villager.id}">Current hearts</label>
-                  <input
-                    id="villager-${villager.id}"
-                    type="number"
-                    min="0"
-                    max="14"
-                    step="1"
-                    value="${current}"
-                    data-action="villager-hearts"
-                    data-id="${villager.id}"
-                  />
+                  <div class="villager-heart-entry">
+                    <div class="villager-portrait">${itemThumb(villager, villager.name)}</div>
+                    <input
+                      id="villager-${villager.id}"
+                      type="number"
+                      min="0"
+                      max="14"
+                      step="1"
+                      value="${current}"
+                      data-action="villager-hearts"
+                      data-id="${villager.id}"
+                    />
+                  </div>
                 </div>
-                <label class="toggle-line">
+                <label class="toggle-line villager-toggle-line">
                   <input
                     type="checkbox"
                     data-action="villager-complete"
                     data-id="${villager.id}"
                     ${done ? "checked" : ""}
                   />
-                  <span>Mark max hearts reached</span>
+                  <span>Max hearts</span>
                 </label>
               </div>
             </article>

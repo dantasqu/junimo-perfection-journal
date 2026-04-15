@@ -930,7 +930,11 @@ input[type="checkbox"] {
   width: 76px;
 }
 
-.villager-heart-box {
+.villager-number-line {
+  align-items: flex-end;
+}
+
+.villager-heart-entry {
   display: grid;
   justify-items: center;
   gap: 6px;
@@ -950,7 +954,7 @@ input[type="checkbox"] {
   border-radius: 12px;
 }
 
-.villager-heart-box input {
+.villager-heart-entry input {
   width: 86px;
 }
 
@@ -968,6 +972,10 @@ input[type="checkbox"] {
 
 .villager-card .toggle-line {
   justify-content: center;
+}
+
+.villager-toggle-line {
+  font-size: 0.92rem;
 }
 
 .building-controls {
