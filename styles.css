@@ -890,6 +890,22 @@ input[type="checkbox"] {
   align-items: start;
 }
 
+.recipe-status-corner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  flex: 0 0 auto;
+}
+
+.recipe-card-crafting .recipe-top {
+  align-items: start;
+}
+
+.recipe-card-crafting .recipe-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .recipe-title .item-inline {
   align-items: start;
 }
