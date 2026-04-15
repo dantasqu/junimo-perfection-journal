@@ -1152,6 +1152,52 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+.fish-table {
+  table-layout: fixed;
+}
+
+.fish-table .fish-col-done {
+  width: 8%;
+}
+
+.fish-table .fish-col-name {
+  width: 19%;
+}
+
+.fish-table .fish-col-type {
+  width: 10%;
+}
+
+.fish-table .fish-col-where {
+  width: 24%;
+}
+
+.fish-table .fish-col-when {
+  width: 11%;
+}
+
+.fish-table .fish-col-season {
+  width: 20%;
+}
+
+.fish-table .fish-col-weather {
+  width: 8%;
+}
+
+.fish-table td:nth-child(2),
+.fish-table th:nth-child(2) {
+  padding-left: 26px;
+}
+
+.fish-table td:nth-child(3),
+.fish-table th:nth-child(3),
+.fish-table td:nth-child(5),
+.fish-table th:nth-child(5),
+.fish-table td:nth-child(7),
+.fish-table th:nth-child(7) {
+  text-align: left;
+}
+
 .monster-table {
   table-layout: fixed;
 }

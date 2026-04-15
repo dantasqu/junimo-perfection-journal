@@ -535,13 +535,15 @@ function renderFish() {
 
   document.getElementById("fish-table").innerHTML = `
     <div class="table-shell">
-      <table class="monster-table">
+      <table class="fish-table">
         <colgroup>
-          <col class="monster-col-done" />
-          <col class="monster-col-goal" />
-          <col class="monster-col-target" />
-          <col class="monster-col-current" />
-          <col class="monster-col-remaining" />
+          <col class="fish-col-done" />
+          <col class="fish-col-name" />
+          <col class="fish-col-type" />
+          <col class="fish-col-where" />
+          <col class="fish-col-when" />
+          <col class="fish-col-season" />
+          <col class="fish-col-weather" />
         </colgroup>
         <thead>
           <tr>
