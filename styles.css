@@ -869,6 +869,10 @@ input[type="checkbox"] {
   grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
 }
 
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
 .villager-card,
 .building-card,
 .mini-card {
@@ -913,15 +917,8 @@ input[type="checkbox"] {
   white-space: nowrap;
 }
 
-.helper-copy {
-  margin: 0;
-  line-height: 1.4;
-}
-
 .building-controls {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
+  margin-top: 8px;
 }
 
 .subtle {

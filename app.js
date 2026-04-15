@@ -420,7 +420,7 @@ function renderGeneralLeftBoard(remaining) {
             (entry) => entry.meta,
             (entry) => entry.value
           ),
-          remaining.materials.length ? "Largest remaining material gaps across cooking, crafting, and buildings" : "No material gaps left"
+          remaining.materials.length ? "Largest remaining material gaps across cooking and crafting" : "No material gaps left"
         )}
       </div>
     </section>
@@ -991,7 +991,6 @@ function renderMonsterGoals() {
             <th>Goal</th>
             <th>Target</th>
             <th>Current kills</th>
-            <th>Reward</th>
           </tr>
         </thead>
         <tbody>
@@ -1014,7 +1013,6 @@ function renderMonsterGoals() {
                   </td>
                   <td>
                     <strong>${escapeHtml(getMonsterGoalLabel(goal))}</strong>
-                    <div class="subtle">${escapeHtml(goal.rewardDescription)}</div>
                   </td>
                   <td>${formatNumber(goal.target)}</td>
                   <td>
@@ -1033,7 +1031,6 @@ function renderMonsterGoals() {
                       <span class="status-pill ${done ? "is-done" : "is-pending"}">${done ? "Done" : `${goal.target - current} left`}</span>
                     </div>
                   </td>
-                  <td>${escapeHtml(goal.reward)}</td>
                 </tr>
               `;
             })
@@ -1060,7 +1057,6 @@ function renderSkills() {
           return `
             <article class="mini-card">
               <h3>${escapeHtml(skill.name)}</h3>
-              <p class="subtle helper-copy">Type your current level or tick the checkbox once it hits 10.</p>
               <div class="control-stack">
                 <div class="number-line">
                   <span class="subtle">Current level</span>
@@ -1156,16 +1152,6 @@ function renderStardropsAndWalnuts() {
 }
 
 function renderBuildings() {
-  const totals = aggregateRemainingBuildingMaterials();
-  const rows = Object.entries(totals)
-    .map(([item, needed]) => ({
-      item,
-      needed,
-      owned: state.buildingStock[item] || 0,
-      remaining: Math.max(needed - (state.buildingStock[item] || 0), 0),
-    }))
-    .sort((left, right) => right.remaining - left.remaining || left.item.localeCompare(right.item));
-
   const buildings = [...data.other.buildings].sort((left, right) => {
     const doneGap = Number(state.buildings[left.id]) - Number(state.buildings[right.id]);
     return doneGap || left.name.localeCompare(right.name);
@@ -1190,73 +1176,18 @@ function renderBuildings() {
                   </div>
                 </div>
               </div>
-              <p><strong>${formatGold(building.goldCost)}</strong></p>
-              <div class="token-row">
-                ${building.materials.length
-                  ? building.materials
-                      .map(
-                        (material) =>
-                          `<span class="token">${escapeHtml(material.item)} x${material.quantity}</span>`
-                      )
-                      .join("")
-                  : `<span class="token">No extra materials</span>`}
-              </div>
               <div class="control-stack building-controls">
                 <label class="toggle-line">
                   <input type="checkbox" data-action="building-toggle" data-id="${building.id}" ${done ? "checked" : ""} />
                   <span>Mark built on farm</span>
                 </label>
-                <p class="subtle helper-copy">${done ? "This building is counted for perfection." : "Use the material planner below, then tick this once it is built."}</p>
               </div>
             </article>
           `;
         })
         .join("")}
     </div>
-    ${
-      rows.length
-        ? `
-          <article class="planner-card" style="margin-top: 18px;">
-            <h3>Remaining obelisk + clock materials</h3>
-            <div class="table-shell">
-              <table class="planner-table tight-table">
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>Need</th>
-                    <th>You have</th>
-                    <th>Still need</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${rows
-                    .map(
-                      (row) => `
-                        <tr>
-                          <td>${escapeHtml(row.item)}</td>
-                          <td>${row.item === "Gold" ? formatGold(row.needed) : formatNumber(row.needed)}</td>
-                          <td>
-                            <input
-                              type="number"
-                              min="0"
-                              step="1"
-                              value="${row.owned}"
-                              data-action="building-owned"
-                              data-item="${escapeAttribute(row.item)}"
-                            />
-                          </td>
-                          <td><strong>${row.item === "Gold" ? formatGold(row.remaining) : formatNumber(row.remaining)}</strong></td>
-                        </tr>
-                      `
-                    )
-                    .join("")}
-                </tbody>
-              </table>
-            </div>
-          </article>
-        `
-        : emptyState("All obelisks and the Gold Clock are marked complete.")
-    }
+    ${buildings.length ? "" : emptyState("All obelisks and the Gold Clock are marked complete.")}
   `;
 }
 
@@ -1316,9 +1247,7 @@ function getRemainingSnapshot() {
     .filter((entry) => !state.buildings[entry.id])
     .map((entry) => ({
       name: entry.name,
-      meta: entry.materials.length
-        ? `${formatGold(entry.goldCost)} • ${entry.materials.map((material) => `${material.item} x${material.quantity}`).join(", ")}`
-        : formatGold(entry.goldCost),
+      meta: entry.type === "clock" ? "Gold clock" : "Farm obelisk",
       value: "Not built",
       imageUrl: entry.imageUrl,
     }));
@@ -1326,7 +1255,6 @@ function getRemainingSnapshot() {
   const materials = [
     ...buildMaterialRows(aggregateRemainingIngredients(data.cooking.recipes, state.cooking.recipes), state.cooking.pantry, "Cooking"),
     ...buildMaterialRows(aggregateRemainingIngredients(data.crafting.recipes, state.crafting.recipes), state.crafting.stock, "Crafting"),
-    ...buildMaterialRows(aggregateRemainingBuildingMaterials(), state.buildingStock, "Buildings"),
   ]
     .filter((entry) => entry.remaining > 0)
     .sort((left, right) => right.remaining - left.remaining || left.name.localeCompare(right.name))
@@ -1353,7 +1281,10 @@ function getRemainingSnapshot() {
 }
 
 function getMonsterGoalLabel(entry) {
-  return entry.monsterType.split(":")[0].trim();
+  return entry.monsterType
+    .split(":")[0]
+    .replace(/\s*\([^)]*\)\s*$/, "")
+    .trim();
 }
 
 function matchesFishSeason(fish) {
