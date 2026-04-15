@@ -385,22 +385,32 @@ function renderGeneralLeftBoard(remaining) {
           remaining.shipping.length ? "Items still missing from the shipped collection" : "Shipping complete"
         )}
         ${renderRemainingCard(
-          "People & Skills",
-          `${remaining.villagers.length + remaining.skills.length} checks left`,
+          "People",
+          `${remaining.villagers.length} left`,
           renderRemainingList(
-            [...remaining.villagers, ...remaining.skills],
+            remaining.villagers,
             (entry) => entry.name,
             (entry) => entry.meta,
             (entry) => entry.value
           ),
-          remaining.villagers.length || remaining.skills.length ? "Friendships and skill levels still missing" : "Friends and skills complete"
+          remaining.villagers.length ? "Villagers not yet at perfection hearts" : "Friends complete"
+        )}
+        ${renderRemainingCard(
+          "Skills",
+          `${remaining.skills.length} left`,
+          renderRemainingList(
+            remaining.skills,
+            (entry) => entry.name,
+            (entry) => entry.meta,
+            (entry) => entry.value
+          ),
+          remaining.skills.length ? "Farmer levels still missing" : "Skills complete"
         )}
         ${renderRemainingCard(
           "Late Game",
-          `${remaining.monsters.length + remaining.stardrops.length + remaining.buildings.length + (remaining.walnutsLeft ? 1 : 0)} checks left`,
+          `${remaining.stardrops.length + remaining.buildings.length + (remaining.walnutsLeft ? 1 : 0)} checks left`,
           renderRemainingList(
             [
-              ...remaining.monsters,
               ...remaining.stardrops,
               ...remaining.buildings,
               ...(remaining.walnutsLeft ? [{ name: "Golden Walnuts", meta: `${state.goldenWalnuts}/${data.other.goldenWalnutsTarget} found`, value: `${remaining.walnutsLeft} left` }] : []),
@@ -409,18 +419,18 @@ function renderGeneralLeftBoard(remaining) {
             (entry) => entry.meta,
             (entry) => entry.value
           ),
-          "Monster goals, stardrops, buildings, and walnuts"
+          remaining.stardrops.length || remaining.buildings.length || remaining.walnutsLeft ? "Stardrops, buildings, and walnuts" : "Late-game checks complete"
         )}
         ${renderRemainingCard(
-          "Big Bottlenecks",
-          `${remaining.materials.length} materials tracked`,
+          "Monster Slayer",
+          `${remaining.monsters.length} left`,
           renderRemainingList(
-            remaining.materials,
+            remaining.monsters,
             (entry) => entry.name,
             (entry) => entry.meta,
             (entry) => entry.value
           ),
-          remaining.materials.length ? "Largest remaining material gaps across cooking and crafting" : "No material gaps left"
+          remaining.monsters.length ? "Monster eradication goals still open" : "Monster goals complete"
         )}
       </div>
     </section>
