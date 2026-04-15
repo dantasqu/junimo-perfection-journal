@@ -1030,20 +1030,50 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+.monster-table {
+  table-layout: fixed;
+}
+
+.monster-table .monster-col-done {
+  width: 6%;
+}
+
+.monster-table .monster-col-goal {
+  width: 32%;
+}
+
+.monster-table .monster-col-target {
+  width: 16%;
+}
+
+.monster-table .monster-col-current {
+  width: 23%;
+}
+
+.monster-table .monster-col-remaining {
+  width: 23%;
+}
+
 .monster-done-cell input {
   margin: 0;
 }
 
+.monster-goal-cell {
+  text-align: left;
+}
+
+.monster-target-cell,
 .monster-number-cell {
-  width: 180px;
+  text-align: center;
 }
 
 .monster-number-cell input {
-  width: 88px;
+  width: min(100%, 96px);
 }
 
 .monster-remaining-cell {
   white-space: nowrap;
+  text-align: center;
 }
 
 .building-controls {

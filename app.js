@@ -520,7 +520,14 @@ function renderFish() {
 
   document.getElementById("fish-table").innerHTML = `
     <div class="table-shell">
-      <table>
+      <table class="monster-table">
+        <colgroup>
+          <col class="monster-col-done" />
+          <col class="monster-col-goal" />
+          <col class="monster-col-target" />
+          <col class="monster-col-current" />
+          <col class="monster-col-remaining" />
+        </colgroup>
         <thead>
           <tr>
             <th>Done</th>
@@ -1016,7 +1023,14 @@ function renderMonsterGoals() {
 
   document.getElementById("monster-content").innerHTML = `
     <div class="table-shell">
-      <table>
+      <table class="monster-table">
+        <colgroup>
+          <col class="monster-col-done" />
+          <col class="monster-col-goal" />
+          <col class="monster-col-target" />
+          <col class="monster-col-current" />
+          <col class="monster-col-remaining" />
+        </colgroup>
         <thead>
           <tr>
             <th>Done</th>
@@ -1042,10 +1056,10 @@ function renderMonsterGoals() {
 	                      ${done ? "checked" : ""}
 	                    />
 	                  </td>
-                  <td>
-                    <strong>${escapeHtml(getMonsterGoalLabel(goal))}</strong>
-                  </td>
-                  <td>${formatNumber(goal.target)}</td>
+	                  <td class="monster-goal-cell">
+	                    <strong>${escapeHtml(getMonsterGoalLabel(goal))}</strong>
+	                  </td>
+	                  <td class="monster-target-cell">${formatNumber(goal.target)}</td>
 	                  <td class="monster-number-cell">
 	                    <input
 	                      type="number"
