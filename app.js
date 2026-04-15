@@ -1613,7 +1613,8 @@ function exportSave() {
 }
 
 function importSave(event) {
-  const [file] = event.target.files || [];
+  const input = event.currentTarget || event.target;
+  const [file] = input?.files || [];
   if (!file) {
     return;
   }
@@ -1626,14 +1627,30 @@ function importSave(event) {
       state = buildState(importedSave.state);
       saveState();
       renderAllDynamic();
-      event.target.value = "";
     } catch (error) {
       window.alert(
         error?.message === "future-save-version"
           ? "That save was made with a newer version of Junimo Perfection Journal."
           : "That file could not be imported."
       );
-      event.target.value = "";
+    } finally {
+      if (input) {
+        try {
+          input.value = "";
+        } catch (_error) {
+          // Ignore file input reset issues after import.
+        }
+      }
+    }
+  };
+  reader.onerror = () => {
+    window.alert("That file could not be imported.");
+    if (input) {
+      try {
+        input.value = "";
+      } catch (_error) {
+        // Ignore file input reset issues after import.
+      }
     }
   };
   reader.readAsText(file);
