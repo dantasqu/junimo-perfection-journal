@@ -679,7 +679,7 @@ function renderCrafting() {
     search: ui.craftingSearch,
     status: ui.craftingStatus,
     stockAction: "crafting-owned",
-    extraBadge: (recipe) => recipe.category,
+    extraBadge: null,
     showPlanner: false,
   });
 }
@@ -706,10 +706,10 @@ function renderRecipePlanner(config) {
       const done = statusMap[recipe.id];
       const searchText = [
         recipe.name,
-        recipe.description,
-        kind === "cooking" ? "" : recipe.recipeSource,
+        kind === "crafting" ? "" : recipe.description,
+        kind === "cooking" || kind === "crafting" ? "" : recipe.recipeSource,
         recipe.ingredients.map((ingredient) => ingredient.item).join(" "),
-        recipe.category || "",
+        kind === "crafting" ? "" : recipe.category || "",
       ]
         .join(" ")
         .toLowerCase();
@@ -751,7 +751,9 @@ function renderRecipePlanner(config) {
     ${summaryCard("Crafted", `${doneCount}/${recipes.length}`, "", ratioToPercent(doneCount / recipes.length))}
   `;
 
-  document.getElementById(ingredientsEl).innerHTML = showPlanner && visibleIngredientRows.length
+  document.getElementById(ingredientsEl).innerHTML = !showPlanner
+    ? ""
+    : visibleIngredientRows.length
     ? `
       <article class="planner-card">
         <h3>${kind === "cooking" ? "Ingredient Planner" : "Material Planner"}</h3>
@@ -815,9 +817,9 @@ function renderRecipePlanner(config) {
     ? filtered
         .map((recipe) => {
           const done = statusMap[recipe.id];
-	          return `
-	            <article class="recipe-card ${done ? "is-done" : ""}">
-	              <div class="recipe-top">
+          return `
+            <article class="recipe-card ${done ? "is-done" : ""}">
+              <div class="recipe-top">
                 <div class="recipe-title">
                   <input type="checkbox" data-action="${kind}-toggle" data-id="${recipe.id}" ${done ? "checked" : ""} />
                   <div>
@@ -833,11 +835,11 @@ function renderRecipePlanner(config) {
                           : ""
                       }
                     </div>
-	                  </div>
-	                </div>
-	              </div>
-	              ${kind === "cooking" ? "" : `<p>${escapeHtml(recipe.description)}</p>`}
-	              <div class="meta-block">
+                  </div>
+                </div>
+              </div>
+              ${kind === "cooking" || kind === "crafting" ? "" : `<p>${escapeHtml(recipe.description)}</p>`}
+              <div class="meta-block">
                 <div>
                   <div class="meta-label">Ingredients</div>
                   <div class="token-row">
@@ -850,7 +852,7 @@ function renderRecipePlanner(config) {
                   </div>
                 </div>
                 ${
-                  kind === "cooking"
+                  kind === "cooking" || kind === "crafting"
                     ? ""
                     : `
                 <div>
