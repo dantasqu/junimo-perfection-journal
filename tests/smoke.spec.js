@@ -50,18 +50,29 @@ test('shipping status filter narrows the visible items', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Shipping' }).click();
 
+  const initialLeft = await summaryValue(page, '#shipping-summary', 0);
+  const initialDone = await summaryValue(page, '#shipping-summary', 1);
+
   await page.locator('#shipping-search').fill('Daffodil');
   await expect(page.locator('#shipping-content .pill-item')).toHaveCount(1);
+  await expect(await summaryValue(page, '#shipping-summary', 0)).toBe(initialLeft);
+  await expect(await summaryValue(page, '#shipping-summary', 1)).toBe(initialDone);
 
   await page.locator('#shipping-status').selectOption('remaining');
   await expect(page.locator('#shipping-content .pill-item')).toHaveCount(1);
+  await expect(await summaryValue(page, '#shipping-summary', 0)).toBe(initialLeft);
+  await expect(await summaryValue(page, '#shipping-summary', 1)).toBe(initialDone);
 
   await page.locator('#shipping-status').selectOption('all');
   await page.locator('#shipping-content input[data-action="shipping-toggle"]').check();
+  await expect.poll(async () => summaryValue(page, '#shipping-summary', 0)).toBe('153');
+  await expect.poll(async () => summaryValue(page, '#shipping-summary', 1)).toBe('1/154');
   await page.locator('#shipping-status').selectOption('done');
 
   await expect(page.locator('#shipping-content .pill-item')).toHaveCount(1);
   await expect(page.locator('#shipping-content .pill-item.is-done')).toHaveCount(1);
+  await expect(await summaryValue(page, '#shipping-summary', 0)).toBe('153');
+  await expect(await summaryValue(page, '#shipping-summary', 1)).toBe('1/154');
 });
 
 test('export, reset, and import restore tracker state', async ({ page }, testInfo) => {

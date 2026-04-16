@@ -551,7 +551,6 @@ function renderFish() {
     ${summaryCard("Fish left", `${fishLeft}`, "Unfished fish", ratioToPercent(fishLeft / data.fish.length))}
     ${summaryCard("Caught", `${progress.fish.done}/${data.fish.length}`, "", ratioToPercent(progress.fish.ratio))}
     ${summaryCard("Legendary left", `${legendaryLeft}`, "", ratioToPercent(legendaryLeft / 5))}
-    ${summaryCard("Showing", `${filtered.length}`, "Results in the current filter", ratioToPercent(filtered.length / data.fish.length))}
   `;
 
   if (!filtered.length) {
