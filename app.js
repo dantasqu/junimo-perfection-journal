@@ -332,38 +332,6 @@ function renderGeneral() {
 
   document.getElementById("general-left-board").innerHTML = renderGeneralLeftBoard(remaining);
 
-  const categoryLookup = {
-    "produce-forage-shipped": progress.shipping,
-    "obelisks-on-farm": progress.obelisks,
-    "golden-clock-on-farm": progress.goldClock,
-    "monster-slayer-hero": progress.monsters,
-    "great-friends": progress.friends,
-    "farmer-level": progress.skills,
-    "found-all-stardrops": progress.stardrops,
-    "cooking-recipes-made": progress.cooking,
-    "crafting-recipes-made": progress.crafting,
-    "fish-caught": progress.fish,
-    "golden-walnuts-found": progress.walnuts,
-  };
-
-  document.getElementById("general-categories").innerHTML = data.perfectionCategories
-    .map((category) => {
-      const entry = categoryLookup[category.id];
-      return `
-        <article class="category-card">
-          <p class="section-kicker">${category.weightPercent}% of perfection</p>
-          <h3>${escapeHtml(category.name)}</h3>
-          <p>${escapeHtml(category.requirement)}</p>
-          <div class="category-meta">
-            <span>${entry.current}/${entry.total}</span>
-            <span>${ratioToPercent(entry.ratio).toFixed(1)}%</span>
-          </div>
-          ${progressBar(entry.ratio)}
-        </article>
-      `;
-    })
-    .join("");
-
   document.getElementById("general-footer").innerHTML = `
     <p class="subtle">Based on Stardew Valley Wiki data.</p>
     <div class="source-links">
