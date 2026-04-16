@@ -1,6 +1,6 @@
 {
   "name": "junimo-perfection-journal",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A cozy Stardew Valley perfection tracker for everything standing between a farm and true perfection. This repo holds the web version.",
   "main": "app.js",
   "scripts": {

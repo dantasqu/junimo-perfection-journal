@@ -1,6 +1,6 @@
 const data = window.STARDEW_WIKI_DATA;
-const APP_VERSION = "1.1.0";
-const RELEASE_NAME = "Honey Junimo";
+const APP_VERSION = "1.2.0";
+const RELEASE_NAME = "";
 const SAVE_SCHEMA_VERSION = 2;
 const STORAGE_KEY = "junimo-perfection-journal-save-v2";
 const LEGACY_STORAGE_KEYS = ["stardew-perfection-tracker-v1"];
@@ -111,7 +111,9 @@ function populateStaticOptions() {
 
   const versionPill = document.getElementById("version-pill");
   if (versionPill) {
-    versionPill.textContent = `Version ${APP_VERSION} • ${RELEASE_NAME}`;
+    versionPill.textContent = RELEASE_NAME
+      ? `Version ${APP_VERSION} • ${RELEASE_NAME}`
+      : `Version ${APP_VERSION}`;
     versionPill.title = `Save format v${SAVE_SCHEMA_VERSION}`;
   }
 }
