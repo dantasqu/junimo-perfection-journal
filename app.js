@@ -1031,11 +1031,7 @@ function renderShipping() {
 }
 
 function renderVillagers() {
-  const villagers = [...data.other.villagers].sort((left, right) => {
-    const leftRemaining = Math.max(left.targetHearts - state.villagers[left.id], 0);
-    const rightRemaining = Math.max(right.targetHearts - state.villagers[right.id], 0);
-    return rightRemaining - leftRemaining || left.name.localeCompare(right.name);
-  });
+  const villagers = [...data.other.villagers].sort((left, right) => left.name.localeCompare(right.name));
 
   document.getElementById("villagers-content").innerHTML = `
     <div class="villager-grid">
@@ -1152,11 +1148,7 @@ function renderMonsterGoals() {
 }
 
 function renderSkills() {
-  const skills = [...data.other.skills].sort((left, right) => {
-    const leftRemaining = Math.max(left.targetLevel - state.skills[left.id], 0);
-    const rightRemaining = Math.max(right.targetLevel - state.skills[right.id], 0);
-    return rightRemaining - leftRemaining || left.name.localeCompare(right.name);
-  });
+  const skills = [...data.other.skills].sort((left, right) => left.name.localeCompare(right.name));
 
   document.getElementById("skills-content").innerHTML = `
     <div class="skills-grid">
@@ -1202,10 +1194,7 @@ function renderSkills() {
 }
 
 function renderStardropsAndWalnuts() {
-  const stardrops = [...data.other.stardrops].sort((left, right) => {
-    const doneGap = Number(state.stardrops[left.id]) - Number(state.stardrops[right.id]);
-    return doneGap || left.name.localeCompare(right.name);
-  });
+  const stardrops = [...data.other.stardrops].sort((left, right) => left.name.localeCompare(right.name));
 
   document.getElementById("collectibles-content").innerHTML = `
     <div class="stardrop-grid collectibles-grid">
@@ -1261,10 +1250,7 @@ function renderStardropsAndWalnuts() {
 }
 
 function renderBuildings() {
-  const buildings = [...data.other.buildings].sort((left, right) => {
-    const doneGap = Number(state.buildings[left.id]) - Number(state.buildings[right.id]);
-    return doneGap || left.name.localeCompare(right.name);
-  });
+  const buildings = [...data.other.buildings].sort((left, right) => left.name.localeCompare(right.name));
 
   document.getElementById("buildings-content").innerHTML = `
     <div class="building-grid">

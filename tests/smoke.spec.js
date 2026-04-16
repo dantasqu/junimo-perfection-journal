@@ -112,3 +112,23 @@ test('other perfection values persist after reload', async ({ page }) => {
 
   await expect(page.locator('input[data-action="skill-level"][data-id="combat"]')).toHaveValue('7');
 });
+
+test('other perfection card grids keep a stable order while values change', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Other Perfection' }).click();
+
+  const villagersBefore = await page.locator('#villagers-content .villager-card h3').allInnerTexts();
+  const skillsBefore = await page.locator('#skills-content .mini-card h3').allInnerTexts();
+  const collectiblesBefore = await page.locator('#collectibles-content .collectible-card h3').allInnerTexts();
+  const buildingsBefore = await page.locator('#buildings-content .building-card h3').allInnerTexts();
+
+  await page.locator('input[data-action="villager-hearts"][data-id="caroline"]').fill('10');
+  await page.locator('input[data-action="skill-level"][data-id="combat"]').fill('10');
+  await page.locator('#collectibles-content input[data-action="stardrop-toggle"]').first().check();
+  await page.locator('#buildings-content input[data-action="building-toggle"]').first().check();
+
+  await expect(page.locator('#villagers-content .villager-card h3')).toHaveText(villagersBefore);
+  await expect(page.locator('#skills-content .mini-card h3')).toHaveText(skillsBefore);
+  await expect(page.locator('#collectibles-content .collectible-card h3')).toHaveText(collectiblesBefore);
+  await expect(page.locator('#buildings-content .building-card h3')).toHaveText(buildingsBefore);
+});
