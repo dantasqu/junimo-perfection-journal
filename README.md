@@ -43,7 +43,6 @@ A Stardew Valley perfection tracker for fish, cooking, crafting, shipping, frien
 
 - `Mac zip`: unzip it and open `Junimo Perfection Journal.app`
 - `Web zip`: unzip it and open `index.html` in a browser
-- There are two downloads because one is the Mac app and the other is the browser version for any computer
 
 ## Inside the Tracker
 
