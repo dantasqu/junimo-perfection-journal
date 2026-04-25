@@ -269,7 +269,16 @@ function handleStateChange(event) {
     return;
   }
 
+  const deferRenderUntilCommit =
+    event.type === "input" &&
+    target.matches(
+      "[data-action='villager-hearts'], [data-action='monster-count'], [data-action='skill-level'], [data-action='golden-walnuts']"
+    );
+
   saveState();
+  if (deferRenderUntilCommit) {
+    return;
+  }
   scheduleRenderAllDynamic();
 }
 
@@ -688,6 +697,7 @@ function renderCooking() {
     ingredientCategory: ui.cookingIngredientCategory,
     extraBadge: null,
     showPlanner: ui.cookingView !== "recipes",
+    stickyPlanner: ui.cookingView === "split",
   });
 }
 
@@ -723,6 +733,7 @@ function renderRecipePlanner(config) {
     ingredientCategory = "all",
     extraBadge,
     showPlanner = true,
+    stickyPlanner = false,
   } = config;
 
   const filtered = recipes
@@ -744,8 +755,9 @@ function renderRecipePlanner(config) {
   const remainingRecipes = recipes.length - doneCount;
   const plannerRecipes = search.trim() ? filtered : recipes;
   const summaryIngredientRows = Object.entries(aggregateRemainingIngredients(recipes, statusMap))
-    .map(([item, needed]) => ({
+    .map(([item, needed], index) => ({
       item,
+      orderIndex: index,
       category:
         kind === "cooking"
           ? cookingIngredientCatalogMap[item]?.category || "Other"
@@ -755,13 +767,14 @@ function renderRecipePlanner(config) {
       owned: clampNumber(stockMap[item], 0, 999999),
       remaining: Math.max(needed - clampNumber(stockMap[item], 0, 999999), 0),
     }))
-    .sort((left, right) => right.remaining - left.remaining || left.item.localeCompare(right.item));
+    .sort((left, right) => right.needed - left.needed || left.orderIndex - right.orderIndex);
   const summaryVisibleIngredientRows =
     status === "remaining" ? summaryIngredientRows.filter((row) => row.remaining > 0) : summaryIngredientRows;
   const ingredientTotals = aggregateRemainingIngredients(plannerRecipes, statusMap);
   const ingredientRows = Object.entries(ingredientTotals)
-    .map(([item, needed]) => ({
+    .map(([item, needed], index) => ({
       item,
+      orderIndex: index,
       category:
         kind === "cooking"
           ? cookingIngredientCatalogMap[item]?.category || "Other"
@@ -772,11 +785,18 @@ function renderRecipePlanner(config) {
       remaining: Math.max(needed - clampNumber(stockMap[item], 0, 999999), 0),
     }))
     .filter((row) => ingredientCategory === "all" || row.category === ingredientCategory)
-    .sort((left, right) => right.remaining - left.remaining || left.item.localeCompare(right.item));
+    .sort((left, right) => right.needed - left.needed || left.orderIndex - right.orderIndex);
 
   const visibleIngredientRows =
     status === "remaining" ? ingredientRows.filter((row) => row.remaining > 0) : ingredientRows;
   const remainingUnits = summaryVisibleIngredientRows.reduce((sum, row) => sum + row.remaining, 0);
+  const plannerContainer = document.getElementById(ingredientsEl);
+  if (plannerContainer) {
+    plannerContainer.classList.toggle(
+      "sticky-planner",
+      kind === "cooking" && stickyPlanner && remainingRecipes > 0
+    );
+  }
 
   document.getElementById(summaryEl).innerHTML = showPlanner
     ? `

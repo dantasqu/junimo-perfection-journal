@@ -19,6 +19,7 @@
   --wood-mid: #a56c34;
   --wood-light: #d39a56;
   --glow: rgba(255, 220, 116, 0.4);
+  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/4/49/%27Jade_Hills_Extended%27.png");
   --shadow: 0 10px 0 rgba(94, 59, 24, 0.12), 0 22px 30px rgba(62, 38, 15, 0.18);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -40,8 +41,14 @@ body {
 body {
   color: var(--ink);
   font-family: var(--font-sans);
-  background:
-    linear-gradient(180deg, #73c7f7 0%, #96dcff 28%, #d9f3ff 52%, #c7db87 52%, #93c15b 74%, #6f9d44 100%);
+  background-color: #94d8f8;
+  background-image:
+    linear-gradient(180deg, rgba(126, 202, 244, 0.78) 0%, rgba(181, 228, 249, 0.66) 34%, rgba(248, 241, 219, 0.52) 68%, rgba(196, 216, 125, 0.4) 100%),
+    var(--stardew-backdrop);
+  background-position: center top, center bottom;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
   overflow-x: hidden;
   position: relative;
 }
@@ -51,11 +58,11 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 220px 78px at 14% 15%, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 32%, transparent 34%),
-    radial-gradient(ellipse 148px 58px at 22% 16%, rgba(255, 255, 255, 0.82) 0, rgba(255, 255, 255, 0.82) 32%, transparent 34%),
-    radial-gradient(ellipse 210px 74px at 78% 12%, rgba(255, 255, 255, 0.88) 0, rgba(255, 255, 255, 0.88) 32%, transparent 34%),
-    radial-gradient(ellipse 136px 52px at 86% 14%, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 32%, transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 40%);
+    radial-gradient(ellipse 220px 78px at 14% 15%, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.72) 32%, transparent 34%),
+    radial-gradient(ellipse 148px 58px at 22% 16%, rgba(255, 255, 255, 0.64) 0, rgba(255, 255, 255, 0.64) 32%, transparent 34%),
+    radial-gradient(ellipse 210px 74px at 78% 12%, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 32%, transparent 34%),
+    radial-gradient(ellipse 136px 52px at 86% 14%, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0.6) 32%, transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 245, 220, 0.06) 42%, rgba(255, 243, 214, 0.14) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -66,12 +73,8 @@ body::before {
   inset: auto 0 0 0;
   height: min(34vh, 290px);
   background:
-    radial-gradient(80% 150% at 14% 100%, #7daa47 0, #7daa47 38%, transparent 39%),
-    radial-gradient(92% 155% at 42% 100%, #94be59 0, #94be59 41%, transparent 42%),
-    radial-gradient(86% 150% at 72% 100%, #79a84a 0, #79a84a 38%, transparent 39%),
-    radial-gradient(74% 130% at 94% 100%, #68963d 0, #68963d 33%, transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 22%),
-    linear-gradient(180deg, #abc96c 0%, #82ad49 58%, #618a37 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 18%),
+    linear-gradient(180deg, rgba(147, 188, 86, 0), rgba(147, 188, 86, 0.12) 38%, rgba(77, 113, 42, 0.22) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -762,6 +765,12 @@ input[type="checkbox"] {
   overflow-x: auto;
 }
 
+.planner-split > .section-stack.sticky-planner {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+}
+
 .cooking-layout.is-recipes,
 .cooking-layout.is-planner {
   grid-template-columns: 1fr;
@@ -1337,6 +1346,10 @@ a {
   .cooking-toolbar,
   .planner-split {
     grid-template-columns: 1fr;
+  }
+
+  .planner-split > .section-stack.sticky-planner {
+    position: static;
   }
 
   .cooking-layout.is-recipes #cooking-recipes.recipe-grid {
