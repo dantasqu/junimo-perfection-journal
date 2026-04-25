@@ -19,7 +19,7 @@
   --wood-mid: #a56c34;
   --wood-light: #d39a56;
   --glow: rgba(255, 220, 116, 0.4);
-  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/4/49/%27Jade_Hills_Extended%27.png");
+  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/4/44/%27Jade_Hills%27.png");
   --shadow: 0 10px 0 rgba(94, 59, 24, 0.12), 0 22px 30px rgba(62, 38, 15, 0.18);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -43,10 +43,10 @@ body {
   font-family: var(--font-sans);
   background-color: #94d8f8;
   background-image:
-    linear-gradient(180deg, rgba(126, 202, 244, 0.78) 0%, rgba(181, 228, 249, 0.66) 34%, rgba(248, 241, 219, 0.52) 68%, rgba(196, 216, 125, 0.4) 100%),
+    linear-gradient(180deg, rgba(134, 206, 244, 0.52) 0%, rgba(194, 232, 249, 0.4) 32%, rgba(249, 240, 214, 0.24) 70%, rgba(199, 219, 132, 0.2) 100%),
     var(--stardew-backdrop);
   background-position: center top, center bottom;
-  background-size: cover, cover;
+  background-size: cover, 100% auto;
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   overflow-x: hidden;
@@ -58,11 +58,11 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 220px 78px at 14% 15%, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.72) 32%, transparent 34%),
-    radial-gradient(ellipse 148px 58px at 22% 16%, rgba(255, 255, 255, 0.64) 0, rgba(255, 255, 255, 0.64) 32%, transparent 34%),
-    radial-gradient(ellipse 210px 74px at 78% 12%, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 32%, transparent 34%),
-    radial-gradient(ellipse 136px 52px at 86% 14%, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0.6) 32%, transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 245, 220, 0.06) 42%, rgba(255, 243, 214, 0.14) 100%);
+    radial-gradient(ellipse 220px 78px at 14% 15%, rgba(255, 255, 255, 0.56) 0, rgba(255, 255, 255, 0.56) 32%, transparent 34%),
+    radial-gradient(ellipse 148px 58px at 22% 16%, rgba(255, 255, 255, 0.48) 0, rgba(255, 255, 255, 0.48) 32%, transparent 34%),
+    radial-gradient(ellipse 210px 74px at 78% 12%, rgba(255, 255, 255, 0.54) 0, rgba(255, 255, 255, 0.54) 32%, transparent 34%),
+    radial-gradient(ellipse 136px 52px at 86% 14%, rgba(255, 255, 255, 0.42) 0, rgba(255, 255, 255, 0.42) 32%, transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 245, 220, 0.02) 42%, rgba(255, 243, 214, 0.08) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -73,8 +73,8 @@ body::before {
   inset: auto 0 0 0;
   height: min(34vh, 290px);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 18%),
-    linear-gradient(180deg, rgba(147, 188, 86, 0), rgba(147, 188, 86, 0.12) 38%, rgba(77, 113, 42, 0.22) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 18%),
+    linear-gradient(180deg, rgba(147, 188, 86, 0), rgba(147, 188, 86, 0.06) 42%, rgba(77, 113, 42, 0.12) 100%);
   pointer-events: none;
   z-index: 0;
 }
