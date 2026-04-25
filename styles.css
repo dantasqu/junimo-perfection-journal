@@ -58,6 +58,10 @@ body::before {
   position: fixed;
   inset: 0;
   background:
+    radial-gradient(ellipse 46% 22% at 50% 16%, rgba(123, 199, 240, 0.96) 0, rgba(123, 199, 240, 0.96) 34%, rgba(148, 219, 250, 0.82) 52%, rgba(148, 219, 250, 0.42) 68%, rgba(148, 219, 250, 0) 82%),
+    radial-gradient(ellipse 18% 7% at 38% 11%, rgba(255, 255, 255, 0.76) 0, rgba(255, 255, 255, 0.76) 38%, transparent 40%),
+    radial-gradient(ellipse 22% 8% at 52% 10%, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 38%, transparent 40%),
+    radial-gradient(ellipse 16% 6% at 64% 13%, rgba(255, 255, 255, 0.68) 0, rgba(255, 255, 255, 0.68) 38%, transparent 40%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 22%, rgba(255, 244, 214, 0.06) 100%);
   pointer-events: none;
   z-index: 0;
