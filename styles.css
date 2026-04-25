@@ -19,7 +19,7 @@
   --wood-mid: #a56c34;
   --wood-light: #d39a56;
   --glow: rgba(255, 220, 116, 0.4);
-  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/9/9c/Title_Screen_Secrets_Composite.png");
+  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/b/b5/The_Mountain.png");
   --shadow: 0 10px 0 rgba(94, 59, 24, 0.12), 0 22px 30px rgba(62, 38, 15, 0.18);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -41,9 +41,9 @@ body {
 body {
   color: var(--ink);
   font-family: var(--font-sans);
-  background-color: #7bc7f0;
+  background-color: #89cdef;
   background-image:
-    linear-gradient(180deg, rgba(119, 197, 238, 0.18) 0%, rgba(195, 233, 249, 0.1) 24%, rgba(249, 241, 217, 0.12) 74%, rgba(219, 227, 153, 0.16) 100%),
+    linear-gradient(180deg, rgba(127, 201, 239, 0.16) 0%, rgba(197, 233, 248, 0.08) 26%, rgba(248, 240, 215, 0.1) 74%, rgba(213, 224, 150, 0.14) 100%),
     var(--stardew-backdrop);
   background-position: center top, center top;
   background-size: cover, cover;
@@ -58,11 +58,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 46% 22% at 50% 16%, rgba(123, 199, 240, 0.96) 0, rgba(123, 199, 240, 0.96) 34%, rgba(148, 219, 250, 0.82) 52%, rgba(148, 219, 250, 0.42) 68%, rgba(148, 219, 250, 0) 82%),
-    radial-gradient(ellipse 18% 7% at 38% 11%, rgba(255, 255, 255, 0.76) 0, rgba(255, 255, 255, 0.76) 38%, transparent 40%),
-    radial-gradient(ellipse 22% 8% at 52% 10%, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 38%, transparent 40%),
-    radial-gradient(ellipse 16% 6% at 64% 13%, rgba(255, 255, 255, 0.68) 0, rgba(255, 255, 255, 0.68) 38%, transparent 40%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 22%, rgba(255, 244, 214, 0.06) 100%);
+    radial-gradient(ellipse 24% 8% at 18% 14%, rgba(255, 255, 255, 0.34) 0, rgba(255, 255, 255, 0.34) 38%, transparent 40%),
+    radial-gradient(ellipse 28% 9% at 74% 12%, rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.3) 38%, transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) 26%, rgba(255, 244, 214, 0.06) 100%);
   pointer-events: none;
   z-index: 0;
 }
