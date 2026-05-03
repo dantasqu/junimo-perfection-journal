@@ -19,7 +19,7 @@
   --wood-mid: #a56c34;
   --wood-light: #d39a56;
   --glow: rgba(255, 220, 116, 0.4);
-  --stardew-backdrop: url("https://stardewvalleywiki.com/mediawiki/images/b/b5/The_Mountain.png");
+  --stardew-backdrop: url("./branding/current/wiki-landscape-background.png");
   --shadow: 0 10px 0 rgba(94, 59, 24, 0.12), 0 22px 30px rgba(62, 38, 15, 0.18);
   --radius-lg: 28px;
   --radius-md: 18px;
