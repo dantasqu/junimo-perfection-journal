@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+- updated the app hero copy and removed the old Forest Spirit label
+- restored the preferred landscape background asset
+- synced repo metadata and links to the personal GitHub account
+
 ## 1.2.0
 
 - fixed the fish checkbox rerender bug so fish progress updates immediately

@@ -1,5 +1,5 @@
 const data = window.STARDEW_WIKI_DATA;
-const APP_VERSION = "1.2.0";
+const APP_VERSION = "1.2.1";
 const RELEASE_NAME = "";
 const SAVE_SCHEMA_VERSION = 2;
 const STORAGE_KEY = "junimo-perfection-journal-save-v2";
