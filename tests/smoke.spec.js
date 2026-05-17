@@ -140,6 +140,55 @@ test('cooking pantry status only shows ingredients already on hand', async ({ pa
   await expect.poll(async () => summaryValue(page, '#cooking-summary', 3)).toBe('2');
 });
 
+test('cooking restored pantry filter stays in sync with the rendered planner', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => {
+    const data = window.STARDEW_WIKI_DATA;
+    const save = {
+      appName: data.meta.appName,
+      appVersion: 'test',
+      releaseName: '',
+      saveVersion: 2,
+      state: {
+        fish: {},
+        cooking: {
+          recipes: {},
+          pantry: {
+            Moss: 20,
+            Milk: 12,
+          },
+        },
+        crafting: {
+          recipes: {},
+          stock: {},
+        },
+        shipping: {},
+        villagers: {},
+        monsterGoals: {},
+        skills: {},
+        stardrops: {},
+        buildings: {},
+        buildingStock: {},
+        goldenWalnuts: 0,
+      },
+    };
+    window.localStorage.setItem('junimo-perfection-journal-save-v2', JSON.stringify(save));
+  });
+  await page.reload();
+  await page.getByRole('button', { name: 'Cooking' }).click();
+  await page.getByRole('button', { name: 'Planner' }).click();
+  await page.evaluate(() => {
+    document.getElementById('cooking-status').value = 'pantry';
+    window.dispatchEvent(new PageTransitionEvent('pageshow'));
+  });
+
+  await expect(page.locator('#cooking-summary')).toContainText('Pantry units');
+  await expect(page.locator('#cooking-summary')).toContainText('Ingredients on hand');
+  await expect(page.locator('#cooking-ingredients')).toContainText('Moss');
+  await expect(page.locator('#cooking-ingredients')).toContainText('Milk');
+  await expect(page.locator('#cooking-ingredients')).not.toContainText('Wheat Flour');
+});
+
 test('shipping status filter narrows the visible items', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Shipping' }).click();

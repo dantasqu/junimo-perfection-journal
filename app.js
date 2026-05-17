@@ -71,6 +71,13 @@ const FISH_SPOT_ORDER = [
 document.addEventListener("DOMContentLoaded", () => {
   populateStaticOptions();
   bindEvents();
+  syncUiFiltersFromControls();
+  renderAllDynamic();
+  updateVisibleTab();
+});
+
+window.addEventListener("pageshow", () => {
+  syncUiFiltersFromControls();
   renderAllDynamic();
   updateVisibleTab();
 });
@@ -117,6 +124,36 @@ function populateStaticOptions() {
       : `Version ${APP_VERSION}`;
     versionPill.title = `Save format v${SAVE_SCHEMA_VERSION}`;
   }
+}
+
+function syncUiFiltersFromControls() {
+  const fishSearch = document.getElementById("fish-search");
+  const fishSpot = document.getElementById("fish-spot");
+  const fishSeason = document.getElementById("fish-season");
+  const fishWeather = document.getElementById("fish-weather");
+  const fishStatus = document.getElementById("fish-status");
+  const cookingSearch = document.getElementById("cooking-search");
+  const cookingStatus = document.getElementById("cooking-status");
+  const cookingIngredientCategory = document.getElementById("cooking-ingredient-category");
+  const craftingSearch = document.getElementById("crafting-search");
+  const craftingStatus = document.getElementById("crafting-status");
+  const shippingSearch = document.getElementById("shipping-search");
+  const shippingStatus = document.getElementById("shipping-status");
+
+  if (fishSearch) ui.fishSearch = fishSearch.value;
+  if (fishSpot) ui.fishSpot = fishSpot.value;
+  if (fishSeason) ui.fishSeason = fishSeason.value;
+  if (fishWeather) ui.fishWeather = fishWeather.value;
+  if (fishStatus) ui.fishStatus = fishStatus.value;
+  if (cookingSearch) ui.cookingSearch = cookingSearch.value;
+  if (cookingStatus) ui.cookingStatus = cookingStatus.value;
+  if (cookingIngredientCategory) {
+    ui.cookingIngredientCategory = cookingIngredientCategory.value;
+  }
+  if (craftingSearch) ui.craftingSearch = craftingSearch.value;
+  if (craftingStatus) ui.craftingStatus = craftingStatus.value;
+  if (shippingSearch) ui.shippingSearch = shippingSearch.value;
+  if (shippingStatus) ui.shippingStatus = shippingStatus.value;
 }
 
 function bindEvents() {

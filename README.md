@@ -34,7 +34,7 @@ A Stardew Valley perfection tracker for fish, cooking, crafting, shipping, frien
 
 ### Live Site
 
-- Open [daniquintana.github.io/junimo-perfection-journal](https://daniquintana.github.io/junimo-perfection-journal/?v=20260517b)
+- Open [daniquintana.github.io/junimo-perfection-journal](https://daniquintana.github.io/junimo-perfection-journal/?v=20260517c)
 - Progress is saved only in that browser on that device
 - To move progress between computers, export on one device and import on the other
 
