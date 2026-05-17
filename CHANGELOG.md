@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2
+
+- added a True Perfection celebration popup when the tracker reaches 100%
+- added a Pantry status to the cooking planner for checking owned ingredients before cooking
+- improved cooking planner status handling so ingredient views stay useful across status filters
+
 ## 1.2.1
 
 - updated the app hero copy and removed the old Forest Spirit label
