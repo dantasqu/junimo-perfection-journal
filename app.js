@@ -800,7 +800,11 @@ function renderRecipePlanner(config) {
   const doneCount = Object.values(statusMap).filter(Boolean).length;
   const remainingRecipes = recipes.length - doneCount;
   const plannerStatusMode =
-    status === "done" ? "done" : status === "all" ? "all" : "remaining";
+    status === "done"
+      ? "done"
+      : status === "all" || status === "pantry"
+      ? "all"
+      : "remaining";
   const plannerRecipes = search.trim() ? filtered : recipes;
   const summaryIngredientRows = Object.entries(
     aggregateIngredientsForStatus(recipes, statusMap, plannerStatusMode)
@@ -918,6 +922,10 @@ function renderRecipePlanner(config) {
         showPlanner && remainingRecipes
           ? status === "remaining" && ingredientRows.length
             ? "You already have enough of the remaining ingredients in this view."
+            : status === "pantry" && ingredientCategory !== "all"
+            ? `No tracked ingredients match the ${ingredientCategory} filter.`
+            : status === "pantry"
+            ? "No tracked ingredients match the current filter."
             : kind === "cooking" && ingredientCategory !== "all"
             ? `No remaining ingredients match the ${ingredientCategory} filter.`
             : "No remaining ingredients match the current filter."
@@ -1995,6 +2003,9 @@ function matchesStatus(done, status) {
   }
   if (status === "remaining") {
     return !done;
+  }
+  if (status === "pantry") {
+    return true;
   }
   return true;
 }
